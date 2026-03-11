@@ -39,39 +39,39 @@ mastodon_link:
 # Feature List
 features:
   - title: Text-to-Speech Technology
-    description: Sound of Text utilizes Google Translate text-to-speech technology to transform written text into spoken words.
+    description: "Sound of Text utilizes Google Translate text-to-speech technology to transform written text into spoken words."
     fontawesome_icon_name: microchip
 
   - title: MP3 Output Format
-    description: Generates high-quality MP3 audio files as the output format, making it convenient for various applications and offline listening.
+    description: "Generates high-quality MP3 audio files as the output format, making it convenient for various applications and offline listening."
     fontawesome_icon_name: file-audio
 
   - title: Education & Tutorials
-    description: Teachers can convert lesson plans into audio format, cater to different [education process](https://soundtext.github.io/education-platform/), and create audio flashcards for memorization.
+    description: "Teachers can convert lesson plans into audio format, cater to different [education process](https://soundtext.github.io/education-platform/), and create audio flashcards for memorization."
     fontawesome_icon_name: graduation-cap
 
   - title: Business & Promotions
-    description: Develop audio advertisements or product demos to engage customers and enhance marketing campaigns with unique audio content.
+    description: "Develop audio advertisements or product demos to engage customers and enhance marketing campaigns with unique audio content."
     fontawesome_icon_name: chart-line
 
   - title: Social Media & TikTok
-    description: Perfect for creating viral [TikTok videos](https://soundtext.github.io/sound-of-text-tiktok/) and other social media content, becoming increasingly popular among teenagers.
+    description: "Perfect for creating viral [TikTok videos](https://soundtext.github.io/sound-of-text-tiktok/) and other social media content, becoming increasingly popular among teenagers."
     fontawesome_icon_name: share-alt
 
   - title: Document Accessibility
-    description: Makes written documents, articles, and blog posts accessible to individuals with visual or reading disabilities.
+    description: "Makes written documents, articles, and blog posts accessible to individuals with visual or reading disabilities."
     fontawesome_icon_name: eye
 
   - title: Personalized Messages
-    description: Craft personalized audio messages, including greeting cards or voicemail greetings with unique voice synthesis like [sound of text whatsapp](https://soundtext.github.io/sound-of-text-whatsapp/).
+    description: "Craft personalized audio messages, including greeting cards or voicemail greetings with unique voice synthesis like [sound of text whatsapp](https://soundtext.github.io/sound-of-text-whatsapp/)."
     fontawesome_icon_name: comment-dots
 
   - title: Global Convenience
-    description: Generated MP3 files are easy to download and distribute, allowing users to review content on the go.
+    description: "Generated MP3 files are easy to download and distribute, allowing users to review content on the go."
     fontawesome_icon_name: mobile-alt
 
   - title: Reliable Service
-    description: Trusted by millions for consistent processing and high-quality voice synthesis across dozens of global languages.
+    description: "Trusted by millions for consistent processing and high-quality voice synthesis across dozens of global languages."
     fontawesome_icon_name: shield-alt
 
 
