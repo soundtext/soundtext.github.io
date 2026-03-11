@@ -20,16 +20,16 @@ enable_smart_app_banner: false
 
 
 # Information About Yourself
-your_name                                 : Emil Baehr                                
-your_link                                 : https://localhost:4000                     
-your_city                                 : Copenhagen                                
-email_address:
+your_name                                 : Sound of Text Creator                                
+your_link                                 : https://soundtext.github.io                     
+your_city                                 : Stockholm                                
+email_address: soundtext@appz.se
 linkedin_username                         :                                           
 linkedin_company                          :                                           
 facebook_username: soundoftextcom
 instagram_username: soundoftext
 twitter_username:
-github_username:
+github_username: soundtext
 tiktok_username: soundoftextapp
 youtube_username:
 mastodon_link:
