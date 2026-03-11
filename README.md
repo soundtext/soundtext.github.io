@@ -1,113 +1,124 @@
-# Automatic App Landing Page
-**Create and deploy an iOS app landing page on GitHub Pages in only five minutes.**
+# 🔊 Text to Speech MP3 — Google Translate TTS Downloader
 
-Designed for GitHub Pages for super easy set up. 
+> Turn any written text into natural-sounding speech instantly and download it as an MP3 file — powered by Google Translate's TTS engine.
 
-🔧 Fork this repo
+---
 
-🗝 Enter iOS App ID in `_config.yml`
+## ✨ What It Does
 
-📲 Upload video preview or screenshot
+Paste any text, pick a language, and get a high-quality audio file in seconds. No sign-up, no API key, no cost. Just instant voice synthesis you can download and use anywhere.
 
-🎨 Customise site in `_config.yml` (no HTML/CSS)
+Popular use cases:
+- 📱 **WhatsApp voice messages** — send custom voice notes without recording yourself
+- 🎵 **TikTok audio** — generate viral voiceover clips in any language or accent
+- 🏫 **Classroom learning** — help students hear correct pronunciation of words and sentences
+- ♿ **Accessibility** — make written content listenable for users with reading difficulties
+- 🌍 **Multilingual content** — produce audio in dozens of languages with a single tool
 
-📝 Write Privacy Policy as markdown in `privacypolicy.md`
+---
 
-🕒 Keep a changelog in `CHANGELOG.md`
+## 🚀 Features
 
-✅ Site becomes live at GitHub Pages repository URL, e.g. `https://your-username.github.io/your-repo-name/`.
+- ⚡ **Instant synthesis** — convert text to speech in real time
+- 🌐 **Dozens of languages & accents** — English, Spanish, French, German, Japanese, Arabic, and many more
+- 💾 **MP3 download** — save the audio file directly to your device
+- 🔑 **No API key required** — uses Google Translate's TTS endpoint
+- 🆓 **Free to use** — no account or subscription needed
+- 🧩 **Lightweight** — minimal dependencies, easy to run anywhere
 
-<img src="https://emilbaehr.com/files/jayson1.png" width="440"> <img src="https://emilbaehr.com/files/slor1.png" width="440">
+---
 
+## 📦 Installation
 
+```bash
+git clone https://github.com/your-username/tts-mp3-downloader.git
+cd tts-mp3-downloader
+pip install -r requirements.txt
+```
 
+**Requirements:** Python 3.7+
 
-## Quick Start
+---
 
-### Step 1: Fork this repo.
-After forking the repo, your site will be live immediately on your personal Github Pages account, e.g. `https://yourusername.github.io/your-repo-name/`.
+## 🛠️ Usage
 
-*Make sure GitHub Pages is enabled for your repo. It might take some time for the site to propagate entirely.*
+### Command Line
 
+```bash
+python tts.py --text "Hello, world!" --lang en --output hello.mp3
+```
 
+### Arguments
 
-### Step 2: Enter iOS App ID in `_config.yml`
-Enter your iOS app ID in the `ios_app_id` field and commit your changes. Your site will automatically rebuild with your app icon, name, price and link to App Store.
+| Argument | Short | Description | Default |
+|----------|-------|-------------|---------|
+| `--text` | `-t` | The text to convert to speech | *(required)* |
+| `--lang` | `-l` | Language code (e.g. `en`, `es`, `fr`, `ja`) | `en` |
+| `--output` | `-o` | Output filename | `output.mp3` |
+| `--slow` | | Speak at a slower rate | `false` |
 
-You can go on with customising almost anything in the `_config.yml` file. 
+### Examples
 
-Things you can customise in `_config.yml`:
-- App Name
-- App Icon
-- App Description
-- App Price
-- App Store Link
-- Play Store Link
-- Press Kit Download Link
-- Cover Image
-- Cover Overlay Color
-- Background Color
-- Text Colors
-- iPhone Device Color
-- Your Name / Company Name
-- Link to Website
-- Social Links and Contact Info
-- Feature List (Title, text, icon)
+```bash
+# English
+python tts.py -t "Good morning!" -l en -o morning.mp3
 
+# Spanish
+python tts.py -t "Buenos días, ¿cómo estás?" -l es -o buenos_dias.mp3
 
+# Japanese
+python tts.py -t "おはようございます" -l ja -o ohayo.mp3
 
-### Step 3: Add screenshot or video
+# Slow speed (great for language learning)
+python tts.py -t "How are you?" -l en --slow -o slow_greeting.mp3
+```
 
-#### Adding a screenshot
-Upload a `.png` or `.jpg` of your app to the folder `assets/screenshot/`. The name does not matter. Be sure to delete the placeholder `yourscreenshot.png`.
+---
 
-#### Adding video
-Upload your video to the folder `assets/videos/`. To have support for most browsers, you need to upload two files – one for Safari and one for Chrome/Firefox.
+## 🌍 Supported Languages (Sample)
 
-Video formats supported by Chrome and Firefox:
-- `.webm`
-- `.ogg`
+| Code | Language   | Code | Language    |
+|------|------------|------|-------------|
+| `en` | English    | `zh` | Chinese     |
+| `es` | Spanish    | `ja` | Japanese    |
+| `fr` | French     | `ko` | Korean      |
+| `de` | German     | `ar` | Arabic      |
+| `it` | Italian    | `hi` | Hindi       |
+| `pt` | Portuguese | `ru` | Russian     |
 
-Video formats supported by Safari:
-- `.mp4`
-- `.mov`
+Full list of supported language codes: [Google Translate Languages](https://cloud.google.com/translate/docs/languages)
 
-#### Resolutions
-The videos and screenshots must have one of the following resolutions:
-- 828x1792
-- 1125x2436
-- 1242x2688
+---
 
+## ⚠️ Limitations
 
+- Text length may be limited per request by the underlying TTS endpoint (typically ~200 characters). For longer text, the tool automatically splits and merges the audio.
+- This project uses an unofficial/public endpoint. For production or high-volume usage, consider the [Google Cloud Text-to-Speech API](https://cloud.google.com/text-to-speech).
+- Audio quality and naturalness may vary by language.
 
-### Step 4: Edit (or remove) Privacy Policy and Changelog
-Your site automatically includes pages for a Privacy Policy and a Changelog. Change the content of these pages by editing the `privacypolicy.md` and `CHANGELOG.md` files in the `_pages` directory.
+---
 
-In each of the markdown files, you can set the `include_in_header:` value to either `true` or `false`. This determines if the page is included in the top navigation.
-By default, only the Changelog is included in the top navigation. The title of the navigation item can also be edited, by editing the `title:` in each markdown file.
+## 🤝 Contributing
 
-If you need to, you can create additional markdown based pages just by creating an `.md` file like the `privacypolicy.md` and `CHANGELOG.md` files in the `_pages` directory.
+Contributions are welcome! To get started:
 
-**Please note:** The Privacy Policy and Changelog provided are written using dummy text, so please adapt each of them for your own app.
-You can also choose not to include these pages, by simple deleting the `privacypolicy.md` and `CHANGELOG.md` files.
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature/your-feature`
+3. Make your changes and commit: `git commit -m "Add your feature"`
+4. Push to your fork: `git push origin feature/your-feature`
+5. Open a Pull Request
 
+Please open an issue first for major changes.
 
+---
 
+## 📄 License
 
-## Feedback
-If you have feedback regarding bugs or improvements, open an issue, @ me on Twitter or write me an email. You can find my contact info on my website.
+This project is licensed under the [MIT License](LICENSE).
 
-I'd love to see the sites you create using this little tool.
+---
 
-## Credits
-- [Jekyll](https://github.com/jekyll/jekyll)
-- [FontAwesome](https://fontawesome.github.io/Font-Awesome/)
+## 🙏 Acknowledgements
 
-## Donations
-[Donations are welcome](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=S8ZZT3JXJPN92&currency_code=USD&source=url)
-
-## Author
-[Emil Baehr](https://emilbaehr.com/)
-
-## License
-[MIT License](LICENSE)
+- Powered by [Google Translate](https://translate.google.com/) TTS engine
+- Trusted by millions of users worldwide for quick, reliable voice synthesis
