@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Sound of Text WhatsApp
+title: Sound of Text WA
 permalink: /sound-of-text-whatsapp/
+include_in_header: true
 ---
 
 # Sound of Text WhatsApp — How to Create a Custom Voice Ringtone
