@@ -47,7 +47,7 @@ features:
     fontawesome_icon_name: file-audio
 
   - title: Education & Tutorials
-    description: Teachers can convert lesson plans into audio format, cater to different learning styles, and create audio flashcards for memorization.
+    description: Teachers can convert lesson plans into audio format, cater to different [education process](https://soundtext.github.io/education-platform/), and create audio flashcards for memorization.
     fontawesome_icon_name: graduation-cap
 
   - title: Business & Promotions
@@ -55,7 +55,7 @@ features:
     fontawesome_icon_name: chart-line
 
   - title: Social Media & TikTok
-    description: Perfect for creating viral TikTok videos and other social media content, becoming increasingly popular among teenagers.
+    description: Perfect for creating viral [TikTok videos](https://soundtext.github.io/sound-of-text-tiktok/) and other social media content, becoming increasingly popular among teenagers.
     fontawesome_icon_name: share-alt
 
   - title: Document Accessibility
@@ -63,7 +63,7 @@ features:
     fontawesome_icon_name: eye
 
   - title: Personalized Messages
-    description: Craft personalized audio messages, including greeting cards or voicemail greetings with unique voice synthesis.
+    description: Craft personalized audio messages, including greeting cards or voicemail greetings with unique voice synthesis like [sound of text whatsapp](https://soundtext.github.io/sound-of-text-whatsapp/).
     fontawesome_icon_name: comment-dots
 
   - title: Global Convenience
