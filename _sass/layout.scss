@@ -246,12 +246,12 @@ nav>ul li a:active {
 
 .appInfo {
 	grid-area: i;
-	display: flex;
-	flex-wrap: wrap;
-	padding-top: 130px;
-	padding-bottom: 30px;
-	align-content: flex-start;
-	justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 100px;
+    padding-bottom: 10px;
+    align-content: flex-start;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 992px) {
@@ -340,6 +340,8 @@ nav>ul li a:active {
 
 .appDescription {
 	color: $app-description-color;
+    font-size: .8em;
+    text-align: center;
 }
 
 @media only screen and (max-width: 992px) {
@@ -531,7 +533,7 @@ nav>ul li a:active {
 	line-height: 1.4;
 }
 
-.feature-description {
+.feature-description, .feature-box p {
 	font-size: 0.95rem;
 	color: #4b5563;
 	line-height: 1.6;
