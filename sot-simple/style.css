@@ -1,0 +1,283 @@
+/**
+ * Release Date: 2024-12-18 05:21
+ */
+
+.sound-of-text {
+    margin: 0 auto;
+    max-width: 36rem;
+}
+
+.sound-of-text .content {
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    filter: drop-shadow(0 0 3px rgba(21, 21, 21, .1));
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc !important;
+    border-radius: 10px;
+    position: relative;
+}
+
+.sound-of-text .textarea-container {
+    position: relative;
+    border-bottom: 1px solid #cecece
+}
+
+.sound-of-text textarea {
+    resize: none;
+    width: 100%;
+    min-height: 10rem;
+    transition: height 0.3s ease-in-out;
+    resize: vertical;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.sound-of-text textarea:focus,
+.sound-of-text textarea:active {
+    min-height: 10rem;
+    border-color: transparent;
+    outline: none;
+}
+
+.sound-of-text .clear-icon {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    border-radius: 50%;
+    padding: 1px;
+    line-height: 1;
+    transition: background-color 0.3s ease;
+}
+
+.sound-of-text .clear-icon:hover {
+    background-color: #f1f1f1;
+}
+
+.sound-of-text .clear-icon svg {
+    width: 16px;
+    height: 16px;
+    fill: #555;
+    transition: fill 0.3s ease;
+}
+
+.sound-of-text .clear-icon:hover svg {
+    fill: #007BFF;
+}
+
+.sound-of-text .bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 20px;
+    line-height: 1.3;
+    margin-top: .5rem;
+}
+
+.sound-of-text .language-select {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    opacity: .7;
+}
+
+.sound-of-text .char-counter {
+    opacity: .7;
+}
+
+.sound-of-text .language-select:hover {
+    opacity: 1;
+}
+
+.sound-of-text .button {
+    display: block;
+    text-align: center;
+}
+
+.sound-of-text button {
+    cursor: pointer;
+}
+.sound-of-text .language {
+    display: none;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, .175);
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 5px;
+    position: absolute;
+    left: 11px;
+    max-width: none;
+    width: max-content;
+    bottom: 42px;
+    z-index: 99;
+    background: white;
+    overflow-y: auto;
+}
+
+.sound-of-text .language.show {
+    display: block;
+}
+
+.sound-of-text .language>div {
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 2px 18px;
+}
+
+.sound-of-text .language>div:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+.sound-of-text .language::-webkit-scrollbar,
+.sound-of-text textarea::-webkit-scrollbar,
+.sound-of-text.history .saved-data::-webkit-scrollbar {
+    width: 10px;
+}
+
+.sound-of-text .language::-webkit-scrollbar-track,
+.sound-of-text textarea::-webkit-scrollbar-track,
+.sound-of-text.history .saved-data::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.sound-of-text .language::-webkit-scrollbar-thumb,
+.sound-of-text textarea::-webkit-scrollbar-thumb,
+.sound-of-text.history .saved-data::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.sound-of-text .language::-webkit-scrollbar-thumb:hover,
+.sound-of-text textarea::-webkit-scrollbar-thumb:hover,
+.sound-of-text.history .saved-data::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.sound-of-text .language::-webkit-scrollbar-button,
+.sound-of-text textarea::-webkit-scrollbar-button,
+.sound-of-text.history .saved-data::-webkit-scrollbar-button {
+    display: none;
+}
+
+
+.sound-of-text.history {
+    margin: 1rem auto;
+    display: none;
+}
+
+.sound-of-text.history .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sound-of-text.history .controls {
+    display: flex;
+    gap: 10px;
+}
+
+.sound-of-text.history .controls>div,
+.sound-of-text.history .clear-all {
+    cursor: pointer;
+    opacity: .7;
+}
+
+.sound-of-text.history .controls>div:hover,
+.sound-of-text.history .clear-all:hover {
+    opacity: 1;
+}
+
+.sound-of-text.history .clear-all {
+    display: flex;
+    align-items: center;
+}
+
+
+.sound-of-text.history .saved-data {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.sound-of-text.history .saved-data.scroll {
+    max-height: 20rem;
+    overflow-y: auto;
+}
+
+.sound-of-text.history .saved-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px 10px 20px;
+    align-items: flex-start;
+}
+
+.sound-of-text.history .saved-item>div {
+    flex-grow: 1;
+}
+
+.sound-of-text.history .saved-item:not(:last-child) {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sound-of-text.history .saved-item p {
+    margin-bottom: .6rem;
+}
+
+.sound-of-text.history .saved-item audio {
+    max-height: 2rem;
+    max-width: 100%;
+}
+
+.sound-of-text.history .saved-item .audio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sound-of-text.history .saved-item .audio svg {
+    display: none;
+    max-width: 2rem;
+    max-height: 2rem;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.sound-of-text.history .saved-item .audio svg:hover {
+    opacity: 1;
+}
+
+.sound-of-text.history .saved-item button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: .4;
+}
+
+.sound-of-text.history .saved-item button:hover {
+    opacity: 1;
+}
+
+.sound-of-text.history .saved-item button svg {
+    width: 24px;
+    height: 24px;
+}
+
+.sound-of-text.history .saved-item.playing {
+    background-color: #f0f8ff;
+    transition: background-color 0.3s ease;
+}
+
+@media only screen and (max-width: 460px) {
+    .sound-of-text .char-counter {
+        text-align: right;
+    }
+
+    .sound-of-text .language {
+        bottom: 71px;
+    }
+}

@@ -1,0 +1,16 @@
+<div class="features-wrapper">
+    <h2 class="features-header">Features of Sound of Text</h2>
+    <div class="features-grid">
+        {% for feature in site.features %}
+        {% if feature.title %}
+        <div class="feature-box">
+            <div class="feature-icon">
+                <i class="fas fa-{{ feature.fontawesome_icon_name }}"></i>
+            </div>
+            <h3 class="feature-title">{{ feature.title }}</h3>
+            <p class="feature-description">{{ feature.description }}</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>

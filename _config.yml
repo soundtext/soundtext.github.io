@@ -1,0 +1,141 @@
+#page title
+page_title                                :                                           # Automatically populates with app name if not set and if iOS app ID is set. Otherwise enter manually.
+
+# App Info
+# ios_app_id: 1234793120                                # Hidden for Android focus
+# ios_app_country: us
+
+appstore_link:                                           # Hidden for Android focus
+playstore_link: https://play.google.com/store/apps/details?id=com.karinov.soundoftext            # Enter Google Play Store URL.
+# presskit_download_link: /review/  # Removed as requested
+
+app_icon: assets/techico.png
+favicon: assets/techico.png
+app_name: Sound of Text
+app_price: Free
+app_description: "Turn any written text into natural-sounding speech instantly using Google Translate's powerful TTS engine and download it as an MP3 file. Widely used for creating custom voice messages on WhatsApp, generating viral TikTok audio, supporting classroom learning, and making content more accessible. Supports dozens of languages and accents — trusted by millions of users worldwide for quick, reliable, high-quality voice synthesis."
+
+enable_smart_app_banner: false
+
+
+
+# Information About Yourself
+your_name                                 : Emil Baehr                                
+your_link                                 : https://localhost:4000                     
+your_city                                 : Copenhagen                                
+email_address:
+linkedin_username                         :                                           
+linkedin_company                          :                                           
+facebook_username: soundoftextcom
+instagram_username: soundoftext
+twitter_username:
+github_username:
+tiktok_username: soundoftextapp
+youtube_username:
+mastodon_link:
+
+
+
+# Feature List
+features:
+  - title: Text-to-Speech Technology
+    description: Sound of Text utilizes Google Translate text-to-speech technology to transform written text into spoken words.
+    fontawesome_icon_name: microchip
+
+  - title: MP3 Output Format
+    description: Generates high-quality MP3 audio files as the output format, making it convenient for various applications and offline listening.
+    fontawesome_icon_name: file-audio
+
+  - title: Education & Tutorials
+    description: Teachers can convert lesson plans into audio format, cater to different learning styles, and create audio flashcards for memorization.
+    fontawesome_icon_name: graduation-cap
+
+  - title: Business & Promotions
+    description: Develop audio advertisements or product demos to engage customers and enhance marketing campaigns with unique audio content.
+    fontawesome_icon_name: chart-line
+
+  - title: Social Media & TikTok
+    description: Perfect for creating viral TikTok videos and other social media content, becoming increasingly popular among teenagers.
+    fontawesome_icon_name: share-alt
+
+  - title: Document Accessibility
+    description: Makes written documents, articles, and blog posts accessible to individuals with visual or reading disabilities.
+    fontawesome_icon_name: eye
+
+  - title: Personalized Messages
+    description: Craft personalized audio messages, including greeting cards or voicemail greetings with unique voice synthesis.
+    fontawesome_icon_name: comment-dots
+
+  - title: Global Convenience
+    description: Generated MP3 files are easy to download and distribute, allowing users to review content on the go.
+    fontawesome_icon_name: mobile-alt
+
+  - title: Reliable Service
+    description: Trusted by millions for consistent processing and high-quality voice synthesis across dozens of global languages.
+    fontawesome_icon_name: shield-alt
+
+
+
+# Theme Settings
+topbar_color                              : "#ffffff"
+topbar_transparency                       : 0.95
+topbar_title_color                        : "#111111"
+
+cover_image                               : assets/light_bg.png
+cover_overlay_color                       : "#ffffff"
+cover_overlay_transparency                : 0.2
+
+device_color                              : black                                     # Set to: blue, black, yellow, coral or white.
+
+body_background_color                     : "#ffffff"
+
+link_color                                : "#1d63ea"
+
+app_title_color                           : "#111111"
+app_price_color                           : "#444444"
+app_description_color                     : "#222222"
+
+feature_title_color                       : "#000000"
+feature_text_color                        : "#666666"
+
+feature_icons_foreground_color            : "#1d63ea"
+feature_icons_background_color            : "#e6e6e6"
+
+social_icons_foreground_color             : "#666666"
+social_icons_background_color             : "#e6e6e6"
+
+footer_text_color                         : "#666666"
+
+
+
+
+
+
+
+
+
+
+
+
+
+####################################################
+### Jekyll Configuration. No need to touch this. ###
+####################################################
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: :compressed # You might prefer to minify using :compressed
+
+# Exclude these files from your production _site
+exclude:
+  - LICENSE
+  - README.md
+  - CNAME
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# Markdown rendering
+markdown: kramdown
