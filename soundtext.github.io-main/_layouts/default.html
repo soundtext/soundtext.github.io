@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+{% include head.html %}
+
+<body>
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+    <div class="contentWrapper">
+        <div class="headerBackground subPageHeaderBackground">
+            <div class="container">
+                {% include header.html %}
+                <main id="main-content">
+                    {% unless page.layout == 'archive' %}
+                    <section class="home-hero" aria-label="Welcome to Sound of Text">
+                        <div class="home-hero-content">
+                            <span class="home-hero-label">FREE TEXT TO SPEECH</span>
+                            <h1 class="home-hero-title">Turn text into<br>natural speech</h1>
+                            <p class="home-hero-description">Create MP3 audio files from any text using Google Translate's TTS engine. Download or play in your browser — 60+ languages supported.</p>
+                        </div>
+                        <div class="home-hero-image-wrapper">
+                            <img class="home-hero-img" src="{{ 'assets/img/google translate text to speech engine.jpg' | relative_url }}"
+                                alt="Sound of Text — free text to speech converter">
+                        </div>
+                    </section>
+                    {% endunless %}
+                    {% if page.url == "/" or page.url == "/index.html" %}
+                    <div class="tts-section" style="margin: 3rem 0; padding: 0;">
+                        <link rel="stylesheet" href="{{ '/sot-simple/style.css' | relative_url }}" />
+                        {% include tts.html %}
+                    </div>
+                    {% endif %}
+                    {% include features.html %}
+                    <div class="page-content" style="grid-area: c; width: 100%;">
+                        {{ content }}
+                    </div>
+                    {% include postlist.html %}
+                    {% include newsletter_cta.html %}
+                </main>
+                {% include footer.html %}
+                {% include appstoreimages.html %}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,337 @@
+/**
+ * Release Date: 2024-12-18 05:21
+ */
+
+.sound-of-text {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.sound-of-text .content {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 0;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sound-of-text .textarea-container {
+    position: relative;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.sound-of-text textarea {
+    width: 100%;
+    min-height: 10rem;
+    transition: height 0.3s ease-in-out;
+    resize: vertical;
+    padding: 20px;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    font-family: inherit;
+    font-size: 16px;
+    color: #333;
+}
+
+.sound-of-text textarea:focus,
+.sound-of-text textarea:active {
+    min-height: 10rem;
+    border-color: transparent;
+    outline: none;
+}
+
+.sound-of-text .clear-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 2px;
+    line-height: 1;
+    transition: opacity 0.3s ease;
+}
+
+.sound-of-text .clear-icon:hover {
+    background-color: transparent;
+    opacity: 0.8 !important;
+}
+
+.sound-of-text .clear-icon svg {
+    width: 16px;
+    height: 16px;
+    fill: #a0aec0;
+    transition: fill 0.3s ease;
+}
+
+.sound-of-text .clear-icon:hover svg {
+    fill: #4a5568;
+}
+
+.sound-of-text .bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    gap: 20px;
+    line-height: 1.3;
+}
+
+.sound-of-text .language-select {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #4a5568;
+    transition: color 0.2s;
+}
+
+.sound-of-text .char-counter {
+    color: #718096;
+    font-size: 15px;
+}
+
+.sound-of-text .language-select:hover {
+    color: #2d3748;
+}
+
+.sound-of-text .productMore {
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.sound-of-text .productMore .button {
+    background-color: #2563eb;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+    transition: background-color 0.2s;
+    display: inline-block;
+}
+
+.sound-of-text .productMore .button:hover {
+    background-color: #1d4ed8;
+}
+
+.sound-of-text .language {
+    display: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    position: absolute;
+    left: 11px;
+    max-width: none;
+    width: max-content;
+    bottom: 55px;
+    z-index: 99;
+    background: white;
+    overflow-y: auto;
+}
+
+.sound-of-text .language.show {
+    display: block;
+}
+
+.sound-of-text .language>div {
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    padding: 8px 20px;
+    font-size: 14px;
+    color: #4a5568;
+}
+
+.sound-of-text .language>div:hover {
+    background-color: #edf2f7;
+    color: #2d3748;
+}
+
+.sound-of-text .language::-webkit-scrollbar,
+.sound-of-text textarea::-webkit-scrollbar,
+.sound-of-text.history .saved-data::-webkit-scrollbar {
+    width: 10px;
+}
+
+.sound-of-text .language::-webkit-scrollbar-track,
+.sound-of-text textarea::-webkit-scrollbar-track,
+.sound-of-text.history .saved-data::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.sound-of-text .language::-webkit-scrollbar-thumb,
+.sound-of-text textarea::-webkit-scrollbar-thumb,
+.sound-of-text.history .saved-data::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.sound-of-text .language::-webkit-scrollbar-thumb:hover,
+.sound-of-text textarea::-webkit-scrollbar-thumb:hover,
+.sound-of-text.history .saved-data::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.sound-of-text .language::-webkit-scrollbar-button,
+.sound-of-text textarea::-webkit-scrollbar-button,
+.sound-of-text.history .saved-data::-webkit-scrollbar-button {
+    display: none;
+}
+
+
+.sound-of-text.history {
+    margin: 1rem auto;
+    display: none;
+}
+
+.sound-of-text.history .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sound-of-text.history .controls {
+    display: flex;
+    gap: 10px;
+}
+
+.sound-of-text.history .controls svg {
+    fill: #718096;
+    transition: fill 0.2s;
+}
+
+.sound-of-text.history .controls>div {
+    cursor: pointer;
+}
+
+.sound-of-text.history .controls>div:hover svg {
+    fill: #4a5568;
+}
+
+.sound-of-text.history .clear-all {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #718096;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.sound-of-text.history .clear-all svg {
+    margin-right: 4px;
+    fill: #718096;
+    transition: fill 0.2s;
+}
+
+.sound-of-text.history .clear-all:hover {
+    color: #4a5568;
+}
+
+.sound-of-text.history .clear-all:hover svg {
+    fill: #4a5568;
+}
+
+.sound-of-text.history .saved-data {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.sound-of-text.history .saved-data.scroll {
+    max-height: 20rem;
+    overflow-y: auto;
+}
+
+.sound-of-text.history .saved-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    align-items: flex-start;
+}
+
+.sound-of-text.history .saved-item>div {
+    flex-grow: 1;
+}
+
+.sound-of-text.history .saved-item:not(:last-child) {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.sound-of-text.history .saved-item p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #4a5568;
+}
+
+.sound-of-text.history .saved-item strong {
+    color: #2d3748;
+}
+
+.sound-of-text.history .saved-item audio {
+    max-height: 2.5rem;
+    max-width: 100%;
+}
+
+.sound-of-text.history .saved-item .audio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sound-of-text.history .saved-item .audio svg {
+    display: none;
+    max-width: 2rem;
+    max-height: 2rem;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.sound-of-text.history .saved-item .audio svg:hover {
+    opacity: 1;
+}
+
+.sound-of-text.history .saved-item button {
+    padding: 2px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.sound-of-text.history .saved-item button svg {
+    width: 20px;
+    height: 20px;
+    fill: #a0aec0;
+    transition: fill 0.2s;
+}
+
+.sound-of-text.history .saved-item button:hover svg {
+    fill: #4a5568;
+}
+
+.sound-of-text.history .saved-item.playing {
+    background-color: #f0f8ff;
+    transition: background-color 0.3s ease;
+}
+
+@media only screen and (max-width: 460px) {
+    .sound-of-text .char-counter {
+        text-align: right;
+    }
+
+    .sound-of-text .language {
+        bottom: 71px;
+    }
+}

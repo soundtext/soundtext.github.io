@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://soundtext.github.io/sitemap.xml

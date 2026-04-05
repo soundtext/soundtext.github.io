@@ -1,0 +1,25 @@
+<section class="postlist-wrapper" aria-label="Latest Articles">
+    <h2 class="postlist-header">Latest Articles</h2>
+    <div class="postlist-grid">
+        {% if paginator.posts %}
+            {% assign posts = paginator.posts %}
+        {% else %}
+            {% assign posts = site.posts %}
+        {% endif %}
+        {% for post in posts limit: 6 %}
+        {% if post.categories.size > 0 and post.image %}
+        <a href="{{ post.url | relative_url }}" class="postlist-card" id="post-{{ post.title | slugify }}">
+            <div class="postlist-card-image">
+                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+            </div>
+            <div class="postlist-card-body">
+                <span class="postlist-category-label">{{ post.categories.first | upcase }}</span>
+                <h3 class="postlist-card-title">{{ post.title }}</h3>
+                <p class="postlist-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+                <span class="postlist-card-tag">{{ post.categories.first }}</span>
+            </div>
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+</section>

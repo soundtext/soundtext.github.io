@@ -1,0 +1,106 @@
+---
+# Post layout for article/blog content
+---
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+{% include head.html %}
+
+<body class="subPageBody">
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+    <div class="headerBackground subPageHeaderBackground">
+        <div class="container subPageContainer">
+            {% include header.html %}
+            <main id="main-content">
+                <article class="page markdown-body" itemscope itemtype="https://schema.org/Article">
+                    {% if page.categories.size > 0 and page.image %}
+                    <div class="post-hero">
+                        <div class="post-hero-text">
+                            <div class="post-hero-tag">{{ page.categories.first }}</div>
+                            <h1 class="post-hero-title" itemprop="headline">{{ page.title }}</h1>
+                            <div class="post-meta">
+                                <div class="post-date">
+                                    <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y"
+                                        }}</time>
+                                </div>
+                                <div class="post-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    By <strong><a href="/author/" style="color: inherit; text-decoration: none;" itemprop="url"><span itemprop="name">{{
+                                            page.author | default: site.author }}</span></a></strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-hero-image">
+                            <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" itemprop="image">
+                        </div>
+                    </div>
+                    <div class="post-content has-hero" itemprop="articleBody">
+                        <div style="margin-bottom: 24px; display: flex; justify-content: center;">
+                            {% include adbanner.html %}
+                        </div>
+                        {{ content }}
+                        <div style="margin-top: 24px; margin-bottom: 24px; display: flex; justify-content: center;">
+                            {% include adbanner.html %}
+                        </div>
+                    </div>
+
+                    <aside class="related-content-section" aria-label="Related articles">
+                        <div class="related-content-header">
+                            <h2>Related Content</h2>
+                        </div>
+                        <div class="related-content-grid">
+                            {% assign related_items = site.posts %}
+                            {% assign related_filtered = "" | split: "" %}
+                            {% for item in related_items %}
+                            {% if item.title and item.image and item.url != page.url %}
+                            {% assign related_filtered = related_filtered | push: item %}
+                            {% endif %}
+                            {% endfor %}
+
+                            {% comment %} Simple pseudo-random: pick items based on title length offset {% endcomment %}
+                            {% assign start_index = page.title.size | modulo: related_filtered.size %}
+                            {% for i in (0..2) %}
+                            {% assign idx = start_index | plus: i | modulo: related_filtered.size %}
+                            {% assign pt = related_filtered[idx] %}
+                            {% if pt %}
+                            <div class="related-card">
+                                <div class="related-card-image-wrapper">
+                                    <img src="{{ pt.image | relative_url }}" alt="{{ pt.title }}" loading="lazy">
+                                </div>
+                                <div class="related-card-body">
+                                    <div class="related-card-category">{{ pt.categories.first | default: "NEWS" }}</div>
+                                    <h3 class="related-card-title"><a href="{{ pt.url | relative_url }}">{{ pt.title }}</a>
+                                    </h3>
+                                    <div class="related-card-date">{{ pt.date | date: "%B %-d, %Y" }}</div>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </aside>
+                    {% else %}
+                    <div class="post-meta">
+                        <h1 class="post-hero-title" itemprop="headline">{{ page.title }}</h1>
+                        <div class="post-date"><time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time></div>
+                        <div class="post-author" itemprop="author" itemscope itemtype="https://schema.org/Person">By <strong><a href="/author/" style="color: inherit; text-decoration: none;" itemprop="url"><span itemprop="name">{{ page.author | default: site.author }}</span></a></strong></div>
+                    </div>
+                    <div itemprop="articleBody">
+                        <div style="margin-bottom: 24px; display: flex; justify-content: center;">
+                            {% include adbanner.html %}
+                        </div>
+                        {{ content }}
+                        <div style="margin-top: 24px; display: flex; justify-content: center;">
+                            {% include adbanner.html %}
+                        </div>
+                    </div>
+                    {% endif %}
+                </article>
+                {% include newsletter_cta.html %}
+            </main>
+            {% include footer.html %}
+        </div>
+        {% include appstoreimages.html %}
+    </div>
+</body>
+
+</html>

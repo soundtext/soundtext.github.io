@@ -1,0 +1,184 @@
+---
+---
+
+$body-color: #FFFFFF;
+
+$header-image: "assets/img/google translate text to speech engine.jpg";
+$device-color: "assets/white.png";
+
+$accent-color: #005BFF;
+
+$header-title-color: #000000;
+$app-title-color: #000000;
+$app-price-color: #1d63ea;
+$app-description-color: #444444;
+
+$feature-title-color: #1d4ed8;
+$feature-text-color: #4b5563;
+$footer-text-color: #444444;
+
+$header_color: #FFFFFF;
+$header_transparency: 1.0;
+
+$image-overlay-color: #FFFFFF;
+$image-overlay-transparency: 0;
+
+$feature-icons-foreground-color: #2563eb;
+$feature-icons-background-color: transparent;
+
+$social-icons-foreground-color: #005BFF;
+$social-icons-background-color: transparent;
+
+@import "base",
+"layout",
+"github-markdown",
+"social";
+
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+	margin: 20px auto 20px;
+}
+
+.markdown-body h1 {
+	font-size: 1.6em !important;
+}
+
+.bnef-footer-bottom p {
+	font-size: 1.1rem;
+	color: #888;
+	margin-top: 40px;
+	border-top: 1px solid #eee;
+	padding-top: 30px;
+	text-align: center;
+}
+
+/* Ad Banner Styles - Moved here for higher specificity */
+.ad-card {
+	background: #ffffff !important;
+	border-radius: 16px !important;
+	padding: 20px !important;
+	max-width: 500px !important;
+	border: 1px solid #e4e4e4 !important;
+	display: grid !important;
+	grid-template-rows: auto 1fr auto !important;
+	gap: 14px !important;
+	text-decoration: none !important;
+	transition: box-shadow 0.2s ease, border-color 0.2s ease !important;
+	animation: fadeInBanner 0.4s ease both;
+	margin: 30px auto !important;
+	text-align: left !important;
+}
+
+@keyframes fadeInBanner {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.ad-card:hover {
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.09) !important;
+	border-color: #d0d0d0 !important;
+}
+
+.top-row {
+	display: flex !important;
+	align-items: flex-start !important;
+	justify-content: space-between !important;
+	gap: 12px !important;
+	margin-bottom: 10px !important;
+}
+
+.app-icon {
+	width: 62px !important;
+	height: 62px !important;
+	border-radius: 15px !important;
+	object-fit: cover !important;
+	border: 1px solid #ececec !important;
+	flex-shrink: 0 !important;
+	margin: 0 !important;
+}
+
+.right-col {
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: flex-end !important;
+	gap: 8px !important;
+	padding-top: 2px !important;
+}
+
+.install-btn {
+	font-family: 'Inter', sans-serif !important;
+	font-size: 13px !important;
+	font-weight: 600 !important;
+	color: #4A90E2 !important;
+	background: transparent !important;
+	border: 1.5px solid #4A90E2 !important;
+	border-radius: 5px !important;
+	padding: 6px 20px !important;
+	cursor: pointer !important;
+	text-decoration: none !important;
+	display: inline-block !important;
+	transition: background 0.15s ease, color 0.15s ease, transform 0.12s ease !important;
+	white-space: nowrap !important;
+	letter-spacing: 0.01em !important;
+}
+
+.install-btn:hover {
+	background: #4A90E2 !important;
+	color: #fff !important;
+	transform: scale(1.03) !important;
+}
+
+.stars-row {
+	display: flex !important;
+	align-items: center !important;
+	gap: 3px !important;
+}
+
+.star {
+	color: #F5A623 !important;
+	font-size: 12px !important;
+}
+
+.rating-label {
+	font-size: 11.5px !important;
+	color: #999 !important;
+	font-weight: 500 !important;
+}
+
+.badge {
+	display: inline-block !important;
+	font-size: 10px !important;
+	font-weight: 500 !important;
+	color: #3a7bd5 !important;
+	background: #eef3fc !important;
+	border-radius: 4px !important;
+	padding: 2px 6px !important;
+	margin-bottom: 5px !important;
+	letter-spacing: 0.01em !important;
+}
+
+.app-name {
+	font-size: 20px !important;
+	font-weight: 600 !important;
+	color: #111 !important;
+	line-height: 1.3 !important;
+	margin: 0 !important;
+}
+
+.description {
+	font-size: 13.5px !important;
+	color: #555 !important;
+	line-height: 1.55 !important;
+	font-weight: 400 !important;
+	border-top: 1px solid #f0f0f0 !important;
+	padding-top: 12px !important;
+	margin: 10px 0 0 0 !important;
+}

@@ -1,0 +1,18 @@
+.socialIconBack {
+	color: $social-icons-background-color;
+	transition: color 0.3s;
+}
+
+.socialIconTop {
+	color: $social-icons-foreground-color;
+	transition: color 0.3s;
+}
+
+.footerIcons a:hover {
+	.socialIconBack {
+		color: $accent-color;
+	}
+	.socialIconTop {
+		color: #fff;
+	}
+}

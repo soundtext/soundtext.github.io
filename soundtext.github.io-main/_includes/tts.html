@@ -1,0 +1,154 @@
+<!-- Sound of Text — Text-to-Speech Tool -->
+
+<section class="sot-tool" id="sot-tool" aria-label="Text to Speech converter">
+
+    <!-- Section heading -->
+    <div class="sot-tool__header">
+        <span class="sot-tool__badge">Free Tool</span>
+        <h2 class="sot-tool__title">Text to Speech</h2>
+        <p class="sot-tool__subtitle">Convert any text into natural-sounding speech. Choose from 60+ languages and download as MP3.</p>
+    </div>
+
+    <!-- Converter card -->
+    <div class="sot-card" id="sound-of-text-app">
+        <div class="sot-card__body">
+
+            <!-- Textarea -->
+            <div class="sot-card__textarea-wrap">
+                <textarea name="text" id="text" class="sot-card__textarea"
+                    placeholder="Type or paste your text here…" maxlength="5000"></textarea>
+                <button class="sot-card__clear" id="clear-icon" title="Clear text" type="button" style="opacity: 0.2;" aria-label="Clear text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Bottom bar: language picker + char count -->
+            <div class="sot-card__bar">
+                <div class="sot-card__lang-select" id="lang-select-btn">
+                    <svg class="sot-card__lang-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                    <span class="code" data-code="en-US" data-name="English (United States)">English (United States)</span>
+                    <svg class="sot-card__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="sot-card__counter" id="char-counter">0 / 5,000</div>
+            </div>
+
+            <!-- Language dropdown -->
+            <div class="sot-card__lang-dropdown language" id="lang-dropdown">
+                <div class="sot-card__lang-search-wrap">
+                    <input type="text" class="sot-card__lang-search" id="lang-search" placeholder="Search language…" autocomplete="off" />
+                </div>
+                <div class="sot-card__lang-list" id="lang-list">
+                    <div data-code="af-ZA" data-name="Afrikaans">Afrikaans</div>
+                    <div data-code="sq" data-name="Albanian">Albanian</div>
+                    <div data-code="ar-AE" data-name="Arabic">Arabic</div>
+                    <div data-code="hy" data-name="Armenian">Armenian</div>
+                    <div data-code="bn-BD" data-name="Bengali (Bangladesh)">Bengali (Bangladesh)</div>
+                    <div data-code="bn-IN" data-name="Bengali (India)">Bengali (India)</div>
+                    <div data-code="bs" data-name="Bosnian">Bosnian</div>
+                    <div data-code="my" data-name="Burmese (Myanmar)">Burmese (Myanmar)</div>
+                    <div data-code="ca-ES" data-name="Catalan">Catalan</div>
+                    <div data-code="cmn-Hant-TW" data-name="Chinese">Chinese</div>
+                    <div data-code="hr-HR" data-name="Croatian">Croatian</div>
+                    <div data-code="cs-CZ" data-name="Czech">Czech</div>
+                    <div data-code="da-DK" data-name="Danish">Danish</div>
+                    <div data-code="nl-NL" data-name="Dutch">Dutch</div>
+                    <div data-code="en-AU" data-name="English (Australia)">English (Australia)</div>
+                    <div data-code="en-GB" data-name="English (United Kingdom)">English (United Kingdom)</div>
+                    <div data-code="en-US" data-name="English (United States)">English (United States)</div>
+                    <div data-code="eo" data-name="Esperanto">Esperanto</div>
+                    <div data-code="et" data-name="Estonian">Estonian</div>
+                    <div data-code="fil-PH" data-name="Filipino">Filipino</div>
+                    <div data-code="fi-FI" data-name="Finnish">Finnish</div>
+                    <div data-code="fr-FR" data-name="French">French</div>
+                    <div data-code="fr-CA" data-name="French (Canada)">French (Canada)</div>
+                    <div data-code="de-DE" data-name="German">German</div>
+                    <div data-code="el-GR" data-name="Greek">Greek</div>
+                    <div data-code="gu" data-name="Gujarati">Gujarati</div>
+                    <div data-code="hi-IN" data-name="Hindi">Hindi</div>
+                    <div data-code="hu-HU" data-name="Hungarian">Hungarian</div>
+                    <div data-code="is-IS" data-name="Icelandic">Icelandic</div>
+                    <div data-code="id-ID" data-name="Indonesian">Indonesian</div>
+                    <div data-code="it-IT" data-name="Italian">Italian</div>
+                    <div data-code="ja-JP" data-name="Japanese (Japan)">Japanese (Japan)</div>
+                    <div data-code="jv" data-name="Javanese (Indonesia)">Javanese (Indonesia)</div>
+                    <div data-code="kn" data-name="Kannada">Kannada</div>
+                    <div data-code="km" data-name="Khmer">Khmer</div>
+                    <div data-code="ko-KR" data-name="Korean">Korean</div>
+                    <div data-code="la" data-name="Latin">Latin</div>
+                    <div data-code="lv" data-name="Latvian">Latvian</div>
+                    <div data-code="mk" data-name="Macedonian">Macedonian</div>
+                    <div data-code="ml" data-name="Malayalam">Malayalam</div>
+                    <div data-code="mr" data-name="Marathi">Marathi</div>
+                    <div data-code="ne" data-name="Nepali">Nepali</div>
+                    <div data-code="nb-NO" data-name="Norwegian">Norwegian</div>
+                    <div data-code="pl-PL" data-name="Polish">Polish</div>
+                    <div data-code="pt-BR" data-name="Portuguese">Portuguese</div>
+                    <div data-code="ro-RO" data-name="Romanian">Romanian</div>
+                    <div data-code="ru-RU" data-name="Russian">Russian</div>
+                    <div data-code="sr-RS" data-name="Serbian">Serbian</div>
+                    <div data-code="si" data-name="Sinhala">Sinhala</div>
+                    <div data-code="sk-SK" data-name="Slovak">Slovak</div>
+                    <div data-code="es-MX" data-name="Spanish (Mexico)">Spanish (Mexico)</div>
+                    <div data-code="es-ES" data-name="Spanish (Spain)">Spanish (Spain)</div>
+                    <div data-code="su" data-name="Sundanese (Indonesia)">Sundanese (Indonesia)</div>
+                    <div data-code="sw" data-name="Swahili">Swahili</div>
+                    <div data-code="sv-SE" data-name="Swedish">Swedish</div>
+                    <div data-code="ta" data-name="Tamil">Tamil</div>
+                    <div data-code="te" data-name="Telugu">Telugu</div>
+                    <div data-code="th-TH" data-name="Thai">Thai</div>
+                    <div data-code="tr-TR" data-name="Turkish">Turkish</div>
+                    <div data-code="uk-UA" data-name="Ukrainian">Ukrainian</div>
+                    <div data-code="ur" data-name="Urdu">Urdu</div>
+                    <div data-code="vi-VN" data-name="Vietnamese">Vietnamese</div>
+                    <div data-code="cy" data-name="Welsh">Welsh</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Convert button -->
+        <button class="sot-card__convert" id="convert-btn" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+            </svg>
+            Convert to Speech
+        </button>
+    </div>
+
+    <!-- History panel (hidden until results exist) -->
+    <div id="data-history" class="sot-history">
+        <div class="sot-history__toolbar">
+            <div class="sot-history__controls">
+                <button type="button" class="sot-history__btn play-all" title="Play all" aria-label="Play all">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+                <button type="button" class="sot-history__btn pause-tts" id="pause-tts" title="Pause" aria-label="Pause">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                </button>
+                <button type="button" class="sot-history__btn stop-tts" id="stop-tts" title="Stop" aria-label="Stop">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h12v12H6z"/></svg>
+                </button>
+            </div>
+            <button type="button" class="sot-history__clear clear-all" aria-label="Clear all results">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                </svg>
+                Clear All
+            </button>
+        </div>
+        <!-- saved-data container is appended here by JS -->
+    </div>
+
+</section>
+
+<script src="{{ '/sot-simple/main-v2.js' | relative_url }}"></script>
+
+<!-- end Sound of Text -->

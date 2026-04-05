@@ -1,0 +1,152 @@
+#page title
+page_title: Sound of Text | Free Text to Speech MP3 for WhatsApp
+
+# App Info
+appstore_link:
+playstore_link: https://play.google.com/store/apps/details?id=com.karinov.soundoftext
+
+app_icon: assets/techico.png
+favicon: assets/techico.png
+app_name: Sound of Text
+app_price: Free
+app_description: "Turn any written text into natural-sounding speech instantly using Google Translate's powerful TTS engine and download it as an MP3 file. Widely used for creating custom voice messages on WhatsApp, generating viral TikTok audio, supporting classroom learning, and making content more accessible. Supports dozens of languages and accents — trusted by millions of users worldwide for quick, reliable, high-quality voice synthesis."
+
+enable_smart_app_banner: false
+
+# SEO Settings
+url: "https://soundtext.github.io"
+baseurl: ""
+locale: "en_US"
+author: "Sound of Text Team"
+
+# Permalink — keeps existing URLs intact
+permalink: /:title/
+
+# Information About Yourself
+your_name                                 : Sound of Text Creator
+your_link                                 : https://soundtext.github.io
+your_city                                 : Stockholm
+email_address: soundtext@appz.se
+linkedin_username                         :
+linkedin_company                          :
+facebook_username: soundoftextcom
+instagram_username: soundoftext
+twitter_username:
+github_username: soundtext
+tiktok_username: soundoftextapp
+youtube_username:
+mastodon_link:
+
+
+
+# Feature List
+features:
+  - title: Text-to-Speech Engine
+    description: "Sound of Text uses Google Translate's TTS engine to turn written text into natural-sounding speech — instantly and for free."
+    fontawesome_icon_name: microchip
+
+  - title: MP3 Downloads
+    description: "Every conversion produces a high-quality MP3 file you can download, share, or embed in any project."
+    fontawesome_icon_name: file-audio
+
+  - title: Education & Learning
+    description: "Teachers and students use Sound of Text to create audio flashcards, pronunciation guides, and [educational materials](https://soundtext.github.io/education-platform/)."
+    fontawesome_icon_name: graduation-cap
+
+  - title: Content Creation
+    description: "Generate professional voiceovers for podcasts, YouTube videos, and social media posts without a microphone."
+    fontawesome_icon_name: chart-line
+
+  - title: Social Media & TikTok
+    description: "Create viral audio for [TikTok videos](https://soundtext.github.io/sound-of-text-tiktok/), Instagram Reels, and other short-form content in any language."
+    fontawesome_icon_name: share-alt
+
+  - title: Accessibility
+    description: "Convert articles, documents, and notes into spoken audio — making content accessible to everyone."
+    fontawesome_icon_name: eye
+
+  - title: WhatsApp & Messaging
+    description: "Craft custom voice messages and fun audio clips for [WhatsApp](https://soundtext.github.io/sound-of-text-whatsapp/), Telegram, and other chat apps."
+    fontawesome_icon_name: comment-dots
+
+  - title: 60+ Languages
+    description: "Choose from over 60 languages and regional accents — from English and Indonesian to Japanese, Arabic, and more."
+    fontawesome_icon_name: globe
+
+  - title: Reliable & Free
+    description: "Trusted by millions of users worldwide for fast, consistent, and completely free text-to-speech conversion."
+    fontawesome_icon_name: shield-alt
+
+
+
+# Theme Settings
+topbar_color                              : "#ffffff"
+topbar_transparency                       : 0.95
+topbar_title_color                        : "#111111"
+
+cover_image                               : assets/light_bg.png
+cover_overlay_color                       : "#ffffff"
+cover_overlay_transparency                : 0.2
+
+device_color                              : black
+
+body_background_color                     : "#ffffff"
+
+link_color                                : "#1d63ea"
+
+app_title_color                           : "#111111"
+app_price_color                           : "#444444"
+app_description_color                     : "#222222"
+
+feature_title_color                       : "#000000"
+feature_text_color                        : "#666666"
+
+feature_icons_foreground_color            : "#1d63ea"
+feature_icons_background_color            : "#e6e6e6"
+
+social_icons_foreground_color             : "#666666"
+social_icons_background_color             : "#e6e6e6"
+
+footer_text_color                         : "#666666"
+
+
+# SEO Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: "Sound of Text Team"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+
+####################################################
+### Jekyll Configuration. No need to touch this. ###
+####################################################
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: :compressed
+
+# Exclude these files from your production _site
+exclude:
+  - LICENSE
+  - README.md
+  - CNAME
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# Markdown rendering
+markdown: kramdown
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

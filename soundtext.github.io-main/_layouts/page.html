@@ -1,0 +1,27 @@
+---
+# Static page layout for legal/info pages (Privacy, Disclaimer, Terms)
+---
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+{% include head.html %}
+
+<body class="subPageBody">
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+    <div class="headerBackground subPageHeaderBackground">
+        <div class="container subPageContainer">
+        {% include header.html %}
+            <main id="main-content">
+                <article class="page markdown-body">
+                    <h1>{{ page.title }}</h1>
+                    {{ content }}
+                </article>
+            </main>
+            {% include footer.html %}
+        </div>
+        {% include appstoreimages.html %}
+    </div>
+</body>
+
+</html>

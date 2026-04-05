@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<section class="archive-wrapper" aria-label="{{ page.title }} articles">
+    <header class="archive-header">
+        <h1 class="archive-title">{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="archive-description">{{ page.description }}</p>
+        {% endif %}
+    </header>
+
+    <div class="postlist-grid">
+        {% for post in page.posts %}
+        <article>
+            <a href="{{ post.url | relative_url }}" class="postlist-card" id="post-{{ post.title | slugify }}">
+                <div class="postlist-card-image">
+                    {% if post.image %}
+                    <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+                    {% else %}
+                    <div class="placeholder-image" style="background: #eee; width: 100%; aspect-ratio: 16/10;"></div>
+                    {% endif %}
+                </div>
+                <div class="postlist-card-body">
+                    <span class="postlist-category-label">{{ post.category | upcase }}</span>
+                    <h3 class="postlist-card-title">{{ post.title }}</h3>
+                    <p class="postlist-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+                    <span class="postlist-card-tag">{{ post.category }}</span>
+                </div>
+            </a>
+        </article>
+        {% endfor %}
+    </div>
+</section>
