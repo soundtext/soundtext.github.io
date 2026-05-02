@@ -13,7 +13,7 @@
         <div class="container subPageContainer">
             {% include header.html %}
             <main id="main-content">
-                <article class="page markdown-body" itemscope itemtype="https://schema.org/Article">
+                <article class="page markdown-body" itemscope itemtype="https://schema.org/Article" itemid="{{ page.url | absolute_url }}">
                     {% if page.categories.size > 0 and page.image %}
                     <div class="post-hero">
                         <div class="post-hero-text">
@@ -31,7 +31,7 @@
                             </div>
                         </div>
                         <div class="post-hero-image">
-                            <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" itemprop="image">
+                            <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" itemprop="image" fetchpriority="high">
                         </div>
                     </div>
                     <div class="post-content has-hero" itemprop="articleBody">
