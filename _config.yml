@@ -9,7 +9,7 @@ app_icon: assets/techico.png
 favicon: assets/techico.png
 app_name: Sound of Text
 app_price: Free
-app_description: "Turn any written text into natural-sounding speech instantly using Google Translate's powerful TTS engine and download it as an MP3 file. Widely used for creating custom voice messages on WhatsApp, generating viral TikTok audio, supporting classroom learning, and making content more accessible. Supports dozens of languages and accents — trusted by millions of users worldwide for quick, reliable, high-quality voice synthesis."
+app_description: "Convert written text into natural-sounding speech using Google Translate's TTS engine. Download high-quality MP3 files for WhatsApp, TikTok, educational purposes, and accessibility. Supports over 60 languages and various regional accents."
 
 enable_smart_app_banner: false
 
@@ -32,7 +32,8 @@ linkedin_company                          :
 facebook_username: soundoftextcom
 instagram_username: soundoftext
 twitter_username:
-github_username: soundtext
+github_username: ncpierson
+github_repo: https://github.com/ncpierson/soundoftext-web
 tiktok_username: soundoftextapp
 youtube_username:
 mastodon_link:
@@ -74,7 +75,7 @@ features:
     fontawesome_icon_name: globe
 
   - title: Reliable & Free
-    description: "Trusted by millions of users worldwide for fast, consistent, and completely free text-to-speech conversion."
+    description: "A fast, consistent, and completely free text-to-speech conversion tool used by creators and learners worldwide."
     fontawesome_icon_name: shield-alt
 
 
