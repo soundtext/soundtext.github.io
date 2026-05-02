@@ -9,14 +9,14 @@ permalink: /author/
         <img src="{{ site.app_icon | relative_url }}" alt="Sound of Text Team" style="width: 120px; border-radius: 50%; margin-bottom: 24px;">
     </div>
     <div class="author-info">
-        <h1>Sound of Text Team</h1>
-        <p class="lead">The dedicated team behind Sound of Text is committed to making high-quality text-to-speech technology accessible to everyone, everywhere.</p>
+        <h1>Sound of Text Editorial Team</h1>
+        <p class="lead">The Sound of Text editorial team consists of audio technology enthusiasts and language specialists dedicated to making voice synthesis accessible.</p>
         
-        <p>Our goal is to provide a simple, reliable, and free platform for users to convert text into natural-sounding speech for education, accessibility, social media, and more. We believe in the power of voice to bring digital content to life.</p>
+        <p>Our contributors bring years of experience in digital accessibility, education technology, and creative content production. We rigorously test and review TTS tools to provide our readers with accurate, helpful, and up-to-date guides for creating audio content.</p>
         
         <div class="author-stats" style="margin-top: 40px;">
-            <h3>Our Mission</h3>
-            <p>To deliver natural-sounding voices and easy-to-use audio tools for creators, learners, and businesses worldwide.</p>
+            <h3>Our Expertise</h3>
+            <p>From troubleshooting regional accents to optimizing MP3 quality for various platforms, our team provides practical insights derived from first-hand usage of text-to-speech engines.</p>
         </div>
     </div>
 </div>
@@ -38,3 +38,22 @@ permalink: /author/
         {% endfor %}
     </div>
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sound of Text Editorial Team",
+  "url": "{{ site.url }}/author/",
+  "image": "{{ site.app_icon | absolute_url }}",
+  "description": "Expert team specializing in text-to-speech technology, digital accessibility, and audio content creation.",
+  "sameAs": [
+    "https://github.com/{{ site.github_username }}",
+    "{{ site.github_repo }}"
+  ],
+  "jobTitle": "Editorial Team",
+  "worksFor": {
+    "@id": "{{ site.url }}/#organization"
+  }
+}
+</script>
