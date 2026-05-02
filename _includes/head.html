@@ -39,7 +39,11 @@
 		"dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
 		"author": {
 			"@type": "Person",
-			"name": "{{ site.author | default: page.author | escape }}"
+			"name": "{{ site.author | default: page.author | escape }}",
+			"url": "{{ site.url }}/author/",
+			"sameAs": [
+				"https://github.com/{{ site.github_username }}"
+			]
 		},
 		"publisher": {
 			"@type": "Organization",
@@ -65,18 +69,44 @@
 	<meta property="article:section" content="{{ page.category }}">
 	{% endif %}
 
-	<!-- WebSite Structured Data -->
-	{% if page.url == "/" or page.url == "/index.html" %}
+	<!-- WebSite & Organization Structured Data -->
 	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "WebSite",
-		"name": "{{ site.app_name | escape }}",
-		"url": "{{ site.url }}",
-		"description": "{{ site.app_description | strip_html | strip_newlines | escape }}"
-	}
+	[
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "{{ site.app_name | escape }}",
+			"url": "{{ site.url }}",
+			"description": "{{ site.app_description | strip_html | strip_newlines | escape }}",
+			"publisher": {
+				"@id": "{{ site.url }}/#organization"
+			}
+		},
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"@id": "{{ site.url }}/#organization",
+			"name": "{{ site.app_name | escape }}",
+			"url": "{{ site.url }}",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "{{ site.app_icon | absolute_url }}"
+			},
+			"sameAs": [
+				"https://facebook.com/{{ site.facebook_username }}",
+				"https://instagram.com/{{ site.instagram_username }}",
+				"https://tiktok.com/@{{ site.tiktok_username }}",
+				"https://github.com/{{ site.github_username }}",
+				"{{ site.github_repo }}"
+			],
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"email": "{{ site.email_address }}",
+				"contactType": "customer support"
+			}
+		}
+	]
 	</script>
-	{% endif %}
 
 	<!-- BreadcrumbList Structured Data (posts only) -->
 	{% if page.layout == 'post' %}
@@ -94,12 +124,6 @@
 			{
 				"@type": "ListItem",
 				"position": 2,
-				"name": "{{ page.categories.first | capitalize }}",
-				"item": "{{ site.url }}/category/{{ page.categories.first | slugify }}/"
-			},
-			{
-				"@type": "ListItem",
-				"position": 3,
 				"name": "{{ page.title | escape }}",
 				"item": "{{ page.url | absolute_url }}"
 			}
