@@ -950,7 +950,7 @@ article .post-content {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	gap: 32px;
+	gap: 20px;
 }
 
 .bnef-nav a {
@@ -958,6 +958,7 @@ article .post-content {
 	font-weight: 500;
 	font-size: 1.3rem;
 	text-decoration: none;
+	white-space: nowrap;
 }
 
 .bnef-nav a:hover {

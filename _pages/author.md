@@ -1,59 +1,38 @@
 ---
 layout: page
-title: About the Author
+title: About Us
 permalink: /about/
 ---
 
 <div class="author-profile">
-    <div class="author-image">
-        <img src="{{ site.app_icon | relative_url }}" alt="Sound of Text Team" style="width: 120px; border-radius: 50%; margin-bottom: 24px;">
-    </div>
     <div class="author-info">
-        <h1>Sound of Text Editorial Team</h1>
-        <p class="lead">The Sound of Text editorial team consists of audio technology enthusiasts and language specialists dedicated to making voice synthesis accessible.</p>
+        <p class="lead"><strong>Sound of Text</strong> is a fast, free, and accessible text-to-speech web application built to convert written text into natural spoken audio and downloadable MP3 files.</p>
         
-        <p>Our contributors bring years of experience in digital accessibility, education technology, and creative content production. We rigorously test and review TTS tools to provide our readers with accurate, helpful, and up-to-date guides for creating audio content.</p>
-        
-        <div class="author-stats" style="margin-top: 40px;">
-            <h3>Our Expertise</h3>
-            <p>From troubleshooting regional accents to optimizing MP3 quality for various platforms, our team provides practical insights derived from first-hand usage of text-to-speech engines.</p>
-        </div>
-    </div>
-</div>
+        <h2>Project Origin & Author</h2>
+        <p>Sound of Text was originally created as an open-source project by developer <a href="https://github.com/ncpierson" target="_blank" rel="noopener">NC Pierson</a> (GitHub: <a href="https://github.com/ncpierson" target="_blank" rel="noopener">@ncpierson</a>) as part of the <a href="https://soundtext.org" target="_blank" rel="noopener">soundtext.org</a> initiative. It remains a lightweight, accessible tool for users around the globe.</p>
 
-<div class="author-posts" style="margin-top: 60px;">
-    <h2>Articles by Sound of Text Team</h2>
-    <div class="related-content-grid">
-        {% for post in site.posts %}
-        <div class="postlist-card">
-            <a href="{{ post.url | relative_url }}" class="postlist-card-image">
-                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
-            </a>
-            <div class="postlist-card-body">
-                <span class="postlist-category-label">{{ post.category | upcase }}</span>
-                <h3 class="postlist-card-title"><a href="{{ post.url | relative_url }}" style="color: inherit; text-decoration: none;">{{ post.title }}</a></h3>
-                <p class="postlist-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
-            </div>
-        </div>
-        {% endfor %}
+        <h2>Our Mission</h2>
+        <p>We aim to empower creators, educators, students, and developers worldwide with instantaneous voice synthesis without requiring software downloads, registration, or hidden fees.</p>
+        
+        <h2>Technology & Method</h2>
+        <p>Our tool leverages browser-native speech synthesis and trusted cloud API endpoints to deliver clear audio across 60+ languages and regional accents. Whether you are generating WhatsApp voice notes, creating video voiceovers, or practicing language pronunciation, Sound of Text provides reliable audio conversion in seconds.</p>
+
+        <h2>Contact & Support</h2>
+        <p>Have questions or feedback? Reach out to us via our <a href="{{ '/contact/' | relative_url }}">Contact Page</a>.</p>
     </div>
 </div>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Sound of Text Editorial Team",
-  "url": "{{ site.url }}/author/",
-  "image": "{{ site.app_icon | absolute_url }}",
-  "description": "Expert team specializing in text-to-speech technology, digital accessibility, and audio content creation.",
+  "@type": "Organization",
+  "name": "Sound of Text",
+  "url": "https://soundtext.github.io",
+  "logo": "https://soundtext.github.io/assets/techico.png",
+  "description": "Free web tool for converting text into natural-sounding speech and downloading MP3 audio.",
   "sameAs": [
-    "https://github.com/{{ site.github_username }}",
-    "{{ site.github_repo }}"
-  ],
-  "jobTitle": "Editorial Team",
-  "worksFor": {
-    "@id": "{{ site.url }}/#organization"
-  }
+    "https://soundtext.org",
+    "https://github.com/ncpierson"
+  ]
 }
 </script>

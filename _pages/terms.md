@@ -4,8 +4,6 @@ title: Terms of Service
 permalink: /terms/
 ---
 
-# Terms of Service
-
 **Last updated:** April 4, 2026
 
 ## 1. Acceptance of Terms

@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+<!-- Breadcrumbs -->
+<nav class="breadcrumb-nav" aria-label="Breadcrumb" style="margin: 1.5rem 0 0.5rem 0; font-size: 0.9rem;">
+    <a href="{{ '/' | relative_url }}">Home</a> &gt; <span>{{ page.title }}</span>
+</nav>
+
+<!-- Hero Section for Pillar -->
+<section class="pillar-hero" style="margin-bottom: 2rem;">
+    <h1 class="pillar-title" style="font-size: 2.2rem; margin-bottom: 0.5rem; font-weight: 700;">{{ page.title }}</h1>
+    <p class="pillar-subtitle" style="font-size: 1.1rem; color: #555; max-width: 800px;">{{ page.description }}</p>
+</section>
+
+<!-- Interactive TTS Widget -->
+<div class="tts-section" style="margin: 2rem 0; padding: 0;">
+    <link rel="stylesheet" href="{{ '/sot-simple/style.css' | relative_url }}" />
+    {% include tts.html %}
+</div>
+
+<!-- Main Content -->
+<article class="page markdown-body" style="margin-top: 2rem;">
+    {{ content }}
+</article>
+
+<!-- Sibling Pillars Section -->
+<section class="sibling-pillars" style="margin: 3rem 0; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+    <h3 style="margin-bottom: 1rem;">Explore Other Voice Tools</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+        <a href="{{ '/sound-of-text-whatsapp/' | relative_url }}" style="padding: 10px; background: white; border-radius: 6px; text-decoration: none; border: 1px solid #eee; display: block;">
+            <strong>WhatsApp Audio</strong>
+            <p style="margin: 4px 0 0 0; font-size: 0.85rem; color: #666;">Convert text to WhatsApp voice messages.</p>
+        </a>
+        <a href="{{ '/text-to-speech/' | relative_url }}" style="padding: 10px; background: white; border-radius: 6px; text-decoration: none; border: 1px solid #eee; display: block;">
+            <strong>Text to Speech</strong>
+            <p style="margin: 4px 0 0 0; font-size: 0.85rem; color: #666;">Free online speech generator in 60+ languages.</p>
+        </a>
+        <a href="{{ '/text-to-sound/' | relative_url }}" style="padding: 10px; background: white; border-radius: 6px; text-decoration: none; border: 1px solid #eee; display: block;">
+            <strong>Text to Sound</strong>
+            <p style="margin: 4px 0 0 0; font-size: 0.85rem; color: #666;">Instant audio file generator.</p>
+        </a>
+        <a href="{{ '/female-voice/' | relative_url }}" style="padding: 10px; background: white; border-radius: 6px; text-decoration: none; border: 1px solid #eee; display: block;">
+            <strong>Female Voice</strong>
+            <p style="margin: 4px 0 0 0; font-size: 0.85rem; color: #666;">Natural female text-to-speech engine.</p>
+        </a>
+        <a href="{{ '/male-voice/' | relative_url }}" style="padding: 10px; background: white; border-radius: 6px; text-decoration: none; border: 1px solid #eee; display: block;">
+            <strong>Male Voice</strong>
+            <p style="margin: 4px 0 0 0; font-size: 0.85rem; color: #666;">Natural male text-to-speech engine.</p>
+        </a>
+    </div>
+</section>
+
+<!-- WebApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "{{ page.title }}",
+  "url": "https://soundtext.github.io{{ page.permalink }}",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "All",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>

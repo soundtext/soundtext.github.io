@@ -4,8 +4,6 @@ title: Disclaimer
 permalink: /disclaimer/
 ---
 
-# Disclaimer
-
 **Last updated:** April 4, 2026
 
 ## General Information

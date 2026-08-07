@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<!-- Breadcrumbs linking back to Homepage -->
+<nav class="breadcrumb-nav" aria-label="Breadcrumb" style="margin: 1.5rem 0 0.5rem 0; font-size: 0.9rem;">
+    <a href="{{ '/' | relative_url }}">Home</a> &gt; <span>{{ page.title }}</span>
+</nav>
+
+<!-- Hero Section for Child Page -->
+<section class="child-hero" style="margin-bottom: 2rem;">
+    <h1 class="child-title" style="font-size: 2rem; margin-bottom: 0.5rem; font-weight: 700;">{{ page.title }}</h1>
+    <p class="child-subtitle" style="font-size: 1.05rem; color: #555; max-width: 800px;">{{ page.description }}</p>
+</section>
+
+<!-- Interactive TTS Widget -->
+<div class="tts-section" style="margin: 2rem 0; padding: 0;">
+    <link rel="stylesheet" href="{{ '/sot-simple/style.css' | relative_url }}" />
+    {% include tts.html %}
+</div>
+
+<!-- Main Content -->
+<article class="page markdown-body" style="margin-top: 2rem;">
+    {{ content }}
+</article>
+
+<!-- Upward Pillar Anchor Link -->
+<div class="pillar-backlink" style="margin: 2.5rem 0; padding: 1rem 1.5rem; background: #eef4ff; border-left: 4px solid #1d63ea; border-radius: 4px;">
+    <p style="margin: 0; font-size: 0.95rem;">
+        Looking for general text-to-speech conversion? Return to the main <a href="{{ '/' | relative_url }}" style="font-weight: 600; color: #1d63ea;">Sound of Text Generator</a> homepage.
+    </p>
+</div>
+
+<!-- WebApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "{{ page.title }}",
+  "url": "https://soundtext.github.io{{ page.permalink }}",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "All",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>

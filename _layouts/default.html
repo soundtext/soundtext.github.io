@@ -10,7 +10,7 @@
             <div class="container">
                 {% include header.html %}
                 <main id="main-content">
-                    {% unless page.layout == 'archive' %}
+                    {% if page.url == "/" or page.url == "/index.html" %}
                     <section class="home-hero" aria-label="Welcome to Sound of Text">
                         <div class="home-hero-content">
                             <span class="home-hero-label">FREE TEXT TO SPEECH</span>
@@ -22,19 +22,20 @@
                                 alt="Sound of Text — free text to speech converter">
                         </div>
                     </section>
-                    {% endunless %}
-                    {% if page.url == "/" or page.url == "/index.html" %}
                     <div class="tts-section" style="margin: 3rem 0; padding: 0;">
                         <link rel="stylesheet" href="{{ '/sot-simple/style.css' | relative_url }}" />
                         {% include tts.html %}
                     </div>
-                    {% endif %}
                     {% include features.html %}
+                    {% endif %}
+
                     <div class="page-content" style="grid-area: c; width: 100%;">
                         {{ content }}
                     </div>
-                    {% include postlist.html %}
+
+                    {% if page.url == "/" or page.url == "/index.html" %}
                     {% include newsletter_cta.html %}
+                    {% endif %}
                 </main>
                 {% include footer.html %}
                 {% include appstoreimages.html %}
