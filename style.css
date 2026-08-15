@@ -1889,6 +1889,10 @@ section {
   .nav-links, .d-none-sm { display: none; }
   .mobile-toggle { display: flex; align-items: center; justify-content: center; }
   
+  .nav-brand { gap: 8px; }
+  .brand-text { font-size: 15px; font-weight: 600; }
+  .brand-icon { width: 32px; height: 32px; }
+  
   .pg-controls-row { grid-template-columns: 1fr; }
   .bento-card:not(.bento-large):not(.bento-wide) { grid-column: span 12; }
   .bento-grid-2col { grid-template-columns: 1fr; }
@@ -2031,6 +2035,9 @@ section {
 
 @media (max-width: 480px) {
   section { padding: 36px 0; }
+  
+  .brand-text { font-size: 13.5px; }
+  .brand-icon { width: 28px; height: 28px; }
   
   .hero-section { padding: 24px 0 36px; }
   .hero-title { font-size: 26px; line-height: 1.2; letter-spacing: -0.02em; }
