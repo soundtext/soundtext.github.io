@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sound of Text — Free Instant Text to Speech & Audio Converter</title>
+  <meta name="description" content="Turn text into natural audio without recording your voice. Translate and convert in one step, import bulk text, merge audio files, and download 100% free with no signups." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="icon.jpg" />
+  <link rel="apple-touch-icon" href="icon.jpg" />
+
+  <!-- Google Fonts: Inter & Manrope (Forma DJR substitutes per DESIGN.md) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Top Utility Strip (DESIGN.md specification) -->
+  <div class="utility-strip">
+    <div class="container">
+      <div class="utility-inner">
+        <div class="utility-left">
+          <span><i data-lucide="globe" class="util-icon"></i> Global Edition</span>
+          <span class="util-sep">|</span>
+          <span>100% Free Open Web Audio Utility</span>
+        </div>
+        <div class="utility-right">
+          <a href="#features" class="util-link">Features</a>
+          <a href="#how-it-works" class="util-link">Workflow</a>
+          <a href="#faq" class="util-link">Support & FAQ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <header class="navbar-wrapper">
+    <div class="container">
+      <nav class="navbar" id="navbar">
+        <a href="#hero" class="nav-brand">
+          <div class="brand-icon">
+            <img src="icon.jpg" alt="Sound of Text" class="brand-img" />
+          </div>
+          <div class="brand-text">
+            <span>Sound of Text</span>
+            <span class="brand-badge">Free</span>
+          </div>
+        </a>
+
+        <div class="nav-links" id="navLinks">
+          <a href="#demo" class="nav-link">Live Demo</a>
+          <a href="#features" class="nav-link">Capabilities</a>
+          <a href="#how-it-works" class="nav-link">How It Works</a>
+          <a href="#screenshots" class="nav-link">App Preview</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+        </div>
+
+        <div class="nav-actions">
+          <a href="#demo" class="btn btn-outline btn-sm d-none-sm">
+            <span>Try Online</span>
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.karinov.soundoftext" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+            <span>Get the App</span>
+          </a>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+            <i data-lucide="menu" id="menuIcon"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="brand-text" style="display: flex; align-items: center; gap: 8px;">
+        <img src="icon.jpg" alt="Sound of Text" class="drawer-brand-img" />
+        <span>Sound of Text</span>
+      </div>
+      <button class="drawer-close" id="drawerClose">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="drawer-links">
+      <a href="#demo" class="drawer-link">Live Demo</a>
+      <a href="#features" class="drawer-link">Capabilities</a>
+      <a href="#how-it-works" class="drawer-link">How It Works</a>
+      <a href="#screenshots" class="drawer-link">App Preview</a>
+      <a href="#faq" class="drawer-link">FAQ</a>
+      <a href="https://play.google.com/store/apps/details?id=com.karinov.soundoftext" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block mt-4">
+        <span>Get the App</span>
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section (DESIGN.md: White Canvas + Angular Chevron Brand Accent) -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-tag">
+              <span class="hero-tag-chip">OPEN UTILITY</span>
+              <span class="hero-tag-text">100% Free • No Registration Required</span>
+            </div>
+            
+            <h1 class="hero-title">
+              Turn Text into Natural Audio Without Recording
+            </h1>
+            
+            <p class="hero-description">
+              The high-performance Text-to-Speech platform. Convert scripts into crystal-clear speech, translate into 50+ languages in a single step, import bulk text, and merge audio clips with zero friction.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="https://play.google.com/store/apps/details?id=com.karinov.soundoftext" target="_blank" rel="noopener noreferrer" class="playstore-badge-btn" title="Download on Google Play">
+                <img src="playstore.png" alt="Get it on Google Play" />
+              </a>
+              <a href="#demo" class="btn btn-outline btn-lg">
+                <span>Test Live Demo Below</span>
+              </a>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="hero-stats">
+              <div class="stat-item">
+                <div class="stat-num">10K+</div>
+                <div class="stat-lbl">App Installs</div>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <div class="stat-num">50+</div>
+                <div class="stat-lbl">Global Languages</div>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <div class="stat-num">100%</div>
+                <div class="stat-lbl">Free &amp; Instant</div>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <div class="stat-num">Bulk</div>
+                <div class="stat-lbl">Audio Merger</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <!-- Chevron architectural decoration -->
+            <div class="chevron-decoration chevron-left"></div>
+            <div class="hero-cover-card">
+              <div class="cover-image-wrap">
+                <img src="cover.jpg" alt="Sound of Text Mobile App Showcase" class="hero-cover-img" />
+              </div>
+              <div class="floating-badge badge-top-right">
+                <i data-lucide="languages" class="badge-icon"></i>
+                <div>
+                  <strong>Instant Translate</strong>
+                  <span>50+ Accents & Dialects</span>
+                </div>
+              </div>
+              <div class="floating-badge badge-bottom-left">
+                <i data-lucide="layers" class="badge-icon"></i>
+                <div>
+                  <strong>Bulk & Merge Audio</strong>
+                  <span>Join multi-lines in 1 click</span>
+                </div>
+              </div>
+            </div>
+            <div class="chevron-decoration chevron-right"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- On Air Web Speech TTS Tool Section (from text-to-speech.html) -->
+    <section class="demo-section cloud-band" id="demo">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge-sub">ON-DEVICE WEB SPEECH API</div>
+          <h2 class="section-title">Live Text to Speech Studio</h2>
+          <p class="section-subtitle">Type something below, press the light, and your browser reads it back — entirely on-device, no server or upload involved.</p>
+        </div>
+
+        <div class="sot-card-wrapper">
+          <!-- Studio Panel Component -->
+          <div class="studio-panel" id="sound-of-text-app">
+            
+            <!-- Textarea & Word-by-word Karaoke Highlighting Display -->
+            <div class="text-well" id="textWell">
+              <textarea id="textInput" placeholder="Paste or type text here...">The quick brown fox jumps over the lazy dog. Your browser can read this out loud using nothing but built-in speech synthesis.</textarea>
+              <div class="text-display" id="textDisplay"></div>
+            </div>
+
+            <!-- Transport Controls (Stop, On Air / Play Button, Pause) -->
+            <div class="transport">
+              <button type="button" class="side-btn" id="stopBtn" title="Stop" disabled aria-label="Stop speech">
+                <i data-lucide="square"></i>
+              </button>
+
+              <button type="button" class="onair" id="playBtn" aria-label="Play speech">Play</button>
+
+              <button type="button" class="side-btn" id="pauseBtn" title="Pause" disabled aria-label="Pause speech">
+                <i data-lucide="pause"></i>
+              </button>
+            </div>
+
+            <hr class="panel-divider" />
+
+            <!-- Voice Selection + Animated VU Meter -->
+            <div class="studio-row">
+              <label for="voiceSelect" class="studio-label">
+                <i data-lucide="volume-2"></i> Voice
+              </label>
+              <select id="voiceSelect" class="studio-select"></select>
+              <div class="vu" id="vu">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <!-- Sliders: Rate, Pitch, Volume -->
+            <div class="slider-row">
+              <label for="rate" class="studio-label">Rate</label>
+              <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1" class="studio-range" />
+              <div class="value" id="rateVal">1.0x</div>
+            </div>
+
+            <div class="slider-row">
+              <label for="pitch" class="studio-label">Pitch</label>
+              <input type="range" id="pitch" min="0" max="2" step="0.1" value="1" class="studio-range" />
+              <div class="value" id="pitchVal">1.0</div>
+            </div>
+
+            <div class="slider-row">
+              <label for="volume" class="studio-label">Volume</label>
+              <input type="range" id="volume" min="0" max="1" step="0.05" value="1" class="studio-range" />
+              <div class="value" id="volumeVal">100%</div>
+            </div>
+
+          </div>
+
+          <!-- App Install Recommendation Banner for Full Features -->
+          <div class="app-upsell-card">
+            <div class="upsell-left">
+              <div class="upsell-badge">PRO FEATURES ON MOBILE</div>
+              <h3 class="upsell-title">Want 50+ Languages &amp; Batch Audio Tools?</h3>
+              <p class="upsell-desc">
+                Get the free <strong>Sound of Text Android App</strong> for 1-step translation, bulk text import, audio file merging, and unlimited offline history:
+              </p>
+              <div class="upsell-perks">
+                <span><i data-lucide="check-circle-2"></i> 50+ Global Languages</span>
+                <span><i data-lucide="check-circle-2"></i> 1-Step Auto-Translate</span>
+                <span><i data-lucide="check-circle-2"></i> Bulk Import &amp; Merge Audio</span>
+                <span><i data-lucide="check-circle-2"></i> 100% Free • No Sign-up</span>
+              </div>
+            </div>
+            <div class="upsell-right">
+              <a href="https://play.google.com/store/apps/details?id=com.karinov.soundoftext" target="_blank" rel="noopener noreferrer" class="playstore-badge-btn-large" title="Download on Google Play">
+                <img src="playstore.png" alt="Download on Google Play Store" />
+              </a>
+              <span class="upsell-note">Free on Google Play • Fast &amp; Lightweight</span>
+            </div>
+          </div>
+
+          <!-- Attribution Box Below Tool -->
+          <div class="tool-attribution-box">
+            <div class="attribution-icon-wrap">
+              <i data-lucide="heart-handshake"></i>
+            </div>
+            <div class="attribution-text">
+              <strong>Pioneered by <a href="https://github.com/ncpierson" target="_blank" rel="noopener noreferrer" class="attr-link">NC Pierson on GitHub</a> &amp; <a href="https://soundtext.org" target="_blank" rel="noopener noreferrer" class="attr-link">Soundtext.org</a></strong>
+              <p>Empowering millions of users with an expansive creator community across Indonesia and worldwide.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Features Bento Grid (White Canvas) -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge-sub">POWERFUL CAPABILITIES</div>
+          <h2 class="section-title">Engineered for Creators, Students & Pros</h2>
+          <p class="section-subtitle">Everything you need to turn text into lifelike audio without recording studio gear or subscriptions.</p>
+        </div>
+
+        <div class="bento-grid">
+          
+          <!-- Bento Feature 1: No Voice Recording -->
+          <div class="bento-card bento-large">
+            <div class="bento-icon-header">
+              <div class="feature-icon-box">
+                <i data-lucide="mic-off"></i>
+              </div>
+              <div class="bento-badge">Core Advantage</div>
+            </div>
+            <div class="bento-content">
+              <h3 class="bento-title">Turn Text to Audio Without Recording Your Own Voice</h3>
+              <p class="bento-text">
+                No expensive microphone, soundproofing, or voice actors needed. Generate crisp, studio-grade narration directly from written scripts in seconds.
+              </p>
+              <ul class="bento-points">
+                <li><i data-lucide="check-circle-2"></i> 100% Studio-clean audio with zero background noise</li>
+                <li><i data-lucide="check-circle-2"></i> Consistent accent & tone across thousands of words</li>
+                <li><i data-lucide="check-circle-2"></i> Perfect for introverts & anonymous content channels</li>
+              </ul>
+            </div>
+            <div class="bento-lucide-visual">
+              <div class="visual-chip-flow">
+                <div class="flow-step">
+                  <i data-lucide="file-text"></i>
+                  <span>Raw Text</span>
+                </div>
+                <i data-lucide="arrow-right" class="flow-arrow"></i>
+                <div class="flow-step active-step">
+                  <i data-lucide="cpu"></i>
+                  <span>Neural TTS</span>
+                </div>
+                <i data-lucide="arrow-right" class="flow-arrow"></i>
+                <div class="flow-step success-step">
+                  <i data-lucide="volume-2"></i>
+                  <span>Clear Audio</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Feature 2: Translate & Convert in 1 Step -->
+          <div class="bento-card">
+            <div class="bento-icon-header">
+              <div class="feature-icon-box">
+                <i data-lucide="languages"></i>
+              </div>
+              <div class="bento-badge">Multilingual Engine</div>
+            </div>
+            <div class="bento-content">
+              <h3 class="bento-title">Translate & Convert in One Step</h3>
+              <p class="bento-text">
+                Type in Indonesian, English, or any language and instantly translate into foreign target languages before converting directly to natural speech.
+              </p>
+            </div>
+            <div class="bento-lucide-visual">
+              <div class="visual-badge-row">
+                <span class="v-tag"><i data-lucide="globe"></i> 50+ Languages</span>
+                <span class="v-tag"><i data-lucide="arrow-right-left"></i> Auto-Sync</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Feature 3: Bulk Import -->
+          <div class="bento-card">
+            <div class="bento-icon-header">
+              <div class="feature-icon-box">
+                <i data-lucide="file-spreadsheet"></i>
+              </div>
+              <div class="bento-badge">Productivity Booster</div>
+            </div>
+            <div class="bento-content">
+              <h3 class="bento-title">Import & Convert Large Blocks</h3>
+              <p class="bento-text">
+                Got a long article, vocabulary list, or video script? Paste multi-line text masal (*one line = one row*) and generate all audio clips in a single batch.
+              </p>
+            </div>
+            <div class="bento-lucide-visual">
+              <div class="visual-badge-row">
+                <span class="v-tag"><i data-lucide="rows-3"></i> Multi-Line Import</span>
+                <span class="v-tag"><i data-lucide="zap"></i> 1-Click Batch</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Feature 4: Join & Merge Audio -->
+          <div class="bento-card">
+            <div class="bento-icon-header">
+              <div class="feature-icon-box">
+                <i data-lucide="combine"></i>
+              </div>
+              <div class="bento-badge">Batch Processing</div>
+            </div>
+            <div class="bento-content">
+              <h3 class="bento-title">Join Multiple Audio Files into One</h3>
+              <p class="bento-text">
+                Merge multiple converted sentences or dialogue clips into a unified audio file. Easily download single MP3s or combined audio files.
+              </p>
+            </div>
+            <div class="bento-lucide-visual">
+              <div class="visual-badge-row">
+                <span class="v-tag"><i data-lucide="layers"></i> Merge Audio</span>
+                <span class="v-tag"><i data-lucide="download"></i> MP3 Export</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Feature 5: Audio History & Bookmarks -->
+          <div class="bento-card bento-wide">
+            <div class="bento-grid-2col">
+              <div class="bento-content">
+                <div class="bento-icon-header">
+                  <div class="feature-icon-box">
+                    <i data-lucide="history"></i>
+                  </div>
+                  <div class="bento-badge">Smart Library</div>
+                </div>
+                <h3 class="bento-title">Saved Audio History & Quick Replay</h3>
+                <p class="bento-text">
+                  Never lose your generated clips. Search your past conversions, mark important audio files as Favorites, and re-export anytime.
+                </p>
+                <div class="feature-inline-tags">
+                  <span><i data-lucide="search"></i> Instant Search</span>
+                  <span><i data-lucide="star"></i> Favorite Pins</span>
+                  <span><i data-lucide="share-2"></i> 1-Tap Share</span>
+                </div>
+              </div>
+              <div class="bento-lucide-visual">
+                <div class="history-mock-visual">
+                  <div class="mock-item">
+                    <i data-lucide="file-audio" class="mock-icon"></i>
+                    <div class="mock-info">
+                      <span>"Halo teman-teman, kembali lagi bersama saya..."</span>
+                      <small>Indonesian • 0:04 • Just now</small>
+                    </div>
+                    <i data-lucide="play-circle" class="mock-action"></i>
+                  </div>
+                  <div class="mock-item">
+                    <i data-lucide="file-audio" class="mock-icon"></i>
+                    <div class="mock-info">
+                      <span>"Welcome back to another exciting tutorial..."</span>
+                      <small>English (US) • 0:06 • 5m ago</small>
+                    </div>
+                    <i data-lucide="play-circle" class="mock-action"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section (Cloud Band) -->
+    <section class="how-section cloud-band" id="how-it-works">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge-sub">WORKFLOW OVERVIEW</div>
+          <h2 class="section-title">How Sound of Text Works</h2>
+          <p class="section-subtitle">Transforming your words into speech takes less than 5 seconds.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <div class="step-icon-wrap">
+              <i data-lucide="file-text"></i>
+            </div>
+            <h3 class="step-title">Enter or Paste Text</h3>
+            <p class="step-desc">Type your script, paste an entire article, or import bulk lines in one go.</p>
+          </div>
+
+          <div class="step-arrow-divider">
+            <i data-lucide="chevron-right"></i>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <div class="step-icon-wrap">
+              <i data-lucide="languages"></i>
+            </div>
+            <h3 class="step-title">Choose Voice & Translate</h3>
+            <p class="step-desc">Select from 50+ natural voices and accents, or auto-translate in one click.</p>
+          </div>
+
+          <div class="step-arrow-divider">
+            <i data-lucide="chevron-right"></i>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <div class="step-icon-wrap">
+              <i data-lucide="download-cloud"></i>
+            </div>
+            <h3 class="step-title">Play, Merge & Download</h3>
+            <p class="step-desc">Listen instantly, merge multi-line tracks, and export audio for your projects.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- App Screenshots Gallery Showcase (White Canvas) -->
+    <section class="screenshots-section" id="screenshots">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge-sub">APPLICATION INTERFACE</div>
+          <h2 class="section-title">Designed for Fast, Intuitive Navigation</h2>
+          <p class="section-subtitle">Explore the official Sound of Text mobile interface.</p>
+        </div>
+
+        <div class="gallery-wrapper">
+          <div class="gallery-track" id="galleryTrack">
+            
+            <div class="gallery-item">
+              <div class="phone-frame">
+                <img src="Sound of text com/1.jpg" alt="Most Powerful Text to Speech UI" />
+              </div>
+              <div class="phone-caption">
+                <strong>100% Free TTS</strong>
+                <span>No registration required</span>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <div class="phone-frame">
+                <img src="Sound of text com/2.jpg" alt="Translate & Convert UI" />
+              </div>
+              <div class="phone-caption">
+                <strong>Translate & Speech</strong>
+                <span>Instant multi-language audio</span>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <div class="phone-frame">
+                <img src="Sound of text com/3.jpg" alt="Instant Playback UI" />
+              </div>
+              <div class="phone-caption">
+                <strong>Instant Playback</strong>
+                <span>Fast voice rendering</span>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <div class="phone-frame">
+                <img src="Sound of text com/4.jpg" alt="Audio History & Favorites UI" />
+              </div>
+              <div class="phone-caption">
+                <strong>Audio History</strong>
+                <span>Organize and favorite clips</span>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <div class="phone-frame">
+                <img src="Sound of text com/5.jpg" alt="Bulk Import UI" />
+              </div>
+              <div class="phone-caption">
+                <strong>Bulk Text Import</strong>
+                <span>Batch convert long scripts</span>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <div class="phone-frame">
+                <img src="Sound of text com/6.jpg" alt="Merge Audio Files UI" />
+              </div>
+              <div class="phone-caption">
+                <strong>Merge Audio</strong>
+                <span>Combine clips into one track</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table Section (Cloud Band) -->
+    <section class="comparison-section cloud-band">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge-sub">EFFICIENCY COMPARISON</div>
+          <h2 class="section-title">Manual Voice Recording vs Sound of Text</h2>
+        </div>
+
+        <div class="table-responsive">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature / Factor</th>
+                <th class="highlight-col">Sound of Text</th>
+                <th>Traditional Voice Recording</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Recording Own Voice</strong></td>
+                <td class="highlight-col"><span class="check-badge"><i data-lucide="check"></i> Automated Speech Engine</span></td>
+                <td><span class="cross-badge"><i data-lucide="x"></i> Required (Manual Mic & Studio)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Foreign Translation</strong></td>
+                <td class="highlight-col"><span class="check-badge"><i data-lucide="check"></i> 1-Step Auto Translate & Voice</span></td>
+                <td><span class="cross-badge"><i data-lucide="x"></i> Manual translation required</span></td>
+              </tr>
+              <tr>
+                <td><strong>Bulk Text Handling</strong></td>
+                <td class="highlight-col"><span class="check-badge"><i data-lucide="check"></i> Multi-Line Batch Import</span></td>
+                <td><span class="cross-badge"><i data-lucide="x"></i> Hours of tedious re-recording</span></td>
+              </tr>
+              <tr>
+                <td><strong>Merging Audio Clips</strong></td>
+                <td class="highlight-col"><span class="check-badge"><i data-lucide="check"></i> Built-in 1-Click Audio Merger</span></td>
+                <td><span class="cross-badge"><i data-lucide="x"></i> Requires complex DAW software</span></td>
+              </tr>
+              <tr>
+                <td><strong>Cost & Registration</strong></td>
+                <td class="highlight-col"><span class="check-badge"><i data-lucide="check"></i> 100% Free & No Sign-up</span></td>
+                <td><span class="cross-badge"><i data-lucide="x"></i> Expensive gear / Subscriptions</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- User Reviews & Testimonials Section (White Canvas) -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge-sub">USER REVIEWS &amp; SOCIAL PROOF</div>
+          <h2 class="section-title">Trusted by 10K+ Creators &amp; Daily Users</h2>
+          <p class="section-subtitle">Real feedback from users who rely on Sound of Text for voiceovers, learning, and content creation.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1: Arsy Zahra -->
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i data-lucide="star" class="star-filled"></i>
+              <i data-lucide="star" class="star-filled"></i>
+              <i data-lucide="star" class="star-filled"></i>
+              <i data-lucide="star" class="star-filled"></i>
+              <i data-lucide="star" class="star-filled"></i>
+            </div>
+            <p class="testimonial-text">
+              “This app is super easy to use, loads very fast, and you can already slow down the voice playback speed. My only suggestion is to add a few more voice modes!”
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AZ</div>
+              <div class="author-info">
+                <strong>Arsy Zahra</strong>
+                <span>from Google Play • Device: Tecno TECNO SPARK Go 2</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2: Isa Lodia -->
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i data-lucide="star" class="star-filled"></i>
+              <i data-lucide="star" class="star-filled"></i>
+              <i data-lucide="star" class="star-filled"></i>
+              <i data-lucide="star" class="star-filled"></i>
+              <i data-lucide="star" class="star-filled"></i>
+            </div>
+            <p class="testimonial-text">
+              “Awesome! Simple, fast, and does exactly what it promises without any hassle.”
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">IL</div>
+              <div class="author-info">
+                <strong>Isa Lodia</strong>
+                <span>from Google Play • Device: Samsung Galaxy A55 5G</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section (Cloud Band: alternating rhythm) -->
+    <section class="faq-section cloud-band" id="faq">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge-sub">FREQUENTLY ASKED QUESTIONS</div>
+          <h2 class="section-title">Common Inquiries &amp; Support</h2>
+        </div>
+
+        <div class="faq-accordion">
+          <div class="faq-item active">
+            <button class="faq-question">
+              <span>Is Sound of Text really 100% free to use?</span>
+              <i data-lucide="chevron-down" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! You can use Sound of Text for free without creating an account or providing credit card details. Convert text to speech anytime with zero hidden fees.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I turn text into audio without speaking or recording my voice?</span>
+              <i data-lucide="chevron-down" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely. Sound of Text uses advanced neural synthesis to convert any written sentence directly into natural audio files, eliminating the need for a microphone, sound equipment, or recording yourself.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How does the 1-Step Translation & Speech feature work?</span>
+              <i data-lucide="chevron-down" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Simply type or paste your text in your native language, select your desired target language voice, and our engine automatically translates the script and generates spoken audio in one seamless step.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I import long blocks of text or batch lines?</span>
+              <i data-lucide="chevron-down" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! With Bulk Text Import, you can paste multiple lines at once (one line = one audio item). You can also toggle the 'Merge into one master audio' switch to join them into a single track automatically.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I use the generated audio for TikTok, YouTube, and commercial projects?</span>
+              <i data-lucide="chevron-down" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, all audio clips generated through Sound of Text are suitable for personal and creative projects including YouTube Shorts, TikTok videos, podcasts, e-learning courses, and presentations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dark Ink Slab Help / Download Prelude Band (DESIGN.md: help-band-dark #1a1a1a) -->
+    <section class="help-band-dark" id="download">
+      <div class="container">
+        <div class="help-band-content text-center">
+          <div class="badge-pill-outline-light">FREE DOWNLOAD</div>
+          <h2 class="help-band-title">Ready to Convert Your Script into Voice?</h2>
+          <p class="help-band-subtitle">Get the official Sound of Text application for Android or continue using our web converter for free.</p>
+          
+          <div class="help-band-cta">
+            <a href="https://play.google.com/store/apps/details?id=com.karinov.soundoftext" target="_blank" rel="noopener noreferrer" class="playstore-badge-btn-large" title="Download on Google Play">
+              <img src="playstore.png" alt="Get it on Google Play Store" />
+            </a>
+          </div>
+
+          <div class="help-band-perks">
+            <span><i data-lucide="shield-check"></i> 100% Free Forever</span>
+            <span><i data-lucide="zap"></i> Zero Latency</span>
+            <span><i data-lucide="globe"></i> 50+ Languages Supported</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Dark Footer (DESIGN.md: footer-dark #1a1a1a) -->
+  <footer class="footer-dark">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-icon">
+            <img src="icon.jpg" alt="Sound of Text" class="brand-img" />
+          </div>
+          <span class="brand-title">Sound of Text</span>
+          <p class="footer-motto">The definitive free text-to-speech converter and batch audio merger for creators worldwide.</p>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Navigation</h4>
+          <a href="#hero">Home</a>
+          <a href="#demo">Live Demo</a>
+          <a href="#features">Capabilities</a>
+          <a href="#screenshots">App Preview</a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Capabilities</h4>
+          <a href="#features">No Voice Recording</a>
+          <a href="#features">1-Step Translation</a>
+          <a href="#features">Bulk Text Import</a>
+          <a href="#features">Audio Merger</a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Community &amp; App</h4>
+          <a href="https://github.com/ncpierson" target="_blank" rel="noopener noreferrer">NC Pierson on GitHub</a>
+          <a href="https://soundtext.org" target="_blank" rel="noopener noreferrer">Soundtext.org Community</a>
+          <a href="https://play.google.com/store/apps/details?id=com.karinov.soundoftext" target="_blank" rel="noopener noreferrer" class="footer-badge" style="margin-top: 6px;">
+            <img src="playstore.png" alt="Google Play" />
+          </a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Legal</h4>
+          <a href="about.html">About</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sound of Text. Open web utility. All rights reserved.</p>
+        <p style="margin-top: 6px; font-size: 12px;">
+          <a href="about.html" style="color: #718481; text-decoration: none; margin: 0 8px;">About</a> · 
+          <a href="privacy.html" style="color: #718481; text-decoration: none; margin: 0 8px;">Privacy</a> · 
+          <a href="terms.html" style="color: #718481; text-decoration: none; margin: 0 8px;">Terms</a> · 
+          <a href="disclaimer.html" style="color: #718481; text-decoration: none; margin: 0 8px;">Disclaimer</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ── Lucide Icons ── */
+    try { if (window.lucide) lucide.createIcons(); } catch(e) { console.warn('Lucide:', e); }
+
+    /* ── Mobile Drawer ── */
+    (function() {
+      var tog = document.getElementById('mobileToggle');
+      var cls = document.getElementById('drawerClose');
+      var drw = document.getElementById('mobileDrawer');
+      if (tog) tog.onclick = function() { if (drw) drw.classList.add('open'); };
+      if (cls) cls.onclick = function() { if (drw) drw.classList.remove('open'); };
+      var links = document.querySelectorAll('.drawer-link');
+      for (var i = 0; i < links.length; i++) {
+        links[i].onclick = function() { if (drw) drw.classList.remove('open'); };
+      }
+    })();
+
+    /* ── FAQ Accordion ── */
+    (function() {
+      var items = document.querySelectorAll('.faq-item');
+      for (var i = 0; i < items.length; i++) {
+        (function(item) {
+          var btn = item.querySelector('.faq-question');
+          if (btn) btn.onclick = function() {
+            var active = item.classList.contains('active');
+            for (var j = 0; j < items.length; j++) items[j].classList.remove('active');
+            if (!active) item.classList.add('active');
+          };
+        })(items[i]);
+      }
+    })();
+
+    /* ══════════════════════════════════════════════════════════════
+       TEXT-TO-SPEECH ENGINE — Ultra-Simple Version
+       ══════════════════════════════════════════════════════════════ */
+    (function() {
+      var synth = window.speechSynthesis;
+      if (!synth) { console.error('SpeechSynthesis API not available'); return; }
+
+      var textInput   = document.getElementById('textInput');
+      var textDisplay = document.getElementById('textDisplay');
+      var textWell    = document.getElementById('textWell');
+      var playBtn     = document.getElementById('playBtn');
+      var pauseBtn    = document.getElementById('pauseBtn');
+      var stopBtn     = document.getElementById('stopBtn');
+      var voiceSelect = document.getElementById('voiceSelect');
+      var rateSlider  = document.getElementById('rate');
+      var pitchSlider = document.getElementById('pitch');
+      var volSlider   = document.getElementById('volume');
+      var rateVal     = document.getElementById('rateVal');
+      var pitchVal    = document.getElementById('pitchVal');
+      var volumeVal   = document.getElementById('volumeVal');
+      var vu          = document.getElementById('vu');
+
+      var voices = [];
+      var wordSpans = [];
+      var paused = false;
+
+      // ── Load voices ──
+      function loadVoices() {
+        voices = synth.getVoices();
+        if (!voiceSelect) return;
+        voiceSelect.innerHTML = '';
+        for (var i = 0; i < voices.length; i++) {
+          var o = document.createElement('option');
+          o.value = i;
+          o.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+          voiceSelect.appendChild(o);
+        }
+      }
+      loadVoices();
+      synth.onvoiceschanged = loadVoices;
+
+      // ── Slider labels ──
+      if (rateSlider)  rateSlider.oninput  = function() { if (rateVal)   rateVal.textContent   = parseFloat(this.value).toFixed(1) + 'x'; };
+      if (pitchSlider) pitchSlider.oninput = function() { if (pitchVal)  pitchVal.textContent  = parseFloat(this.value).toFixed(1); };
+      if (volSlider)   volSlider.oninput   = function() { if (volumeVal) volumeVal.textContent = Math.round(this.value * 100) + '%'; };
+
+      // ── Build karaoke word display ──
+      function buildDisplay(text) {
+        if (!textDisplay) return;
+        textDisplay.innerHTML = '';
+        wordSpans = [];
+        var parts = text.split(/(\s+)/);
+        var cursor = 0;
+        for (var i = 0; i < parts.length; i++) {
+          var tok = parts[i];
+          if (tok.length === 0) continue;
+          if (/^\s+$/.test(tok)) {
+            textDisplay.appendChild(document.createTextNode(tok));
+          } else {
+            var span = document.createElement('span');
+            span.className = 'word';
+            span.textContent = tok;
+            textDisplay.appendChild(span);
+            wordSpans.push({ start: cursor, end: cursor + tok.length, el: span });
+          }
+          cursor += tok.length;
+        }
+      }
+
+      // ── Highlight current word ──
+      function highlightAt(idx) {
+        for (var i = 0; i < wordSpans.length; i++) wordSpans[i].el.classList.remove('active');
+        for (var i = 0; i < wordSpans.length; i++) {
+          if (idx >= wordSpans[i].start && idx < wordSpans[i].end) {
+            wordSpans[i].el.classList.add('active');
+            wordSpans[i].el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+            break;
+          }
+        }
+      }
+
+      // ── Toggle UI state ──
+      function setUI(on) {
+        var live = on && !paused;
+        if (playBtn) {
+          if (live) { playBtn.classList.add('live'); playBtn.textContent = 'On Air'; }
+          else      { playBtn.classList.remove('live'); playBtn.textContent = 'Play'; }
+        }
+        if (vu) { if (live) vu.classList.add('on'); else vu.classList.remove('on'); }
+        if (pauseBtn) pauseBtn.disabled = !on;
+        if (stopBtn)  stopBtn.disabled  = !on;
+        if (textWell)    { if (on) textWell.classList.add('speaking');    else textWell.classList.remove('speaking'); }
+        if (textDisplay) { if (on) textDisplay.classList.add('showing');  else textDisplay.classList.remove('showing'); }
+      }
+
+      // ── Core speak function ──
+      function doSpeak() {
+        var text = textInput ? textInput.value.trim() : '';
+        if (!text) { alert('Please enter text first.'); return; }
+
+        // Make sure voices are loaded
+        if (voices.length === 0) { voices = synth.getVoices(); loadVoices(); }
+
+        // Cancel any previous speech and unlock queue
+        synth.cancel();
+
+        buildDisplay(text);
+
+        var u = new SpeechSynthesisUtterance(text);
+
+        // Set voice
+        if (voices.length > 0 && voiceSelect) {
+          var v = voices[parseInt(voiceSelect.value, 10)];
+          if (v) u.voice = v;
+        }
+
+        u.rate   = rateSlider  ? parseFloat(rateSlider.value)  : 1;
+        u.pitch  = pitchSlider ? parseFloat(pitchSlider.value) : 1;
+        u.volume = volSlider   ? parseFloat(volSlider.value)   : 1;
+
+        u.onstart = function()  { paused = false; setUI(true); };
+        u.onend   = function()  { setUI(false); for (var i=0;i<wordSpans.length;i++) wordSpans[i].el.classList.remove('active'); };
+        u.onerror = function()  { setUI(false); };
+        u.onboundary = function(e) { if (e.name === 'word') highlightAt(e.charIndex); };
+
+        // Store reference to prevent Chrome GC bug
+        window._ttsUtterance = u;
+
+        synth.speak(u);
+      }
+
+      // ── Button handlers using onclick ──
+      if (playBtn) {
+        playBtn.onclick = function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          if (synth.speaking && paused) {
+            synth.resume();
+            paused = false;
+            setUI(true);
+          } else {
+            doSpeak();
+          }
+        };
+      }
+
+      if (pauseBtn) {
+        pauseBtn.onclick = function(e) {
+          e.preventDefault();
+          if (synth.speaking && !paused) {
+            synth.pause();
+            paused = true;
+            setUI(true);
+          }
+        };
+      }
+
+      if (stopBtn) {
+        stopBtn.onclick = function(e) {
+          e.preventDefault();
+          synth.cancel();
+          paused = false;
+          setUI(false);
+          for (var i=0;i<wordSpans.length;i++) wordSpans[i].el.classList.remove('active');
+        };
+      }
+
+      console.log('TTS Engine initialized. playBtn:', !!playBtn, 'voices:', voices.length);
+    })();
+  </script>
+</body>
+</html>
+

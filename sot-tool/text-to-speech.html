@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>On Air — Text to Speech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #14171f;
+    --panel: #1c212e;
+    --panel-raised: #232a3a;
+    --line: #333c52;
+    --amber: #e8a33d;
+    --amber-dim: #a97a35;
+    --teal: #4fb6a8;
+    --text: #ede7da;
+    --text-dim: #8a90a4;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--ink);
+    background-image:
+      radial-gradient(circle at 20% -10%, rgba(232,163,61,0.07), transparent 45%),
+      radial-gradient(circle at 90% 110%, rgba(79,182,168,0.06), transparent 45%);
+    color: var(--text);
+    font-family: 'IBM Plex Mono', monospace;
+    display: flex;
+    justify-content: center;
+    padding: 48px 20px;
+  }
+
+  .studio {
+    width: 100%;
+    max-width: 620px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    color: var(--teal);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 44px;
+    margin: 0 0 12px 0;
+    color: var(--text);
+  }
+
+  .lede {
+    color: var(--text-dim);
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 32px 0;
+    max-width: 46ch;
+  }
+
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 22px;
+  }
+
+  .text-well {
+    position: relative;
+    min-height: 140px;
+  }
+
+  textarea, .text-display {
+    width: 100%;
+    min-height: 140px;
+    background: var(--panel-raised);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    color: var(--text);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14.5px;
+    line-height: 1.7;
+    padding: 14px;
+    resize: vertical;
+  }
+
+  textarea:focus {
+    outline: none;
+    border-color: var(--amber-dim);
+  }
+
+  .text-display {
+    display: none;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    max-height: 320px;
+  }
+
+  .text-display.showing { display: block; }
+  .text-well.speaking textarea { display: none; }
+
+  .text-display span.word {
+    transition: background 0.12s ease, color 0.12s ease;
+    border-radius: 3px;
+  }
+
+  .text-display span.word.active {
+    background: var(--amber);
+    color: #1a1200;
+  }
+
+  .transport {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin: 28px 0 24px 0;
+  }
+
+  .onair {
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    border: 2px solid var(--line);
+    background: var(--panel-raised);
+    color: var(--text-dim);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    transition: color 0.2s ease, border-color 0.2s ease, box-shadow 0.3s ease;
+  }
+
+  .onair:hover { border-color: var(--amber-dim); }
+
+  .onair.live {
+    color: #1a1200;
+    background: var(--amber);
+    border-color: var(--amber);
+    box-shadow: 0 0 0 6px rgba(232,163,61,0.18), 0 0 24px rgba(232,163,61,0.35);
+    animation: pulse-ring 1.6s ease-in-out infinite;
+  }
+
+  @keyframes pulse-ring {
+    0%, 100% { box-shadow: 0 0 0 6px rgba(232,163,61,0.18), 0 0 24px rgba(232,163,61,0.35); }
+    50% { box-shadow: 0 0 0 10px rgba(232,163,61,0.10), 0 0 30px rgba(232,163,61,0.5); }
+  }
+
+  .side-btn {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: var(--panel-raised);
+    color: var(--text-dim);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .side-btn:hover:not(:disabled) { color: var(--text); border-color: var(--amber-dim); }
+  .side-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+  .side-btn svg { width: 16px; height: 16px; }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .row:last-child { margin-bottom: 0; }
+
+  label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    white-space: nowrap;
+  }
+
+  select {
+    flex: 1;
+    background: var(--panel-raised);
+    border: 1px solid var(--line);
+    color: var(--text);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    padding: 8px 10px;
+    border-radius: 5px;
+  }
+
+  .vu {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 18px;
+  }
+
+  .vu span {
+    width: 3px;
+    height: 4px;
+    background: var(--line);
+    border-radius: 1px;
+    transition: background 0.2s ease;
+  }
+
+  .vu.on span { background: var(--teal); animation: bounce 0.9s ease-in-out infinite; }
+  .vu.on span:nth-child(1) { animation-delay: 0s; }
+  .vu.on span:nth-child(2) { animation-delay: 0.12s; }
+  .vu.on span:nth-child(3) { animation-delay: 0.24s; }
+  .vu.on span:nth-child(4) { animation-delay: 0.36s; }
+  .vu.on span:nth-child(5) { animation-delay: 0.48s; }
+
+  @keyframes bounce {
+    0%, 100% { height: 4px; }
+    50% { height: 17px; }
+  }
+
+  .slider-row {
+    display: grid;
+    grid-template-columns: 70px 1fr 44px;
+    align-items: center;
+    gap: 14px;
+    margin-top: 14px;
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 2px;
+    background: var(--line);
+    border-radius: 2px;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--amber);
+    border: 2px solid var(--ink);
+    cursor: pointer;
+    margin-top: -6px;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--amber);
+    border: 2px solid var(--ink);
+    cursor: pointer;
+  }
+
+  .value {
+    font-size: 12px;
+    color: var(--text-dim);
+    text-align: right;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 22px 0;
+  }
+
+  @media (max-width: 480px) {
+    h1 { font-size: 34px; }
+    .slider-row { grid-template-columns: 56px 1fr 40px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="studio">
+  <div class="eyebrow">Web Speech API</div>
+  <h1>On Air</h1>
+  <p class="lede">Type something below, press the light, and your browser reads it back — entirely on-device, no server or upload involved.</p>
+
+  <div class="panel">
+    <div class="text-well" id="textWell">
+      <textarea id="textInput" placeholder="Paste or type text here...">The quick brown fox jumps over the lazy dog. Your browser can read this out loud using nothing but built-in speech synthesis.</textarea>
+      <div class="text-display" id="textDisplay"></div>
+    </div>
+
+    <div class="transport">
+      <button class="side-btn" id="stopBtn" title="Stop" disabled>
+        <svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="6" width="12" height="12" rx="1"/></svg>
+      </button>
+
+      <button class="onair" id="playBtn">Play</button>
+
+      <button class="side-btn" id="pauseBtn" title="Pause" disabled>
+        <svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+      </button>
+    </div>
+
+    <hr class="divider">
+
+    <div class="row">
+      <label for="voiceSelect">Voice</label>
+      <select id="voiceSelect"></select>
+      <div class="vu" id="vu">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <div class="slider-row">
+      <label for="rate">Rate</label>
+      <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1">
+      <div class="value" id="rateVal">1.0x</div>
+    </div>
+
+    <div class="slider-row">
+      <label for="pitch">Pitch</label>
+      <input type="range" id="pitch" min="0" max="2" step="0.1" value="1">
+      <div class="value" id="pitchVal">1.0</div>
+    </div>
+
+    <div class="slider-row">
+      <label for="volume">Volume</label>
+      <input type="range" id="volume" min="0" max="1" step="0.05" value="1">
+      <div class="value" id="volumeVal">100%</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const textInput = document.getElementById('textInput');
+  const textDisplay = document.getElementById('textDisplay');
+  const textWell = document.getElementById('textWell');
+  const playBtn = document.getElementById('playBtn');
+  const pauseBtn = document.getElementById('pauseBtn');
+  const stopBtn = document.getElementById('stopBtn');
+  const voiceSelect = document.getElementById('voiceSelect');
+  const rate = document.getElementById('rate');
+  const pitch = document.getElementById('pitch');
+  const volume = document.getElementById('volume');
+  const rateVal = document.getElementById('rateVal');
+  const pitchVal = document.getElementById('pitchVal');
+  const volumeVal = document.getElementById('volumeVal');
+  const vu = document.getElementById('vu');
+
+  const synth = window.speechSynthesis;
+  let voices = [];
+  let wordSpans = [];
+  let isPaused = false;
+
+  function loadVoices() {
+    voices = synth.getVoices();
+    voiceSelect.innerHTML = '';
+    voices.forEach((v, i) => {
+      const opt = document.createElement('option');
+      opt.value = i;
+      opt.textContent = `${v.name} (${v.lang})`;
+      voiceSelect.appendChild(opt);
+    });
+  }
+  loadVoices();
+  if (synth.onvoiceschanged !== undefined) {
+    synth.onvoiceschanged = loadVoices;
+  }
+
+  rate.addEventListener('input', () => rateVal.textContent = parseFloat(rate.value).toFixed(1) + 'x');
+  pitch.addEventListener('input', () => pitchVal.textContent = parseFloat(pitch.value).toFixed(1));
+  volume.addEventListener('input', () => volumeVal.textContent = Math.round(volume.value * 100) + '%');
+
+  function buildDisplay(text) {
+    textDisplay.innerHTML = '';
+    wordSpans = [];
+    const tokens = text.split(/(\s+)/);
+    let cursor = 0;
+    tokens.forEach(tok => {
+      if (tok.length === 0) return;
+      if (/\s+/.test(tok)) {
+        textDisplay.appendChild(document.createTextNode(tok));
+      } else {
+        const span = document.createElement('span');
+        span.className = 'word';
+        span.textContent = tok;
+        textDisplay.appendChild(span);
+        wordSpans.push({ start: cursor, end: cursor + tok.length, el: span });
+      }
+      cursor += tok.length;
+    });
+  }
+
+  function highlightAt(charIndex) {
+    wordSpans.forEach(w => w.el.classList.remove('active'));
+    const match = wordSpans.find(w => charIndex >= w.start && charIndex < w.end);
+    if (match) {
+      match.el.classList.add('active');
+      match.el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    }
+  }
+
+  function setSpeakingUI(speaking) {
+    playBtn.classList.toggle('live', speaking && !isPaused);
+    playBtn.textContent = speaking && !isPaused ? 'On Air' : 'Play';
+    vu.classList.toggle('on', speaking && !isPaused);
+    pauseBtn.disabled = !speaking;
+    stopBtn.disabled = !speaking;
+    textWell.classList.toggle('speaking', speaking);
+    textDisplay.classList.toggle('showing', speaking);
+  }
+
+  function speak() {
+    const text = textInput.value.trim();
+    if (!text) return;
+
+    synth.cancel();
+    buildDisplay(text);
+
+    const utter = new SpeechSynthesisUtterance(text);
+    const selected = voices[voiceSelect.value];
+    if (selected) utter.voice = selected;
+    utter.rate = parseFloat(rate.value);
+    utter.pitch = parseFloat(pitch.value);
+    utter.volume = parseFloat(volume.value);
+
+    utter.onboundary = (e) => {
+      if (e.name === 'word' || e.charLength !== undefined) {
+        highlightAt(e.charIndex);
+      }
+    };
+
+    utter.onstart = () => {
+      isPaused = false;
+      setSpeakingUI(true);
+    };
+
+    utter.onend = () => {
+      setSpeakingUI(false);
+      wordSpans.forEach(w => w.el.classList.remove('active'));
+    };
+
+    utter.onerror = () => setSpeakingUI(false);
+
+    synth.speak(utter);
+  }
+
+  playBtn.addEventListener('click', () => {
+    if (synth.speaking && isPaused) {
+      synth.resume();
+      isPaused = false;
+      setSpeakingUI(true);
+    } else if (!synth.speaking) {
+      speak();
+    }
+  });
+
+  pauseBtn.addEventListener('click', () => {
+    if (synth.speaking && !isPaused) {
+      synth.pause();
+      isPaused = true;
+      setSpeakingUI(true);
+    }
+  });
+
+  stopBtn.addEventListener('click', () => {
+    synth.cancel();
+    isPaused = false;
+    setSpeakingUI(false);
+    wordSpans.forEach(w => w.el.classList.remove('active'));
+  });
+</script>
+
+</body>
+</html>

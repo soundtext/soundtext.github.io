@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Sound of Text</title>
+  <meta name="description" content="About Sound of Text — the free text-to-speech platform pioneered by NC Pierson and the Soundtext.org community. Learn about our mission, the app, and the team." />
+  <link rel="icon" type="image/jpeg" href="icon.jpg" />
+  <link rel="apple-touch-icon" href="icon.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --colors-primary: #176B63;
+      --colors-primary-bright: #1f8d83;
+      --colors-primary-deep: #0f4943;
+      --colors-primary-soft: #e2f3f1;
+      --colors-ink: #0f1c1a;
+      --colors-ink-deep: #081615;
+      --colors-on-ink: #ffffff;
+      --colors-canvas: #ffffff;
+      --colors-cloud: #f6faf9;
+      --colors-graphite: #5c726f;
+      --colors-hairline: #e3ecea;
+      --font-family: 'Inter', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-family); color: var(--colors-ink); background: var(--colors-cloud); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    .topbar { background: var(--colors-canvas); border-bottom: 1px solid var(--colors-hairline); padding: 16px 0; position: sticky; top: 0; z-index: 100; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .topbar-inner { display: flex; align-items: center; justify-content: space-between; }
+    .topbar-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--colors-ink); }
+    .topbar-brand img { width: 32px; height: 32px; border-radius: 8px; }
+    .topbar-brand span { font-weight: 600; font-size: 16px; }
+    .topbar-back { font-size: 14px; color: var(--colors-primary); text-decoration: none; font-weight: 500; }
+    .topbar-back:hover { text-decoration: underline; }
+    .legal-page { padding: 56px 0 80px; }
+    .legal-page h1 { font-size: 32px; font-weight: 700; color: var(--colors-ink); margin-bottom: 8px; line-height: 1.3; }
+    .legal-meta { font-size: 14px; color: var(--colors-graphite); margin-bottom: 36px; }
+    .legal-page h2 { font-size: 20px; font-weight: 600; color: var(--colors-primary-deep); margin-top: 40px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid var(--colors-primary-soft); }
+    .legal-page h3 { font-size: 16px; font-weight: 600; margin-top: 24px; margin-bottom: 10px; }
+    .legal-page p { margin-bottom: 16px; color: #3a4a48; font-size: 15px; }
+    .legal-page ul { padding-left: 24px; margin-bottom: 16px; }
+    .legal-page li { margin-bottom: 8px; color: #3a4a48; font-size: 15px; }
+    .legal-page a { color: var(--colors-primary); text-decoration: underline; }
+    .legal-page a:hover { color: var(--colors-primary-deep); }
+    .legal-page hr { border: none; border-top: 1px solid var(--colors-hairline); margin: 32px 0; }
+    .legal-card { background: var(--colors-canvas); border-radius: 16px; padding: 48px 40px; box-shadow: 0 2px 8px rgba(15,28,26,0.07); }
+
+    .about-hero {
+      display: flex; align-items: center; gap: 20px;
+      margin-bottom: 32px; padding-bottom: 32px;
+      border-bottom: 1px solid var(--colors-hairline);
+    }
+    .about-hero img { width: 72px; height: 72px; border-radius: 16px; box-shadow: 0 2px 8px rgba(15,28,26,0.1); }
+    .about-hero-text h1 { margin-bottom: 4px; }
+    .about-hero-text p { font-size: 15px; color: var(--colors-graphite); margin: 0; }
+
+    .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 28px 0 8px; }
+    .stat-item {
+      background: var(--colors-primary-soft); border-radius: 12px; padding: 20px 16px;
+      text-align: center;
+    }
+    .stat-number { font-size: 24px; font-weight: 700; color: var(--colors-primary); display: block; }
+    .stat-label { font-size: 13px; color: var(--colors-graphite); margin-top: 4px; }
+
+    .legal-footer { background: var(--colors-ink-deep); color: #718481; text-align: center; padding: 24px 0; font-size: 13px; }
+    .legal-footer a { color: #a7b7b5; text-decoration: none; margin: 0 10px; }
+    .legal-footer a:hover { color: var(--colors-on-ink); }
+    @media (max-width: 600px) {
+      .legal-card { padding: 28px 20px; border-radius: 12px; }
+      .legal-page h1 { font-size: 26px; }
+      .about-hero { flex-direction: column; text-align: center; }
+      .stat-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <a href="index.html" class="topbar-brand"><img src="icon.jpg" alt="Sound of Text" /><span>Sound of Text</span></a>
+        <a href="index.html" class="topbar-back">&larr; Back to Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="legal-page">
+    <div class="container">
+      <div class="legal-card">
+
+        <div class="about-hero">
+          <img src="icon.jpg" alt="Sound of Text Icon" />
+          <div class="about-hero-text">
+            <h1>About Sound of Text</h1>
+            <p>Free, open text-to-speech for everyone</p>
+          </div>
+        </div>
+
+        <p><strong>Sound of Text</strong> is a free text-to-speech platform that lets you convert written text into natural-sounding audio instantly — no account, no subscription, no voice recording equipment needed. Whether you're a content creator, language learner, educator, or someone who simply wants to hear text read aloud, Sound of Text makes it effortless.</p>
+
+        <div class="stat-grid">
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Languages Supported</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">10K+</span>
+            <span class="stat-label">App Installs</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Free to Use</span>
+          </div>
+        </div>
+
+        <h2>Our Story</h2>
+        <p>Sound of Text was originally pioneered by <a href="https://github.com/ncpierson" target="_blank" rel="noopener noreferrer">NC Pierson</a> as an open-source project, and has grown through the <a href="https://soundtext.org" target="_blank" rel="noopener noreferrer">Soundtext.org</a> community into one of the most accessible TTS tools on the web. The <strong>Sound of Text Com</strong> mobile application, developed by <strong>Appz</strong>, extends this mission to Android devices with advanced features like 1-step auto-translation, bulk text import, and audio file merging.</p>
+
+        <h2>What We Offer</h2>
+
+        <h3>Web — Live Text-to-Speech Studio</h3>
+        <p>Our browser-based tool uses the Web Speech API to generate speech entirely on-device. No audio data is uploaded to any server. You can adjust voice, speed, pitch, and volume, and watch real-time word-by-word karaoke highlighting as the text is read aloud.</p>
+
+        <h3>Mobile — Sound of Text Com App</h3>
+        <p>The free Android app takes things further with:</p>
+        <ul>
+          <li><strong>50+ Global Languages</strong> — far beyond what most browsers offer natively.</li>
+          <li><strong>1-Step Auto-Translate &amp; Voice</strong> — type in your language, get audio in another.</li>
+          <li><strong>Bulk Text Import &amp; Audio Merge</strong> — paste multiple lines and combine them into a single audio file.</li>
+          <li><strong>Offline History</strong> — all your generated audio is saved locally on your device.</li>
+          <li><strong>No Sign-Up Required</strong> — download, open, and start converting immediately.</li>
+        </ul>
+
+        <p>
+          <a href="https://play.google.com/store/apps/details?id=com.karinov.soundoftext" target="_blank" rel="noopener noreferrer">
+            → Download on Google Play
+          </a>
+        </p>
+
+        <h2>Our Mission</h2>
+        <p>We believe that converting text to speech should be free, fast, and private. Our tools are built for accessibility — helping people who need audio versions of text for learning, creating content, or personal convenience, without barriers or paywalls.</p>
+
+        <h2>Contact</h2>
+        <p>Have questions, feedback, or partnership inquiries? Reach out to us:</p>
+        <ul>
+          <li><strong>Developer:</strong> Appz</li>
+          <li><strong>Email:</strong> <a href="mailto:dev@appz.se">dev@appz.se</a></li>
+          <li><strong>Website:</strong> <a href="https://help.appz.se" target="_blank" rel="noopener noreferrer">https://help.appz.se</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="legal-footer">
+    <div class="container">
+      <p>&copy; 2026 Sound of Text. All rights reserved.</p>
+      <p style="margin-top:8px;">
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
