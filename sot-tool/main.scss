@@ -1,0 +1,179 @@
+---
+# Minimal base styles for the sot-tool site.
+# The widget styles live in assets/sot-simple/style.css and are loaded
+# separately. This file provides only the page chrome (body, docs page)
+# needed because no global theme stylesheet is shipped.
+---
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple SD Gothic Neo",
+        "Noto Sans KR", sans-serif;
+    color: #1e293b;
+    background: #ffffff;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+    min-height: 100vh;
+}
+
+/* ── Tool page (index.html) ─────────────────────────────────────── */
+
+main:has(.sot-tool) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    background:
+        radial-gradient(1200px 600px at 50% -10%, #eef3fc 0%, transparent 60%),
+        #ffffff;
+}
+
+/* ── Docs page (docs.md) ─────────────────────────────────────────── */
+
+.docs-main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+}
+
+.docs-main h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 1.5rem;
+    letter-spacing: -0.01em;
+}
+
+.docs-main h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 2.5rem 0 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.docs-main h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.docs-main p,
+.docs-main li {
+    color: #334155;
+}
+
+.docs-main a {
+    color: #1d63ea;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.docs-main a:hover {
+    text-decoration: underline;
+}
+
+.docs-main code {
+    background: #f1f5f9;
+    color: #0f172a;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+        "Liberation Mono", monospace;
+    font-size: 0.9em;
+}
+
+.docs-main pre {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
+    overflow-x: auto;
+    line-height: 1.5;
+}
+
+.docs-main pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+    font-size: 0.85rem;
+}
+
+.docs-main blockquote {
+    margin: 1.25rem 0;
+    padding: 0.75rem 1rem;
+    border-left: 4px solid #1d63ea;
+    background: #eef3fc;
+    color: #1e293b;
+    border-radius: 0 6px 6px 0;
+}
+
+.docs-main table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.95rem;
+}
+
+.docs-main th,
+.docs-main td {
+    text-align: left;
+    padding: 0.6rem 0.85rem;
+    border-bottom: 1px solid #e2e8f0;
+    vertical-align: top;
+}
+
+.docs-main th {
+    background: #f8fafc;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.docs-main hr {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin: 2rem 0;
+}
+
+.docs-main ul,
+.docs-main ol {
+    padding-left: 1.5rem;
+}
+
+.docs-main li + li {
+    margin-top: 0.25rem;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+    .docs-main {
+        padding: 2rem 1rem 3rem;
+    }
+
+    .docs-main h1 {
+        font-size: 1.6rem;
+    }
+
+    .docs-main h2 {
+        font-size: 1.2rem;
+    }
+
+    main:has(.sot-tool) {
+        padding: 1.5rem 0.75rem;
+    }
+}
