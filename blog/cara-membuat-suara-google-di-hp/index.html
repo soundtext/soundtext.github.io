@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10 Cara Membuat Suara Google di HP (Tanpa &amp; Pakai Aplikasi) — Sound of Text</title>
+  <meta name="description" content="10 cara mudah membuat suara Google di HP untuk voice over video TikTok, reels Instagram, dan nada notifikasi WhatsApp." />
+  <link rel="canonical" href="https://soundtext.github.io/blog/cara-membuat-suara-google-di-hp/" />
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="10 Cara Membuat Suara Google di HP (Tanpa &amp; Pakai Aplikasi) — Sound of Text" />
+  <meta property="og:description" content="10 cara mudah membuat suara Google di HP untuk voice over video TikTok, reels Instagram, dan nada notifikasi WhatsApp." />
+  <meta property="og:image" content="https://cdn.emzeth.com/sot/cover/cara-pakai-savefrom-untuk-download-youtube.jpg" />
+  <meta property="og:url" content="https://soundtext.github.io/blog/cara-membuat-suara-google-di-hp/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://cdn.emzeth.com/sot/cover/cara-pakai-savefrom-untuk-download-youtube.jpg" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="../../icon.jpg" />
+  <link rel="apple-touch-icon" href="../../icon.jpg" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    :root {
+      --colors-primary: #176B63;
+      --colors-primary-bright: #1f8d83;
+      --colors-primary-deep: #0f4943;
+      --colors-primary-soft: #e2f3f1;
+      --colors-ink: #0f1c1a;
+      --colors-ink-deep: #081615;
+      --colors-on-ink: #ffffff;
+      --colors-canvas: #ffffff;
+      --colors-cloud: #f6faf9;
+      --colors-graphite: #5c726f;
+      --colors-hairline: #e3ecea;
+      --font-family: 'Inter', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-family);
+      color: var(--colors-ink);
+      background: var(--colors-cloud);
+      line-height: 1.75;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--colors-primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    
+    .topbar {
+      background: var(--colors-canvas);
+      border-bottom: 1px solid var(--colors-hairline);
+      position: sticky; top: 0; z-index: 100;
+      padding: 14px 0;
+    }
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .article-container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--colors-ink);
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .topbar-brand img {
+      width: 34px; height: 34px;
+      border-radius: 6px;
+    }
+    .topbar-nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .topbar-link {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--colors-graphite);
+      text-decoration: none;
+    }
+    .topbar-link:hover, .topbar-link.active {
+      color: var(--colors-primary);
+      text-decoration: none;
+    }
+    .topbar-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: var(--colors-primary);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.15s ease;
+    }
+    .topbar-btn:hover {
+      background: var(--colors-primary-deep);
+      text-decoration: none;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumb-nav {
+      padding: 24px 0 12px;
+      font-size: 13px;
+      color: var(--colors-graphite);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb-nav a { color: var(--colors-graphite); text-decoration: none; }
+    .breadcrumb-nav a:hover { color: var(--colors-primary); }
+    .breadcrumb-sep { color: #a0b5b2; }
+    
+    /* Article Card */
+    .article-wrapper {
+      padding-bottom: 60px;
+    }
+    .article-main-card {
+      background: var(--colors-canvas);
+      border-radius: 8px;
+      padding: 44px 44px;
+      box-shadow: 0 2px 12px rgba(15, 28, 26, 0.05);
+      border: 1px solid var(--colors-hairline);
+    }
+    
+    /* Header & Meta */
+    .article-category-badge {
+      display: inline-block;
+      background: var(--colors-primary-soft);
+      color: var(--colors-primary);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+    .article-title {
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1.28;
+      color: var(--colors-ink);
+      margin-bottom: 18px;
+      font-family: 'Manrope', var(--font-family);
+    }
+    .article-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 14px;
+      color: var(--colors-graphite);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--colors-hairline);
+      flex-wrap: wrap;
+    }
+    .article-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .article-meta-item i { width: 16px; height: 16px; }
+    
+    /* Hero Cover Image */
+    .article-hero-img-box {
+      margin-bottom: 32px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(15, 28, 26, 0.08);
+      background: var(--colors-cloud);
+      text-align: center;
+      border: 1px solid var(--colors-hairline);
+    }
+    .article-hero-img {
+      width: 100%;
+      height: auto;
+      max-height: 440px;
+      object-fit: cover;
+      display: block;
+    }
+    
+    /* Table of Contents */
+    .article-toc {
+      background: var(--colors-cloud);
+      border: 1px solid var(--colors-hairline);
+      border-left: 4px solid var(--colors-primary);
+      border-radius: 6px;
+      padding: 18px 22px;
+      margin: 28px 0;
+    }
+    .toc-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--colors-ink);
+      margin-bottom: 10px;
+    }
+    .toc-header i { width: 18px; height: 18px; color: var(--colors-primary); }
+    .toc-list {
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      gap: 6px;
+    }
+    .toc-list li {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .toc-list a {
+      color: #335552;
+      text-decoration: none;
+    }
+    .toc-list a:hover {
+      color: var(--colors-primary);
+      text-decoration: underline;
+    }
+    
+    /* Article Body Typography */
+    .article-content h2 {
+      font-size: 23px;
+      font-weight: 700;
+      color: var(--colors-primary-deep);
+      margin-top: 36px;
+      margin-bottom: 14px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--colors-primary-soft);
+      line-height: 1.35;
+    }
+    .article-content h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--colors-ink);
+      margin-top: 24px;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .article-content p {
+      margin-bottom: 18px;
+      color: #2b3d3a;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    .article-content strong {
+      color: var(--colors-ink);
+      font-weight: 600;
+    }
+
+    /* Polished List & Steps Typography */
+    .article-list {
+      padding-left: 24px;
+      margin: 16px 0 24px;
+      list-style-type: disc;
+    }
+    .article-list li {
+      margin-bottom: 10px;
+      color: #2b3d3a;
+      line-height: 1.75;
+      padding-left: 4px;
+    }
+    .article-list li::marker {
+      color: var(--colors-primary);
+    }
+    
+    .article-steps {
+      padding-left: 24px;
+      margin: 16px 0 24px;
+      list-style-type: decimal;
+    }
+    .article-steps li {
+      margin-bottom: 12px;
+      color: #2b3d3a;
+      line-height: 1.75;
+      padding-left: 6px;
+    }
+    .article-steps li::marker {
+      color: var(--colors-primary);
+      font-weight: 700;
+    }
+    .article-steps li strong {
+      color: var(--colors-ink);
+    }
+
+    /* Clean Contextual Internal Link */
+    .contextual-internal-link {
+      color: var(--colors-primary);
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 2px;
+      transition: all 0.15s ease;
+    }
+    .contextual-internal-link:hover {
+      color: var(--colors-primary-deep);
+      background-color: var(--colors-primary-soft);
+      border-radius: 2px;
+      text-decoration: none;
+    }
+    
+    /* In-article Figures & Captions */
+    .article-figure {
+      margin: 28px 0;
+      text-align: center;
+    }
+    .article-img {
+      max-width: 100%;
+      border-radius: 6px;
+      box-shadow: 0 2px 10px rgba(15, 28, 26, 0.08);
+      border: 1px solid var(--colors-hairline);
+      height: auto;
+    }
+    .article-figure figcaption {
+      font-size: 13px;
+      color: var(--colors-graphite);
+      margin-top: 8px;
+      font-style: italic;
+    }
+    
+    /* Download Table Wrap */
+    .download-table-wrap {
+      overflow-x: auto;
+      margin: 20px 0 28px;
+      border: 1px solid var(--colors-hairline);
+      border-radius: 6px;
+      background: var(--colors-canvas);
+      box-shadow: 0 2px 6px rgba(15, 28, 26, 0.03);
+    }
+    .download-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    .download-table th {
+      background: var(--colors-cloud);
+      padding: 10px 16px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--colors-graphite);
+      border-bottom: 1px solid var(--colors-hairline);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .download-table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--colors-hairline);
+      font-size: 14px;
+      color: var(--colors-ink);
+      vertical-align: middle;
+    }
+    .download-table tr:last-child td {
+      border-bottom: none;
+    }
+    .download-table tr:hover td {
+      background: #f1f8f7;
+    }
+    .table-dl-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: var(--colors-primary-soft);
+      color: var(--colors-primary);
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 12px;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+    .table-dl-btn:hover {
+      background: var(--colors-primary);
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    /* Download Pill Box */
+    .download-pill-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--colors-cloud);
+      border: 1px solid var(--colors-hairline);
+      border-radius: 6px;
+      padding: 12px 18px;
+      margin: 12px 0;
+      transition: border-color 0.15s ease;
+    }
+    .download-pill-box:hover {
+      border-color: var(--colors-primary-bright);
+    }
+    .download-pill-icon {
+      width: 32px; height: 32px;
+      border-radius: 4px;
+      background: var(--colors-primary-soft);
+      color: var(--colors-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .download-pill-icon i { width: 16px; height: 16px; }
+    .download-pill-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .download-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--colors-graphite);
+      text-transform: uppercase;
+    }
+    .download-action a {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--colors-primary);
+    }
+
+    /* CTA Section */
+    .article-cta-box {
+      background: linear-gradient(135deg, #0f4943 0%, #176B63 100%);
+      color: #ffffff;
+      border-radius: 8px;
+      padding: 32px 28px;
+      margin: 40px 0 20px;
+      text-align: center;
+    }
+    .article-cta-box h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+    .article-cta-box p {
+      font-size: 15px;
+      color: #d1ebe8;
+      max-width: 600px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+    .cta-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-cta-white {
+      background: #ffffff;
+      color: var(--colors-primary-deep);
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background 0.15s ease;
+    }
+    .btn-cta-white:hover {
+      background: #f0f7f6;
+      text-decoration: none;
+    }
+    .btn-cta-ghost {
+      background: rgba(255,255,255,0.15);
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.3);
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background 0.15s ease;
+    }
+    .btn-cta-ghost:hover {
+      background: rgba(255,255,255,0.25);
+      text-decoration: none;
+    }
+
+    /* Related Articles */
+    .related-section {
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 1px solid var(--colors-hairline);
+    }
+    .related-title-heading {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--colors-ink);
+      margin-bottom: 20px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .related-card {
+      background: var(--colors-canvas);
+      border: 1px solid var(--colors-hairline);
+      border-radius: 6px;
+      overflow: hidden;
+      text-decoration: none;
+      color: var(--colors-ink);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .related-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(15, 28, 26, 0.08);
+      text-decoration: none;
+    }
+    .related-thumb-wrapper {
+      position: relative;
+      width: 100%;
+      height: 130px;
+      background: var(--colors-cloud);
+      overflow: hidden;
+    }
+    .related-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .related-category {
+      position: absolute;
+      top: 8px; left: 8px;
+      background: rgba(15, 73, 67, 0.85);
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+      text-transform: uppercase;
+    }
+    .related-body {
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+    .related-title {
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--colors-ink);
+      margin-bottom: 6px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .related-meta {
+      font-size: 11px;
+      color: var(--colors-graphite);
+    }
+
+    /* Footer (identical to home) */
+    .footer-dark {
+      background-color: var(--colors-ink-deep);
+      color: #ffffff;
+      padding: 60px 0 28px;
+      border-top: 1px solid #1a2f2c;
+      margin-top: 60px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.3fr 1fr;
+      gap: 36px;
+      margin-bottom: 40px;
+    }
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .footer-brand .brand-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .footer-brand .brand-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .footer-brand .brand-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .footer-motto {
+      font-size: 14px;
+      color: #a7b7b5;
+      max-width: 320px;
+      line-height: 1.6;
+    }
+    .footer-links-col h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 14px;
+    }
+    .footer-links-col {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+    .footer-links-col a {
+      text-decoration: none;
+      color: #a7b7b5;
+      font-size: 14px;
+      transition: color 0.15s ease;
+    }
+    .footer-links-col a:hover {
+      color: #ffffff;
+    }
+    .footer-badge img {
+      height: 38px;
+      width: auto;
+      border-radius: 6px;
+      display: block;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 24px;
+      border-top: 1px solid #1a2f2c;
+      font-size: 13px;
+      color: #718481;
+    }
+    .footer-bottom a {
+      color: #718481;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    .footer-bottom a:hover {
+      color: #ffffff;
+    }
+
+    @media (max-width: 1024px) {
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .footer-brand { grid-column: span 2; }
+    }
+
+    @media (max-width: 768px) {
+      .article-main-card { padding: 24px 18px; border-radius: 6px; }
+      .article-title { font-size: 24px; }
+      .related-grid { grid-template-columns: 1fr; }
+      .topbar-nav .topbar-link { display: none; }
+      .footer-top { grid-template-columns: 1fr; gap: 24px; }
+      .footer-brand { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation (NO JUMP LINKS) -->
+  <header class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <a href="../../" class="topbar-brand">
+          <img src="../../icon.jpg" alt="Sound of Text" />
+          <span>Sound of Text</span>
+        </a>
+        <nav class="topbar-nav">
+          <a href="../../" class="topbar-link">Home</a>
+          <a href="../" class="topbar-link active">Blog & Panduan</a>
+          <a href="../../about/" class="topbar-link">About</a>
+          <a href="https://play.google.com/store/apps/details?id=com.karinov.soundoftext" target="_blank" rel="noopener noreferrer" class="topbar-btn">
+            <i data-lucide="download"></i> <span>Get App</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="container">
+    <div class="article-container">
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <a href="../../">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../">Blog</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Panduan HP</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Article Main Content -->
+  <main class="article-wrapper">
+    <div class="container">
+      <div class="article-container">
+        <article class="article-main-card">
+          
+          <header class="article-header">
+            <span class="article-category-badge">Panduan HP</span>
+            <h1 class="article-title">10 Cara Membuat Suara Google di HP (Tanpa &amp; Pakai Aplikasi)</h1>
+            <div class="article-meta-row">
+              <div class="article-meta-item">
+                <i data-lucide="user"></i>
+                <span>Sound of Text Team</span>
+              </div>
+              <div class="article-meta-item">
+                <i data-lucide="calendar"></i>
+                <span>16 Agustus 2025</span>
+              </div>
+              <div class="article-meta-item">
+                <i data-lucide="clock"></i>
+                <span>7 min read</span>
+              </div>
+            </div>
+          </header>
+
+          <div class="article-hero-img-box">
+            <img src="https://cdn.emzeth.com/sot/cover/cara-pakai-savefrom-untuk-download-youtube.jpg" alt="10 Cara Membuat Suara Google di HP" class="article-hero-img" />
+          </div>
+
+          
+
+          <div class="article-content">
+            <p>Mau melakukan voiceover dengan <a href="../cara-ubah-nada-pesan-masuk-whatsapp/" class="contextual-internal-link">suara Google</a>? Biar mudah, ikuti <strong>cara membuat suara Google di HP</strong> <strong>tanpa aplikasi</strong> maupun dengan aplikasi di sini.</p>
+<p>Jika sedang malas melakukan voiceover, jurus yang sering diandalkan banyak orang adalah menggunakan suara Google. Saat ini penggunaan suara Google sudah sangat lumrah dalam berbagai hal, sehingga banyak yang mencari <strong>cara membuat suara Google di HP</strong> <strong>tanpa aplikasi</strong>.</p>
+<p>Kebanyakan orang memilih cara tanpa aplikasi, karena alasan memori penuh. Jadi artikel ini juga menyediakan alternatif melalui web bagi yang tidak ingin memasang aplikasi pihak ketiga. Suara Google seringkali digunakan untuk mengisi sebuah konten video.</p>
+<p>Asyiknya sekarang membuat voiceover dengan suara Google bisa dilakukan di HP, sehingga lebih fleksibel. Baca terus artikel ini untuk memahami penjelasan lebih lengkapnya:</p>
+<h2 id="cara-membuat-suara-google-di-hp-tanpa-aplikasi">Cara Membuat Suara Google di HP Tanpa Aplikasi</h2>
+
+<figure class="article-figure">
+  <img src="https://cdn.emzeth.com/sot/cara-kirim-sound-of-text-di-voice-note-wa.jpg" alt="Gunakan Suara Google di Pesan WA" loading="lazy" class="article-img" />
+  <figcaption>Mengirimkan pesan suara hasil text to speech ke WhatsApp</figcaption>
+</figure>
+<p>Khusus bagi yang memori HP penuh, disarankan menggunakan alat <a href="../cara-sound-tiktok-jadi-nada-dering-wa/" class="contextual-internal-link">text to speech</a> berbasis web yang hanya membutuhkan browser. Terdapat empat macam web yang sering digunakan untuk menghasilkan suara Google, namun pilihan jenis suaranya terbatas. Kalau mau menggunakan cara ini, simak berikut:</p>
+<h3 id="google-translate">Google Translate</h3>
+<p>Hampir semua orang tahu <a href="../cara-download-suara-google-translate/" class="contextual-internal-link">Google Translate</a>, menjadikannya sebagai cara paling dasar untuk mendapatkan suara Google. Nantinya perlu digunakan aplikasi tambahan berupa perekam layar supaya dapat menyimpan suara yang dihasilkan mesin ini. Berikut penjelasannya:</p>
+<ul class="article-list">
+<li>Buka <strong>Google Chrome</strong> di HP.</li>
+<li>Masuk ke web <a href="https://translate.google.co.id/?hl=en&amp;sl=en&amp;tl=id&amp;op=translate" target="_blank" rel="noopener noreferrer">Google Translate</a>.</li>
+<li>Ubah bagian bahasa input dengan <strong>Bahasa Indonesia</strong>.</li>
+<li>Sedangkan bagian output menjadi bahasa Inggris.</li>
+<li>Ketik teks yang mau diucapkan oleh <strong>Google</strong> pada kotak input.</li>
+<li>Kemudian jalankan aplikasi perekam suara layar.</li>
+<li>Ketika rekaman dimulai, tekan tombol <strong>Speaker</strong> supaya web ini berbicara.</li>
+<li>Matikan rekaman dan file tersimpan dalam format MP3. Selesai.</li>
+</ul>
+<h3 id="voiceoftext-com">Voiceoftext.com</h3>
+<p>Lebih simple dan mudah jika menggunakan web seperti Voice of Text. Web ini sangat populer dan dijadikan andalan bagi banyak konten kreator. Pilihan bahasa dan jenis suaranya beragam, tak heran kalau banyak yang menyukainya. Simak <strong>cara membuat</strong><strong> </strong><strong>suara Google di HP</strong> <strong>online</strong> di bawah:</p>
+<ul class="article-list">
+<li>Kunjungi situs <a href="http://www.voiceoftext.com" target="_blank" rel="noopener noreferrer">Voice of Text</a> di browser.</li>
+<li>Pilih jenis bahasa yang mau digunakan.</li>
+<li>Ketika teks ke kolom yang tersedia. Maksimum hanya bisa 200 karakter.</li>
+<li>Kemudian, tekan tombol <strong>Convert</strong><strong> to </strong><strong>Voice</strong>.</li>
+<li>Tunggu sampai proses konversi selesai.</li>
+<li>Jika sudah, tekan <strong>ikon panah ke bawah</strong> untuk mengunduh file.</li>
+<li>Tekan ikon segitiga untuk memutar audio Google yang telah dibuat.</li>
+<li>Selesai.</li>
+</ul>
+<h3 id="google-cloud-text-to-speech">Google Cloud Text To Speech</h3>
+<p>Google juga mempunyai layanan text to speech lain yang gratis digunakan oleh semua orang. Layanan ini tersedia pada Googe Cloud dan tidak banyak orang yang tahu. Kalau mau mencobanya, ikuti panduan penggunaannya sebagai berikut:</p>
+<ul class="article-list">
+<li>Buka <strong>Chrome</strong>.</li>
+<li>Pastikan sudah <strong>log in</strong> menggunakan akun Google.</li>
+<li>Kunjungi web <a href="https://cloud.google.com/text-to-speech/" target="_blank" rel="noopener noreferrer">Cloud Google Text to Speech</a>.</li>
+<li>Gulir layar ke bawah dan ketik teks yang diinginkan ke area yang tersedia.</li>
+<li>Lakukan pengaturan jenis bahasa, jenis suara dan lainnya.</li>
+<li>Jika sudah sesuai, tekan tombol <strong>Speak</strong><strong> </strong><strong>It</strong>.</li>
+<li>Setelah proses konversi selesai, download audio tersebut. Selesai.</li>
+</ul>
+<h3 id="responsivevoice-org">Responsivevoice.org</h3>
+<p>Jika ingin lebih kreatif dalam membuat suara Google, gunakan web satu ini. Responsivevoice.org juga mendukung integrasi penambahan suara Google ke web Anda. Namun mari bahas dulu bagaimana cara membuat suara Google di sini, berikut urutannya:</p>
+<ul class="article-list">
+<li>Jalankan browser dan akses situs <a href="https://responsivevoice.org/" target="_blank" rel="noopener noreferrer">Responsivevoice.org</a>.</li>
+<li>Di bagian atas tersedia kotak kosong, isi dengan teks yang diinginkan.</li>
+<li>Tentukan jenis bahasa yang diinginkan melalui menu dropdown.</li>
+<li>Kemudian pilih tombol <strong>Play</strong> untuk melihat hasilnya.</li>
+<li><strong>Download</strong> file tersebut dan selesai.</li>
+</ul>
+<h2 id="cara-membuat-suara-google-di-hp-di-iphone-dan-android">Cara Membuat Suara Google di HP di iPhone dan Android</h2>
+<p>Menggunakan aplikasi akan mempermudah pekerjaan Anda, apalagi jika sering menggunakan suara Google untuk membuat konten. Beberapa aplikasi ini tersedia untuk Android maupun iPhone. Apa saja aplikasi yang disarankan? Berikut di antaranya:</p>
+<h3 id="narrator-s-voice">Narrator&#x27;s Voice</h3>
+<p>Aplikasi dengan unduhan lebih dari 10 juta ini memungkinkan pengguna untuk mengubah teks menjadi suara Google. Pengaturannya lebih mendalam sehingga suara dapat diubah kecepatan dan intonasinya. Inilah cara penggunaannya:</p>
+<ul class="article-list">
+<li>Unduh dan buka <a href="https://play.google.com/store/apps/details?id=br.com.escolhatecnologia.vozdonarrador" target="_blank" rel="noopener noreferrer">Narrator’s Voice</a> di HP.</li>
+<li><strong>Login</strong> dengan akun baru.</li>
+<li>Pilih bahasa dan gaya suara sesuai kebutuhan.</li>
+<li>Klik <strong>ikon teks</strong> dan ketik narasi yang diinginkan.</li>
+<li>Tunggu sampai konversi selesai.</li>
+<li>Jika sudah, <strong>download</strong> dan simpan file tersebut.</li>
+</ul>
+<h3 id="telegram">Telegram</h3>
+<p>Bagi yang mempunyai Telegram, terdapat bot canggih yang mampu melakukan fitur text to speech. Dengan cara ini, tidak perlu menggunakan aplikasi tambahan kalau Anda sudah memilikinya. Berikut cara mengaktifkan bot terkait:</p>
+<ul class="article-list">
+<li>Instal dan jalankan aplikasi <a href="https://play.google.com/store/apps/details?id=org.telegram.messenger" target="_blank" rel="noopener noreferrer">Telegram</a>.</li>
+<li><strong>Login</strong> dengan akun yang sudah ada.</li>
+<li>Buka kolom pencarian dan masukkan kata kunci <a href="https://t.me/ttsbot" target="_blank" rel="noopener noreferrer">@ttsbot</a>.</li>
+<li>Pilih tombol <strong>Start</strong> untuk melanjutkan.</li>
+<li>Tekan <strong>Speak</strong> dan tambahkan narasi yang mau diubah.</li>
+<li>Kirim dan tunggu sampai audio dikonversi.</li>
+<li><strong>Download</strong> audio tersebut untuk menyimpannya.</li>
+</ul>
+<h3 id="capcut">Capcut</h3>
+<p>Menggunakan Capcut adalah <strong>cara membuat suara Google di HP</strong> yang paling efektif, sehingga bisa sekaligus menambahkannya ke dalam video yang dibuat. Kalau masih bingung bagaimana cara menggunakannya, lihat di bawah ini:</p>
+<ul class="article-list">
+<li>Instal aplikasi <a href="https://play.google.com/store/apps/details?id=com.lemon.lvoverseas" target="_blank" rel="noopener noreferrer">CapCut</a> terlebih dulu jika belum memilikinya.</li>
+<li>Jalankan aplikasi tersebut, lalu berikan izin ketika muncul kotak dialog akses.</li>
+<li>Buat proyek baru dan masukkan video yang ingin diberikan voiceover menggunakan suara Google.</li>
+<li>Tekan ikon <strong>Mic</strong> untuk melakukan perekaman suara seperti biasa.</li>
+<li>Jika sudah, pilih file suara tersebut.</li>
+<li>Tambahkan <strong>efek robot</strong> yang membuatnya terdengar seperti suara <strong>Google</strong>.</li>
+<li>Setelah hasilnya sesuai, <strong>simpan</strong> dan <strong>ekspor video</strong> tersebut. Selesai.</li>
+</ul>
+<h3 id="whatsapp">WhatsApp</h3>
+<p>Tidak hanya bisa dipakai chatting, pahami <strong>cara membuat suara Google di WhatsApp</strong> kalau ingin praktis dan cepat jadi. Langkah-langkahnya mudah dan dapat dilakukan di iPhone atau Android. Simak penjelasannya yaitu:</p>
+<ul class="article-list">
+<li>Jalankan aplikasi <strong>WhatsApp</strong>.</li>
+<li>Buka <strong>room chat</strong> dengan kontak sendiri atau teman dekat.</li>
+<li>Buat pesan suara menggunakan fitur <strong>Mic</strong>.</li>
+<li>Tirukan suara seperti Google agar hasilnya terdengar sungguhan.</li>
+<li>Kirim pesan suara tersebut agar bisa disimpan.</li>
+<li>Jika sudah, file suara tersebut dapat diakses melalui folder <strong>WhatsApp</strong> di <strong>File Manager</strong>. Selesai.</li>
+</ul>
+<h3 id="voice-changer-with-effect">Voice Changer with Effect</h3>
+<p>Jika ingin menambahkan efek tertentu pada suara Google, aplikasi ini mampu melakukannya. Tak heran aplikasi ini telah mendapatkan rating 4.4 dan 100 juta unduhan. Jangan sampai ketinggalan, pahami cara penggunaannya sebagai berikut:</p>
+<ul class="article-list">
+<li>Unduh dan instal aplikasi <a href="https://play.google.com/store/apps/details?id=br.com.escolhatecnologia.vozdonarrador" target="_blank" rel="noopener noreferrer">Voice Changer with Effect</a>.</li>
+<li>Jalankan aplikasi tersebut.</li>
+<li>Pada halaman utama, masukkan teks yang diinginkan pada kotak yang tersedia.</li>
+<li>Atur dengan efek yang ada supaya terdengar lebih menarik.</li>
+<li>Dengarkan terlebih dulu melalui menu <strong>Preview</strong>.</li>
+<li>Terakhir, <strong>download</strong> file tersebut. Selesai.</li>
+</ul>
+<h3 id="text-to-speech">Text to Speech</h3>
+<p>Dengan ukuran aplikasi yang kecil dan fungsinya yang fokus pada pembuatan suara Google, menjadikan aplikasi ini cukup unggul. Kalau ingin mencobanya, ikuti langkah-langkah di bawah ini:</p>
+<ul class="article-list">
+<li>Unduh aplikasi <a href="https://play.google.com/store/apps/details?id=com.baviux.voicechanger" target="_blank" rel="noopener noreferrer">Text to Speech</a>.</li>
+<li>Jalankan aplikasi tersebut dan tambahkan teks yang diinginkan.</li>
+<li>Tekan tombol <strong>Speaker</strong> untuk mendengarkan.</li>
+<li>Kemudian tekan ikon titik tiga di sudut layar.</li>
+<li>Pilih <strong>S</strong><strong>ave</strong><strong> to </strong><strong>wav</strong><strong> </strong><strong>file</strong>.</li>
+<li>File akan tersimpan otomatis ke dalam memori.</li>
+<li>Membuat suara Google sebetulnya sangat mudah. Apalagi dengan adanya kumpulan <strong>cara membuat suara Google di HP</strong> melalui Translate, WhatsApp, CapCut dan lain sebagainya. Silakan pilih cara yang dirasa paling mudah agar nyaman melakukan perekaman.</li>
+</ul>
+
+<figure class="article-figure">
+  <img src="https://cdn.emzeth.com/sot/pindahkan-nada-dering-ke-folder-notifications.jpg" alt="Simpan Audio ke Notifikasi" loading="lazy" class="article-img" />
+  <figcaption>Menjadikan file suara Google sebagai nada notifikasi pesan</figcaption>
+</figure>
+          </div>
+
+          <!-- CTA Box -->
+          <div class="article-cta-box">
+            <h3>Buat Suara Teks Custom Sendiri Sekarang!</h3>
+            <p>Ubah tulisan apa pun menjadi suara Google jernih secara online, atau unduh aplikasi Sound of Text Com di Google Play untuk fitur 50+ bahasa dan audio merger gratis.</p>
+            <div class="cta-buttons">
+              <a href="../../#demo" class="btn-cta-white">Coba Live Demo Web</a>
+              <a href="https://play.google.com/store/apps/details?id=com.karinov.soundoftext" target="_blank" rel="noopener noreferrer" class="btn-cta-ghost">Download Aplikasi Android</a>
+            </div>
+          </div>
+
+          <!-- Related Articles -->
+          <section class="related-section">
+            <h3 class="related-title-heading">Artikel Terkait Lainnya</h3>
+            <div class="related-grid">
+              
+<a href="../5-platform-voice-over-ternama-indonesia/" class="related-card">
+  <div class="related-thumb-wrapper">
+    <img src="https://cdn.emzeth.com/sot/cover/rekam-suara-menggunakan-voice-recorder-online.jpg" alt="5 Platform Voice Over Ternama di Indonesia" loading="lazy" class="related-thumb" />
+    <span class="related-category">Voice Over</span>
+  </div>
+  <div class="related-body">
+    <h4 class="related-title">5 Platform Voice Over Ternama di Indonesia</h4>
+    <p class="related-meta">15 Juli 2025 • 4 min read</p>
+  </div>
+</a>
+<a href="../kumpulan-link-download-nada-dering-wa/" class="related-card">
+  <div class="related-thumb-wrapper">
+    <img src="https://cdn.emzeth.com/sot/cover/cara-sound-of-text-wa-buat-nada-dering-bahasa-indonesia.jpg" alt="Kumpulan Link Download Nada Dering WA (Lengkap 128+ Sound)" loading="lazy" class="related-thumb" />
+    <span class="related-category">Ringtone WA</span>
+  </div>
+  <div class="related-body">
+    <h4 class="related-title">Kumpulan Link Download Nada Dering WA (Lengkap 128+ Sound)</h4>
+    <p class="related-meta">20 Juli 2025 • 8 min read</p>
+  </div>
+</a>
+<a href="../botika-buat-ringtone-whatsapp-nama-sendiri/" class="related-card">
+  <div class="related-thumb-wrapper">
+    <img src="https://cdn.emzeth.com/sot/cover/buat-nada-dering-iphone-ada-namanya-saat-telepon-masuk.jpg" alt="Botika: Buat Ringtone Whatsapp Nama Sendiri" loading="lazy" class="related-thumb" />
+    <span class="related-category">Tutorial TTS</span>
+  </div>
+  <div class="related-body">
+    <h4 class="related-title">Botika: Buat Ringtone Whatsapp Nama Sendiri</h4>
+    <p class="related-meta">24 Juli 2025 • 5 min read</p>
+  </div>
+</a>
+            </div>
+          </section>
+
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Dark Footer (matching home) -->
+  <footer class="footer-dark">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-icon">
+            <img src="../../icon.jpg" alt="Sound of Text" class="brand-img" />
+          </div>
+          <span class="brand-title">Sound of Text</span>
+          <p class="footer-motto">Free text-to-speech converter and batch audio merger for creators worldwide.</p>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Navigation</h4>
+          <a href="../../">Home</a>
+          <a href="../../#demo">Live Demo</a>
+          <a href="../../#features">Capabilities</a>
+          <a href="../">Blog &amp; Panduan</a>
+          <a href="../../#screenshots">App Preview</a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Capabilities</h4>
+          <a href="../../#features">No Voice Recording</a>
+          <a href="../../#features">1-Step Translation</a>
+          <a href="../../#features">Bulk Text Import</a>
+          <a href="../../#features">Audio Merger</a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Community &amp; App</h4>
+          <a href="https://github.com/ncpierson" target="_blank" rel="noopener noreferrer">NC Pierson on GitHub</a>
+          <a href="https://soundtext.org" target="_blank" rel="noopener noreferrer">Soundtext.org Community</a>
+          <a href="https://play.google.com/store/apps/details?id=com.karinov.soundoftext" target="_blank" rel="noopener noreferrer" class="footer-badge" style="margin-top: 6px;">
+            <img src="../../playstore.png" alt="Google Play" />
+          </a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Legal</h4>
+          <a href="../../about/">About</a>
+          <a href="../../privacy/">Privacy Policy</a>
+          <a href="../../terms/">Terms of Service</a>
+          <a href="../../disclaimer/">Disclaimer</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sound of Text. Open web utility. All rights reserved.</p>
+        <p style="margin-top: 6px; font-size: 12px;">
+          <a href="../">Blog</a> · 
+          <a href="../../about/">About</a> · 
+          <a href="../../privacy/">Privacy</a> · 
+          <a href="../../terms/">Terms</a> · 
+          <a href="../../disclaimer/">Disclaimer</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

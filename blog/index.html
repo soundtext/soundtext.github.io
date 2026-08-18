@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog & Panduan Sound of Text — Tips, Tutorial & Ringtone WA</title>
+  <meta name="description" content="Kumpulan panduan, tutorial text to speech, cara membuat nada dering WhatsApp sebut nama, download sound TikTok MP3, dan ulasan tools audio terbaik." />
+  <link rel="canonical" href="https://soundtext.github.io/blog/" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="../icon.jpg" />
+  <link rel="apple-touch-icon" href="../icon.jpg" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    :root {
+      --colors-primary: #176B63;
+      --colors-primary-bright: #1f8d83;
+      --colors-primary-deep: #0f4943;
+      --colors-primary-soft: #e2f3f1;
+      --colors-ink: #0f1c1a;
+      --colors-ink-deep: #081615;
+      --colors-on-ink: #ffffff;
+      --colors-canvas: #ffffff;
+      --colors-cloud: #f6faf9;
+      --colors-graphite: #5c726f;
+      --colors-hairline: #e3ecea;
+      --font-family: 'Inter', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-family);
+      color: var(--colors-ink);
+      background: var(--colors-cloud);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--colors-primary); text-decoration: none; }
+    
+    .topbar {
+      background: var(--colors-canvas);
+      border-bottom: 1px solid var(--colors-hairline);
+      position: sticky; top: 0; z-index: 100;
+      padding: 14px 0;
+    }
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--colors-ink);
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .topbar-brand img {
+      width: 34px; height: 34px;
+      border-radius: 6px;
+    }
+    .topbar-nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .topbar-link {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--colors-graphite);
+      text-decoration: none;
+    }
+    .topbar-link:hover, .topbar-link.active {
+      color: var(--colors-primary);
+      text-decoration: none;
+    }
+    .topbar-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: var(--colors-primary);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.15s ease;
+    }
+    .topbar-btn:hover {
+      background: var(--colors-primary-deep);
+      text-decoration: none;
+    }
+
+    /* Hero Section (LESS ROUNDED, CLEAN GEOMETRY) */
+    .blog-hero {
+      background: var(--colors-canvas);
+      border-bottom: 1px solid var(--colors-hairline);
+      padding: 48px 0 36px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--colors-primary-soft);
+      color: var(--colors-primary);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+    }
+    .blog-hero h1 {
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--colors-ink);
+      margin-bottom: 12px;
+      font-family: 'Manrope', var(--font-family);
+    }
+    .blog-hero p {
+      font-size: 16px;
+      color: var(--colors-graphite);
+      max-width: 660px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+    }
+
+    /* Filter Pills (Clean 6px radius) */
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .filter-pill {
+      background: var(--colors-cloud);
+      border: 1px solid var(--colors-hairline);
+      color: var(--colors-graphite);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .filter-pill:hover {
+      border-color: var(--colors-primary-bright);
+      color: var(--colors-primary);
+    }
+    .filter-pill.active {
+      background: var(--colors-primary);
+      border-color: var(--colors-primary);
+      color: #ffffff;
+    }
+
+    /* Blog Grid & Cards (Clean 8px radius) */
+    .blog-grid-section {
+      padding: 40px 0 70px;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .blog-card {
+      background: var(--colors-canvas);
+      border: 1px solid var(--colors-hairline);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(15, 28, 26, 0.04);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(15, 28, 26, 0.08);
+    }
+    .blog-card-link {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .blog-thumb-wrap {
+      position: relative;
+      width: 100%;
+      height: 190px;
+      background: var(--colors-cloud);
+      overflow: hidden;
+    }
+    .blog-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.25s ease;
+    }
+    .blog-card:hover .blog-thumb {
+      transform: scale(1.03);
+    }
+    .blog-category-tag {
+      position: absolute;
+      top: 10px; left: 10px;
+      background: rgba(15, 73, 67, 0.9);
+      backdrop-filter: blur(4px);
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .blog-card-body {
+      padding: 20px 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .blog-card-meta {
+      font-size: 12px;
+      color: var(--colors-graphite);
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .blog-card-title {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--colors-ink);
+      margin-bottom: 8px;
+      font-family: 'Manrope', var(--font-family);
+    }
+    .blog-card-desc {
+      font-size: 13.5px;
+      color: #4b605d;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      flex-grow: 1;
+    }
+    .blog-card-footer {
+      border-top: 1px solid var(--colors-hairline);
+      padding-top: 12px;
+    }
+    .read-more {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--colors-primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .read-more i { width: 14px; height: 14px; }
+
+    /* Footer (identical to home) */
+    .footer-dark {
+      background-color: var(--colors-ink-deep);
+      color: #ffffff;
+      padding: 60px 0 28px;
+      border-top: 1px solid #1a2f2c;
+      margin-top: 60px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.3fr 1fr;
+      gap: 36px;
+      margin-bottom: 40px;
+    }
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .footer-brand .brand-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .footer-brand .brand-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .footer-brand .brand-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .footer-motto {
+      font-size: 14px;
+      color: #a7b7b5;
+      max-width: 320px;
+      line-height: 1.6;
+    }
+    .footer-links-col h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 14px;
+    }
+    .footer-links-col {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+    .footer-links-col a {
+      text-decoration: none;
+      color: #a7b7b5;
+      font-size: 14px;
+      transition: color 0.15s ease;
+    }
+    .footer-links-col a:hover {
+      color: #ffffff;
+    }
+    .footer-badge img {
+      height: 38px;
+      width: auto;
+      border-radius: 6px;
+      display: block;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 24px;
+      border-top: 1px solid #1a2f2c;
+      font-size: 13px;
+      color: #718481;
+    }
+    .footer-bottom a {
+      color: #718481;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    .footer-bottom a:hover {
+      color: #ffffff;
+    }
+
+    @media (max-width: 1024px) {
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .footer-brand { grid-column: span 2; }
+    }
+
+    @media (max-width: 960px) {
+      .blog-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-hero h1 { font-size: 26px; }
+      .topbar-nav .topbar-link { display: none; }
+      .footer-top { grid-template-columns: 1fr; gap: 24px; }
+      .footer-brand { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation (NO JUMP LINKS) -->
+  <header class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <a href="../" class="topbar-brand">
+          <img src="../icon.jpg" alt="Sound of Text" />
+          <span>Sound of Text</span>
+        </a>
+        <nav class="topbar-nav">
+          <a href="../" class="topbar-link">Home</a>
+          <a href="./" class="topbar-link active">Blog & Panduan</a>
+          <a href="../about/" class="topbar-link">About</a>
+          <a href="https://play.google.com/store/apps/details?id=com.karinov.soundoftext" target="_blank" rel="noopener noreferrer" class="topbar-btn">
+            <i data-lucide="download"></i> <span>Get App</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner (Less rounded, clean geometric) -->
+  <section class="blog-hero">
+    <div class="container">
+      <span class="hero-badge">ARTIKEL &amp; PANDUAN</span>
+      <h1>Tips, Tutorial &amp; Suara Google Sound of Text</h1>
+      <p>Panduan lengkap seputar text-to-speech, download nada dering WhatsApp viral, sound TikTok, dan rekomendasi aplikasi audio terbaik.</p>
+      
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-pill active" data-filter="all">Semua Artikel</button><button class="filter-pill" data-filter="panduan hp">Panduan HP</button><button class="filter-pill" data-filter="panduan lengkap">Panduan Lengkap</button><button class="filter-pill" data-filter="review aplikasi">Review Aplikasi</button><button class="filter-pill" data-filter="ringtone wa">Ringtone WA</button><button class="filter-pill" data-filter="software review">Software Review</button><button class="filter-pill" data-filter="tips whatsapp">Tips WhatsApp</button><button class="filter-pill" data-filter="tools tts">Tools TTS</button><button class="filter-pill" data-filter="tutorial ringtone">Tutorial Ringtone</button><button class="filter-pill" data-filter="tutorial tts">Tutorial TTS</button><button class="filter-pill" data-filter="voice over">Voice Over</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Listing -->
+  <section class="blog-grid-section">
+    <div class="container">
+      <div class="blog-grid" id="blogGrid">
+        
+<article class="blog-card" data-category="voice over">
+  <a href="5-platform-voice-over-ternama-indonesia/" class="blog-card-link">
+    <div class="blog-thumb-wrap">
+      <img src="https://cdn.emzeth.com/sot/cover/rekam-suara-menggunakan-voice-recorder-online.jpg" alt="5 Platform Voice Over Ternama di Indonesia" loading="lazy" class="blog-thumb" />
+      <span class="blog-category-tag">Voice Over</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <span>15 Juli 2025</span> • <span>4 min read</span>
+      </div>
+      <h2 class="blog-card-title">5 Platform Voice Over Ternama di Indonesia</h2>
+      <p class="blog-card-desc">Ulasan 5 platform voice over ternama dan terpopuler di Indonesia untuk voice talent profesional, pembuatan iklan, video YouTube, dan narasi.</p>
+      <div class="blog-card-footer">
+        <span class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"></i></span>
+      </div>
+    </div>
+  </a>
+</article>
+<article class="blog-card" data-category="ringtone wa">
+  <a href="kumpulan-link-download-nada-dering-wa/" class="blog-card-link">
+    <div class="blog-thumb-wrap">
+      <img src="https://cdn.emzeth.com/sot/cover/cara-sound-of-text-wa-buat-nada-dering-bahasa-indonesia.jpg" alt="Kumpulan Link Download Nada Dering WA (Lengkap 128+ Sound)" loading="lazy" class="blog-thumb" />
+      <span class="blog-category-tag">Ringtone WA</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <span>20 Juli 2025</span> • <span>8 min read</span>
+      </div>
+      <h2 class="blog-card-title">Kumpulan Link Download Nada Dering WA (Lengkap 128+ Sound)</h2>
+      <p class="blog-card-desc">Daftar link download nada dering WA aesthetic, lucu, keren, viral TikTok, anime, game dan lainnya lengkap dengan durasi singkat untuk semua HP.</p>
+      <div class="blog-card-footer">
+        <span class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"></i></span>
+      </div>
+    </div>
+  </a>
+</article>
+<article class="blog-card" data-category="tutorial tts">
+  <a href="botika-buat-ringtone-whatsapp-nama-sendiri/" class="blog-card-link">
+    <div class="blog-thumb-wrap">
+      <img src="https://cdn.emzeth.com/sot/cover/buat-nada-dering-iphone-ada-namanya-saat-telepon-masuk.jpg" alt="Botika: Buat Ringtone Whatsapp Nama Sendiri" loading="lazy" class="blog-thumb" />
+      <span class="blog-category-tag">Tutorial TTS</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <span>24 Juli 2025</span> • <span>5 min read</span>
+      </div>
+      <h2 class="blog-card-title">Botika: Buat Ringtone Whatsapp Nama Sendiri</h2>
+      <p class="blog-card-desc">Cara membuat ringtone WhatsApp sebut nama sendiri dengan Botika Text to Speech bahasa Indonesia yang natural dan jernih.</p>
+      <div class="blog-card-footer">
+        <span class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"></i></span>
+      </div>
+    </div>
+  </a>
+</article>
+<article class="blog-card" data-category="tutorial ringtone">
+  <a href="cara-buat-nada-dering-suara-google/" class="blog-card-link">
+    <div class="blog-thumb-wrap">
+      <img src="https://cdn.emzeth.com/sot/cover/nada-dering-iphone-ada-namanya-saat-telepon-masuk.jpg" alt="Cara Buat Nada Dering dengan Suara Google" loading="lazy" class="blog-thumb" />
+      <span class="blog-category-tag">Tutorial Ringtone</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <span>26 Juli 2025</span> • <span>5 min read</span>
+      </div>
+      <h2 class="blog-card-title">Cara Buat Nada Dering dengan Suara Google</h2>
+      <p class="blog-card-desc">Panduan praktis cara membuat nada dering WhatsApp dengan suara Google di Android dan iPhone tanpa aplikasi tambahan.</p>
+      <div class="blog-card-footer">
+        <span class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"></i></span>
+      </div>
+    </div>
+  </a>
+</article>
+<article class="blog-card" data-category="tips whatsapp">
+  <a href="cara-sound-tiktok-jadi-nada-dering-wa/" class="blog-card-link">
+    <div class="blog-thumb-wrap">
+      <img src="https://cdn.emzeth.com/sot/cover/fitur-wa.jpg" alt="Cara Sound TikTok Jadi Nada Dering WA Pesan &amp; Panggilan" loading="lazy" class="blog-thumb" />
+      <span class="blog-category-tag">Tips WhatsApp</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <span>28 Juli 2025</span> • <span>6 min read</span>
+      </div>
+      <h2 class="blog-card-title">Cara Sound TikTok Jadi Nada Dering WA Pesan &amp; Panggilan</h2>
+      <p class="blog-card-desc">Langkah mudah mengubah audio dan sound viral TikTok menjadi nada dering WhatsApp pesan atau panggilan di semua HP Android &amp; iPhone.</p>
+      <div class="blog-card-footer">
+        <span class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"></i></span>
+      </div>
+    </div>
+  </a>
+</article>
+<article class="blog-card" data-category="tools tts">
+  <a href="voicemaker-suara-google-pria-wanita-bayi/" class="blog-card-link">
+    <div class="blog-thumb-wrap">
+      <img src="https://cdn.emzeth.com/sot/cover/fitur-fitur-terbaru-gb-whatsapp-latest-version-tahun-2022.jpg" alt="Voicemaker: Buat Suara Google Pria, Wanita, Hingga Anak Bayi" loading="lazy" class="blog-thumb" />
+      <span class="blog-category-tag">Tools TTS</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <span>30 Juli 2025</span> • <span>5 min read</span>
+      </div>
+      <h2 class="blog-card-title">Voicemaker: Buat Suara Google Pria, Wanita, Hingga Anak Bayi</h2>
+      <p class="blog-card-desc">Review fitur Voicemaker.in untuk membuat text to speech suara Google pria, wanita, hingga efek suara anak bayi yang realistis.</p>
+      <div class="blog-card-footer">
+        <span class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"></i></span>
+      </div>
+    </div>
+  </a>
+</article>
+<article class="blog-card" data-category="panduan lengkap">
+  <a href="cara-buat-sound-of-text-wa-di-hp/" class="blog-card-link">
+    <div class="blog-thumb-wrap">
+      <img src="https://cdn.emzeth.com/sot/cover/cara-terbaru-menggunakan-sound-of-text-wa.jpg" alt="8 Cara Buat Sound of Text WA di HP Online Suara Google Semua Bahasa" loading="lazy" class="blog-thumb" />
+      <span class="blog-category-tag">Panduan Lengkap</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <span>2 Agustus 2025</span> • <span>7 min read</span>
+      </div>
+      <h2 class="blog-card-title">8 Cara Buat Sound of Text WA di HP Online Suara Google Semua Bahasa</h2>
+      <p class="blog-card-desc">8 cara membuat Sound of Text WA di HP secara online dengan suara Google bahasa Indonesia, Jawa, Sunda, Korea, hingga suara anime.</p>
+      <div class="blog-card-footer">
+        <span class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"></i></span>
+      </div>
+    </div>
+  </a>
+</article>
+<article class="blog-card" data-category="tutorial tts">
+  <a href="freetts-buat-nada-dering-whatsapp-ada-namanya/" class="blog-card-link">
+    <div class="blog-thumb-wrap">
+      <img src="https://cdn.emzeth.com/sot/cover/wa-web.jpg" alt="FreeTTS.com: Cara Buat Nada Dering WhatsApp Ada Namanya" loading="lazy" class="blog-thumb" />
+      <span class="blog-category-tag">Tutorial TTS</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <span>5 Agustus 2025</span> • <span>5 min read</span>
+      </div>
+      <h2 class="blog-card-title">FreeTTS.com: Cara Buat Nada Dering WhatsApp Ada Namanya</h2>
+      <p class="blog-card-desc">Panduan menggunakan FreeTTS.com untuk membuat nada dering WhatsApp sebut nama sendiri dengan suara jernih dan bebas limit karakter.</p>
+      <div class="blog-card-footer">
+        <span class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"></i></span>
+      </div>
+    </div>
+  </a>
+</article>
+<article class="blog-card" data-category="tutorial tts">
+  <a href="cara-download-suara-google-translate/" class="blog-card-link">
+    <div class="blog-thumb-wrap">
+      <img src="https://cdn.emzeth.com/sot/cover/google-translate-text-to-speech-engine.jpg" alt="Cara Download Suara Google Translate Mudah (MP3)" loading="lazy" class="blog-thumb" />
+      <span class="blog-category-tag">Tutorial TTS</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <span>8 Agustus 2025</span> • <span>4 min read</span>
+      </div>
+      <h2 class="blog-card-title">Cara Download Suara Google Translate Mudah (MP3)</h2>
+      <p class="blog-card-desc">Ketahui cara download suara Google Translate format MP3 di HP dan laptop dengan mudah tanpa aplikasi pihak ketiga.</p>
+      <div class="blog-card-footer">
+        <span class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"></i></span>
+      </div>
+    </div>
+  </a>
+</article>
+<article class="blog-card" data-category="ringtone wa">
+  <a href="cara-download-nada-dering-sebut-nama-kontak/" class="blog-card-link">
+    <div class="blog-thumb-wrap">
+      <img src="https://cdn.emzeth.com/sot/cover/gb-whatsapp-pro-apk-official-versi-terbaru-desember-2021.jpg" alt="5 Cara Download Nada Dering Sebut Nama Kontak" loading="lazy" class="blog-thumb" />
+      <span class="blog-category-tag">Ringtone WA</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <span>10 Agustus 2025</span> • <span>6 min read</span>
+      </div>
+      <h2 class="blog-card-title">5 Cara Download Nada Dering Sebut Nama Kontak</h2>
+      <p class="blog-card-desc">Cara download dan pasang nada dering sebut nama kontak pemanggil WhatsApp di HP Android dan iPhone tanpa ribet.</p>
+      <div class="blog-card-footer">
+        <span class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"></i></span>
+      </div>
+    </div>
+  </a>
+</article>
+<article class="blog-card" data-category="software review">
+  <a href="aplikasi-voice-changer-terbaik-pc/" class="blog-card-link">
+    <div class="blog-thumb-wrap">
+      <img src="https://cdn.emzeth.com/sot/cover/situs-mp3-juice-yang-asli-dan-versi-terbaru-tahun-2022.jpg" alt="5 Aplikasi Voice Changer Terbaik Untuk PC Windows" loading="lazy" class="blog-thumb" />
+      <span class="blog-category-tag">Software Review</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <span>12 Agustus 2025</span> • <span>5 min read</span>
+      </div>
+      <h2 class="blog-card-title">5 Aplikasi Voice Changer Terbaik Untuk PC Windows</h2>
+      <p class="blog-card-desc">Rekomendasi 5 software voice changer terbaik untuk PC Windows untuk kebutuhan gaming, streaming Discord, video editing, dan voice over.</p>
+      <div class="blog-card-footer">
+        <span class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"></i></span>
+      </div>
+    </div>
+  </a>
+</article>
+<article class="blog-card" data-category="review aplikasi">
+  <a href="aplikasi-text-to-speech-indonesia-terbaik/" class="blog-card-link">
+    <div class="blog-thumb-wrap">
+      <img src="https://cdn.emzeth.com/sot/cover/google-translate-text-to-speech-engine.jpg" alt="5 Aplikasi Text to Speech Indonesia Terbaik" loading="lazy" class="blog-thumb" />
+      <span class="blog-category-tag">Review Aplikasi</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <span>14 Agustus 2025</span> • <span>5 min read</span>
+      </div>
+      <h2 class="blog-card-title">5 Aplikasi Text to Speech Indonesia Terbaik</h2>
+      <p class="blog-card-desc">Daftar 5 aplikasi text to speech Indonesia terbaik dengan suara natural, jernih, dan fitur lengkap untuk edukasi, konten, dan bisnis.</p>
+      <div class="blog-card-footer">
+        <span class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"></i></span>
+      </div>
+    </div>
+  </a>
+</article>
+<article class="blog-card" data-category="panduan hp">
+  <a href="cara-membuat-suara-google-di-hp/" class="blog-card-link">
+    <div class="blog-thumb-wrap">
+      <img src="https://cdn.emzeth.com/sot/cover/cara-pakai-savefrom-untuk-download-youtube.jpg" alt="10 Cara Membuat Suara Google di HP (Tanpa &amp; Pakai Aplikasi)" loading="lazy" class="blog-thumb" />
+      <span class="blog-category-tag">Panduan HP</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <span>16 Agustus 2025</span> • <span>7 min read</span>
+      </div>
+      <h2 class="blog-card-title">10 Cara Membuat Suara Google di HP (Tanpa &amp; Pakai Aplikasi)</h2>
+      <p class="blog-card-desc">10 cara mudah membuat suara Google di HP untuk voice over video TikTok, reels Instagram, dan nada notifikasi WhatsApp.</p>
+      <div class="blog-card-footer">
+        <span class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"></i></span>
+      </div>
+    </div>
+  </a>
+</article>
+<article class="blog-card" data-category="tips whatsapp">
+  <a href="cara-ubah-nada-pesan-masuk-whatsapp/" class="blog-card-link">
+    <div class="blog-thumb-wrap">
+      <img src="https://cdn.emzeth.com/sot/cover/y2mate-cara-cepat-download-video-youtube.jpg" alt="Cara Ubah Nada Pesan Masuk di WhatsApp" loading="lazy" class="blog-thumb" />
+      <span class="blog-category-tag">Tips WhatsApp</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <span>18 Agustus 2025</span> • <span>3 min read</span>
+      </div>
+      <h2 class="blog-card-title">Cara Ubah Nada Pesan Masuk di WhatsApp</h2>
+      <p class="blog-card-desc">Panduan lengkap cara mengubah nada pesan notifikasi masuk di WhatsApp untuk semua kontak maupun kontak tertentu secara mudah.</p>
+      <div class="blog-card-footer">
+        <span class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"></i></span>
+      </div>
+    </div>
+  </a>
+</article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dark Footer (matching home) -->
+  <footer class="footer-dark">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-icon">
+            <img src="../icon.jpg" alt="Sound of Text" class="brand-img" />
+          </div>
+          <span class="brand-title">Sound of Text</span>
+          <p class="footer-motto">Free text-to-speech converter and batch audio merger for creators worldwide.</p>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Navigation</h4>
+          <a href="../">Home</a>
+          <a href="../#demo">Live Demo</a>
+          <a href="../#features">Capabilities</a>
+          <a href="./">Blog &amp; Panduan</a>
+          <a href="../#screenshots">App Preview</a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Capabilities</h4>
+          <a href="../#features">No Voice Recording</a>
+          <a href="../#features">1-Step Translation</a>
+          <a href="../#features">Bulk Text Import</a>
+          <a href="../#features">Audio Merger</a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Community &amp; App</h4>
+          <a href="https://github.com/ncpierson" target="_blank" rel="noopener noreferrer">NC Pierson on GitHub</a>
+          <a href="https://soundtext.org" target="_blank" rel="noopener noreferrer">Soundtext.org Community</a>
+          <a href="https://play.google.com/store/apps/details?id=com.karinov.soundoftext" target="_blank" rel="noopener noreferrer" class="footer-badge" style="margin-top: 6px;">
+            <img src="../playstore.png" alt="Google Play" />
+          </a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Legal</h4>
+          <a href="../about/">About</a>
+          <a href="../privacy/">Privacy Policy</a>
+          <a href="../terms/">Terms of Service</a>
+          <a href="../disclaimer/">Disclaimer</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sound of Text. Open web utility. All rights reserved.</p>
+        <p style="margin-top: 6px; font-size: 12px;">
+          <a href="./">Blog</a> · 
+          <a href="../about/">About</a> · 
+          <a href="../privacy/">Privacy</a> · 
+          <a href="../terms/">Terms</a> · 
+          <a href="../disclaimer/">Disclaimer</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+
+    // Filter interaction
+    const pills = document.querySelectorAll('.filter-pill');
+    const cards = document.querySelectorAll('.blog-card');
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const filter = pill.getAttribute('data-filter');
+
+        cards.forEach(card => {
+          const cat = card.getAttribute('data-category');
+          if (filter === 'all' || cat === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
