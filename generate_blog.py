@@ -1315,7 +1315,9 @@ def generate_article_html(article, blocks, all_articles):
     }}
 
     @media (max-width: 768px) {{
-      .article-main-card {{ padding: 24px 18px; border-radius: 6px; }}
+      .container {{ padding: 0 12px; }}
+      .article-container {{ padding: 0 6px; }}
+      .article-main-card {{ padding: 20px 12px; border-radius: 6px; }}
       .article-title {{ font-size: 24px; }}
       .related-grid {{ grid-template-columns: 1fr; }}
       .topbar-nav .topbar-link {{ display: none; }}
