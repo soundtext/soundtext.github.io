@@ -1,0 +1,15 @@
+# robots.txt for soundtext.github.io
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin/private areas
+Disallow: /admin/
+Disallow: /.git/
+
+# Specify sitemap
+Sitemap: https://soundtext.github.io/sitemap.xml
+
+# Crawl delay (optional, adjust as needed)
+# Crawl-delay: 1
