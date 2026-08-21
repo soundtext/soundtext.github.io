@@ -2,31 +2,121 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://soundtext.github.io/</loc>
-    <lastmod>2026-08-19</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://soundtext.github.io/about.html</loc>
-    <lastmod>2026-08-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://soundtext.github.io/blog/</loc>
+    <lastmod>2025-08-18</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://soundtext.github.io/privacy.html</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://soundtext.github.io/about/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://soundtext.github.io/privacy/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://soundtext.github.io/terms/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://soundtext.github.io/disclaimer/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://soundtext.github.io/blog/5-platform-voice-over-ternama-indonesia/</loc>
+    <lastmod>2025-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://soundtext.github.io/disclaimer.html</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://soundtext.github.io/blog/kumpulan-link-download-nada-dering-wa/</loc>
+    <lastmod>2025-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://soundtext.github.io/terms.html</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://soundtext.github.io/blog/botika-buat-ringtone-whatsapp-nama-sendiri/</loc>
+    <lastmod>2025-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://soundtext.github.io/blog/cara-buat-nada-dering-suara-google/</loc>
+    <lastmod>2025-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://soundtext.github.io/blog/cara-sound-tiktok-jadi-nada-dering-wa/</loc>
+    <lastmod>2025-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://soundtext.github.io/blog/voicemaker-suara-google-pria-wanita-bayi/</loc>
+    <lastmod>2025-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://soundtext.github.io/blog/cara-buat-sound-of-text-wa-di-hp/</loc>
+    <lastmod>2025-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://soundtext.github.io/blog/freetts-buat-nada-dering-whatsapp-ada-namanya/</loc>
+    <lastmod>2025-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://soundtext.github.io/blog/cara-download-suara-google-translate/</loc>
+    <lastmod>2025-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://soundtext.github.io/blog/cara-download-nada-dering-sebut-nama-kontak/</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://soundtext.github.io/blog/aplikasi-voice-changer-terbaik-pc/</loc>
+    <lastmod>2025-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://soundtext.github.io/blog/aplikasi-text-to-speech-indonesia-terbaik/</loc>
+    <lastmod>2025-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://soundtext.github.io/blog/cara-membuat-suara-google-di-hp/</loc>
+    <lastmod>2025-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://soundtext.github.io/blog/cara-ubah-nada-pesan-masuk-whatsapp/</loc>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
