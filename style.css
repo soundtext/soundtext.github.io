@@ -1939,7 +1939,33 @@ section {
 }
 
 /* ==========================================================================
-   Popular Voices Section
+   Ad Banners
+   ========================================================================== */
+
+.ad-banner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+  min-height: 90px;
+}
+
+.ad-banner ins {
+  display: block;
+}
+
+.ad-banner-top {
+  padding-top: 16px;
+  padding-bottom: 8px;
+}
+
+.ad-banner-tool {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints & Mobile Typography Polish
    ========================================================================== */
 
 .voices-section {
