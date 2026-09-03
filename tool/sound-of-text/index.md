@@ -1,6 +1,6 @@
 ---
 layout: sot
-title: "Sound of Text by Country: 30+ Free Voice Generators (MP3)"
+title: "30+ Text to Speech Voices in Different Languages"
 permalink: /sound-of-text/
 description: "Browse all Sound of Text voices by country. 30 language generators - Indonesian, Japanese, Arabic, English and more. Pick a voice, convert text, download MP3 free."
 image: /assets/images/voice.jpg
