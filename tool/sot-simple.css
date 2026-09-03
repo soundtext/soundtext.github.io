@@ -1,0 +1,386 @@
+/**
+ * Release Date: 2024-12-18 05:21
+ */
+
+.sound-of-text {
+    margin: 0 auto;
+    max-width: 36rem;
+}
+
+.sound-of-text .content {
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+    background-color: var(--white);
+    filter: drop-shadow(0 0 3px rgba(21, 21, 21, .1));
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid var(--border) !important;
+    border-radius: 10px;
+    position: relative;
+}
+
+.sound-of-text .textarea-container {
+    position: relative;
+    border-bottom: 1px solid #cecece
+}
+
+.sound-of-text textarea {
+    resize: none;
+    width: 100%;
+    min-height: 10rem;
+    transition: height 0.3s ease-in-out;
+    resize: vertical;
+    padding: 1rem;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.sound-of-text textarea:focus,
+.sound-of-text textarea:active {
+    min-height: 10rem;
+    border-color: transparent;
+    outline: none;
+}
+
+.sound-of-text .clear-icon {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    border-radius: 50%;
+    padding: 1px;
+    line-height: 1;
+    transition: background-color 0.3s ease;
+}
+
+.sound-of-text .clear-icon:hover {
+    background-color: #f1f1f1;
+}
+
+.sound-of-text .clear-icon svg {
+    width: 16px;
+    height: 16px;
+    fill: #555;
+    transition: fill 0.3s ease;
+}
+
+.sound-of-text .clear-icon:hover svg {
+    fill: var(--navy);
+}
+
+.sound-of-text .bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 20px;
+    line-height: 1.3;
+    margin-top: .5rem;
+}
+
+.sound-of-text .language-select {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    opacity: .7;
+    color: var(--navy);
+}
+
+.sound-of-text .char-counter {
+    opacity: .7;
+    color: var(--text-muted);
+}
+
+.sound-of-text .language-select:hover {
+    opacity: 1;
+}
+
+.sound-of-text .button {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 14px;
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity var(--transition);
+}
+
+.sound-of-text button {
+    cursor: pointer;
+}
+
+.sound-of-text .productMore {
+    margin-top: 16px;
+}
+
+.sound-of-text .language {
+    display: none;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, .175);
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+    max-width: none;
+    width: max-content;
+    max-height: 300px;
+    bottom: 100%;
+    margin-bottom: 4px;
+    z-index: 99;
+    background: white;
+    overflow-y: auto;
+}
+
+.sound-of-text .language.show {
+    display: block;
+}
+
+.sound-of-text .language>div {
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 2px 18px;
+}
+
+.sound-of-text .language>div:hover {
+    background-color: var(--navy);
+    color: white;
+}
+
+.sound-of-text .language::-webkit-scrollbar,
+.sound-of-text textarea::-webkit-scrollbar,
+.sound-of-text.history .saved-data::-webkit-scrollbar {
+    width: 10px;
+}
+
+.sound-of-text .language::-webkit-scrollbar-track,
+.sound-of-text textarea::-webkit-scrollbar-track,
+.sound-of-text.history .saved-data::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.sound-of-text .language::-webkit-scrollbar-thumb,
+.sound-of-text textarea::-webkit-scrollbar-thumb,
+.sound-of-text.history .saved-data::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.sound-of-text .language::-webkit-scrollbar-thumb:hover,
+.sound-of-text textarea::-webkit-scrollbar-thumb:hover,
+.sound-of-text.history .saved-data::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.sound-of-text .language::-webkit-scrollbar-button,
+.sound-of-text textarea::-webkit-scrollbar-button,
+.sound-of-text.history .saved-data::-webkit-scrollbar-button {
+    display: none;
+}
+
+
+.sound-of-text.history {
+    margin: 1rem auto;
+    display: none;
+}
+
+.sound-of-text.history .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sound-of-text.history .controls {
+    display: flex;
+    gap: 10px;
+}
+
+.sound-of-text.history .controls>div,
+.sound-of-text.history .clear-all {
+    cursor: pointer;
+    opacity: .7;
+}
+
+.sound-of-text.history .controls>div:hover,
+.sound-of-text.history .clear-all:hover {
+    opacity: 1;
+}
+
+.sound-of-text.history .clear-all {
+    display: flex;
+    align-items: center;
+}
+
+
+.sound-of-text.history .saved-data {
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+
+.sound-of-text.history .saved-data.scroll {
+    max-height: 20rem;
+    overflow-y: auto;
+}
+
+.sound-of-text.history .saved-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px 10px 20px;
+    align-items: flex-start;
+}
+
+.sound-of-text.history .saved-item>div {
+    flex-grow: 1;
+}
+
+.sound-of-text.history .saved-item:not(:last-child) {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sound-of-text.history .saved-item p {
+    margin-bottom: .6rem;
+}
+
+.sound-of-text.history .saved-item audio {
+    max-height: 2rem;
+    max-width: 100%;
+}
+
+.sound-of-text.history .saved-item .audio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sound-of-text.history .saved-item .audio svg {
+    display: none;
+    max-width: 2rem;
+    max-height: 2rem;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.sound-of-text.history .saved-item .audio svg:hover {
+    opacity: 1;
+}
+
+.sound-of-text.history .saved-item button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: .4;
+}
+
+.sound-of-text.history .saved-item button:hover {
+    opacity: 1;
+}
+
+.sound-of-text.history .saved-item button svg {
+    width: 24px;
+    height: 24px;
+}
+
+.sound-of-text.history .saved-item.playing {
+    background-color: #f0f8ff;
+    transition: background-color 0.3s ease;
+}
+
+@media only screen and (max-width: 768px) {
+    .sound-of-text {
+        max-width: 100%;
+        padding: 0 4px;
+    }
+    .sound-of-text .bar {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0 4px;
+    }
+    .sound-of-text .language-select {
+        font-size: 0.85rem;
+        flex: 1;
+        min-width: 0;
+        overflow: hidden;
+    }
+    .sound-of-text .language-select span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .sound-of-text .language {
+        max-width: 280px;
+        right: 0;
+        bottom: 100%;
+    }
+    .sound-of-text textarea {
+        font-size: 16px;
+        padding: 0.75rem;
+    }
+    .sound-of-text.history .saved-item {
+        flex-wrap: wrap;
+        padding: 10px 8px;
+    }
+    .sound-of-text.history .saved-item .audio {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+    .sound-of-text.history .saved-item button {
+        align-self: flex-start;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .sound-of-text .char-counter {
+        text-align: right;
+    }
+    .sound-of-text .language {
+        bottom: 71px;
+    }
+    .sound-of-text .button {
+        padding: 12px 10px;
+        font-size: 0.8rem;
+    }
+    .sound-of-text textarea {
+        padding: 0.6rem;
+        min-height: 8rem;
+        font-size: 15px;
+    }
+    .sound-of-text .language {
+        max-width: 240px;
+        max-height: 200px;
+        right: 0;
+    }
+    .sound-of-text .language>div {
+        padding: 2px 12px;
+        font-size: 14px;
+    }
+    .sound-of-text .content {
+        padding: 6px;
+        margin: 12px 0;
+    }
+    .sound-of-text .bar {
+        gap: 8px;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+    .sound-of-text.history .saved-item {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .sound-of-text.history .saved-item audio {
+        width: 100%;
+    }
+    .sound-of-text.history .navigation {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sound of Text by Country: 30+ Free Voice Generators (MP3) — Sound of Text</title>
+  <meta name="description" content="Browse all Sound of Text voices by country. 30 language generators - Indonesian, Japanese, Arabic, English and more. Pick a voice, convert text, download MP3 free." />
+  <link rel="canonical" href="https://soundtext.github.io/sound-of-text/" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sound of Text by Country: 30+ Free Voice Generators (MP3) — Sound of Text" />
+  <meta property="og:description" content="Browse all Sound of Text voices by country. 30 language generators - Indonesian, Japanese, Arabic, English and more. Pick a voice, convert text, download MP3 free." />
+  <meta property="og:image" content="https://soundtext.github.io/assets/images/voice.jpg" />
+  <meta property="og:url" content="https://soundtext.github.io/sound-of-text/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sound of Text by Country: 30+ Free Voice Generators (MP3) — Sound of Text" />
+  <meta name="twitter:description" content="Browse all Sound of Text voices by country. 30 language generators - Indonesian, Japanese, Arabic, English and more. Pick a voice, convert text, download MP3 free." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="https://soundtext.github.io/icon.jpg" />
+  <link rel="apple-touch-icon" href="https://soundtext.github.io/icon.jpg" />
+
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9340211986472309" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts (template repo root) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Template repo root stylesheet (header/footer/typography) -->
+  <link rel="stylesheet" href="https://soundtext.github.io/style.css" />
+
+  <!-- Tool widget stylesheet (folder tool) -->
+  <link rel="stylesheet" href="https://soundtext.github.io/tool/sot-simple.css" />
+
+  <!-- CSS bridge: variables required by sot-simple.css mapped to repo template colors -->
+  <style>
+    .sound-of-text {
+      --navy: #176B63;
+      --white: #ffffff;
+      --border: #e3ecea;
+      --text-muted: #5c726f;
+      --transition: 0.2s ease;
+    }
+
+    /* ── Page layout wrapper ── */
+    .sot-page {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 28px 20px 64px;
+    }
+
+    .sot-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: #5c726f;
+      margin-bottom: 18px;
+    }
+    .sot-breadcrumb a {
+      color: #5c726f;
+      text-decoration: none;
+    }
+    .sot-breadcrumb a:hover {
+      color: #176B63;
+    }
+    .sot-breadcrumb .sep { color: #a0b5b2; }
+
+    .sot-page h1 {
+      font-family: 'Manrope', 'Inter', sans-serif;
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 1.3;
+      color: #0f1c1a;
+      margin: 0 0 22px;
+    }
+
+    /* ── FAQ accordion ── */
+    .sot-faq {
+      margin-top: 44px;
+      padding-top: 28px;
+      border-top: 1px solid #e3ecea;
+    }
+    .sot-faq h2 {
+      font-size: 23px;
+      font-weight: 700;
+      color: #0f4943;
+      margin: 0 0 18px;
+    }
+    .sot-faq details {
+      background: #ffffff;
+      border: 1px solid #e3ecea;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .sot-faq details[open] {
+      border-color: #176B63;
+    }
+    .sot-faq summary {
+      cursor: pointer;
+      padding: 14px 18px;
+      font-weight: 600;
+      font-size: 15px;
+      color: #0f1c1a;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .sot-faq summary::-webkit-details-marker { display: none; }
+    .sot-faq summary::after {
+      content: '+';
+      font-size: 20px;
+      font-weight: 700;
+      color: #176B63;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .sot-faq details[open] summary::after { content: '\2212'; }
+    .sot-faq details p {
+      margin: 0;
+      padding: 0 18px 16px;
+      font-size: 14.5px;
+      line-height: 1.7;
+      color: #2b3d3a;
+    }
+
+    /* ── Article body typography (md content) ── */
+    .sot-article h2 {
+      font-size: 23px;
+      font-weight: 700;
+      color: #0f4943;
+      margin: 34px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #e2f3f1;
+    }
+    .sot-article h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0f1c1a;
+      margin: 24px 0 10px;
+    }
+    .sot-article p {
+      margin: 0 0 16px;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #2b3d3a;
+    }
+    .sot-article ul,
+    .sot-article ol {
+      margin: 0 0 18px;
+      padding-left: 24px;
+      color: #2b3d3a;
+    }
+    .sot-article li {
+      margin-bottom: 8px;
+      line-height: 1.75;
+    }
+    .sot-article ul li::marker { color: #176B63; }
+    .sot-article ol li::marker { color: #176B63; font-weight: 700; }
+    .sot-article strong { color: #0f1c1a; font-weight: 600; }
+    .sot-article a {
+      color: #176B63;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .sot-article a:hover {
+      color: #0f4943;
+      background-color: #e2f3f1;
+    }
+    .sot-article hr {
+      border: none;
+      border-top: 1px solid #e3ecea;
+      margin: 26px 0;
+    }
+
+    @media only screen and (max-width: 460px) {
+      .sot-page { padding: 18px 12px 48px; }
+      .sot-page h1 { font-size: 24px; }
+    }
+  </style>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Sound of Text?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sound of Text is a free online Text-to-Speech (TTS) tool that converts written text into high-quality MP3 speech using Google Translate's speech synthesis engine." }
+      },
+      {
+        "@type": "Question",
+        "name": "How to create a custom WhatsApp ringtone?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Enter your text, choose your preferred language, click Convert, and download the MP3 file. Then open WhatsApp Settings > Notifications and select the MP3 sound." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Sound of Text free to use?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, 100% free with no registration, login, or installation required." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between the homepage and this directory?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The homepage is the full converter studio with bulk import and audio merging. This page is a directory that lists every Sound of Text voice by country so you can jump straight to one language generator." }
+      }
+    ]
+  }
+  </script>
+  
+</head>
+<body>
+
+  <!-- Main Navigation Bar (from repo root template) -->
+  <header class="navbar-wrapper">
+    <div class="container">
+      <nav class="navbar" id="navbar">
+        <a href="https://soundtext.github.io/" class="nav-brand">
+          <div class="brand-icon">
+            <img src="https://soundtext.github.io/icon.jpg" alt="Sound of Text" class="brand-img" />
+          </div>
+          <div class="brand-text">
+            <span>Sound of Text</span>
+          </div>
+        </a>
+
+        <div class="nav-links" id="navLinks">
+          <a href="https://soundtext.github.io/" class="nav-link">Home</a>
+          <a href="https://soundtext.github.io/blog/" class="nav-link">Blog &amp; Panduan</a>
+          <a href="https://soundtext.github.io/sound-of-text/" class="nav-link">Sound of Text</a>
+          <a href="https://soundtext.github.io/about/" class="nav-link">About</a>
+        </div>
+
+        <div class="nav-actions">
+          <a href="https://play.google.com/store/apps/details?id=com.karinov.soundoftext" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+            <span>Get the App</span>
+          </a>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+            <i data-lucide="menu" id="menuIcon"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu (from repo root template) -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="brand-text" style="display: flex; align-items: center; gap: 8px;">
+        <img src="https://soundtext.github.io/icon.jpg" alt="Sound of Text" class="drawer-brand-img" />
+        <span>Sound of Text</span>
+      </div>
+      <button class="drawer-close" id="drawerClose">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="drawer-links">
+      <a href="https://soundtext.github.io/" class="drawer-link">Home</a>
+      <a href="https://soundtext.github.io/blog/" class="drawer-link">Blog &amp; Panduan</a>
+      <a href="https://soundtext.github.io/sound-of-text/" class="drawer-link">Sound of Text</a>
+      <a href="https://soundtext.github.io/about/" class="drawer-link">About</a>
+      <a href="https://play.google.com/store/apps/details?id=com.karinov.soundoftext" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block mt-4">
+        <span>Get the App</span>
+      </a>
+    </div>
+  </div>
+
+  <main class="sot-page">
+
+    <!-- Breadcrumb -->
+    <nav class="sot-breadcrumb" aria-label="Breadcrumb">
+      <a href="https://soundtext.github.io/">Home</a>
+      <span class="sep">/</span>
+      <a href="https://soundtext.github.io/sound-of-text/">Sound of Text</a>
+      <span class="sep">/</span>
+      <span>English (US)</span>
+    </nav>
+
+    <h1>Sound of Text by Country: 30+ Free Voice Generators (MP3)</h1>
+
+    <!-- Sound of Text Widget (markup contract of tool/sot-engine.js + tool/sot-simple.css) -->
+    <div class="sound-of-text">
+      <div class="content">
+        <div class="textarea-container">
+          <textarea id="text" placeholder="Type or paste your text here..."></textarea>
+          <div class="clear-icon" id="clear-icon" title="Clear text" aria-label="Clear text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </div>
+        </div>
+
+        <div class="bar">
+          <div class="language-select" title="Voice language">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            <span class="code" data-code="en-US" data-name="English (US)">English (US)</span>
+          </div>
+          <div class="char-counter" id="char-counter">0 characters</div>
+        </div>
+
+        <button class="button" id="convert-btn">Convert to Speech</button>
+      </div>
+
+      <div class="sound-of-text history">
+        <div class="navigation">
+          <div class="controls">
+            <div class="play-all" id="play-all" title="Play all audio">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              <span>Play All</span>
+            </div>
+            <div id="pause-tts" title="Pause">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="4" width="4" height="16" rx="1"/><rect x="6" y="4" width="4" height="16" rx="1"/></svg>
+              <span>Pause</span>
+            </div>
+            <div id="stop-tts" title="Stop">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2"/></svg>
+              <span>Stop</span>
+            </div>
+          </div>
+          <div class="clear-all" title="Clear history">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+            <span>Clear All</span>
+          </div>
+        </div>
+        <div class="saved-data" id="data-history"></div>
+      </div>
+    </div>
+
+    <!-- Markdown article content -->
+    <div class="sot-article">
+      <h2>All Sound of Text Voices by Country</h2>
+<p><strong>Sound of Text by Country</strong> is a directory of country-specific voice generators. Each language listed below has its own dedicated generator page — pick a country, type your text, and download the MP3 for free. For the full studio tool with bulk import and audio merging in 50+ languages, use the <a href="https://soundtext.github.io/">Main Generator Page</a>.</p>
+<p>Designed for WhatsApp users, content creators, educators, and language learners, every country page lets you generate personalized ringtones, notification sounds, video voiceovers, and audio notes in that language. Read more <a href="https://soundtext.github.io/about/">about our mission</a>.</p>
+<hr>
+<h3>Popular Language Generators</h3>
+<p>Choose from our curated language and dialect voice generators:</p>
+<ul>
+<li><a href="https://soundtext.github.io/sound-of-text/indonesian/">Sound of Text Indonesia</a> — Indonesian Google voice for WhatsApp ringtones and TikToks.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/javanese/">Sound of Text Javanese</a> — Local Javanese dialect speech synthesis.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/sundanese/">Sound of Text Sundanese</a> — Gentle Sundanese regional accent generator.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/japanese/">Sound of Text Japan</a> — Cute Japanese kawaii anime voice generator.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/korean/">Sound of Text Korea</a> — Hangul speech generator for K-content.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/english/">Sound of Text English</a> — Standard US and UK English speech synthesis.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/english-uk/">Sound of Text UK</a> — British English accent voice generator.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/english-usa/">Sound of Text USA</a> — American English accent voice generator.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/english-america/">Sound of Text America</a> — US English text to speech variant.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/english-au/">Sound of Text Australia</a> — Aussie English accent voice generator.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/arabic/">Sound of Text Arabic</a> — Arabic script text to speech conversion.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/spanish/">Sound of Text Spain</a> — Spanish language speech synthesis.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/french/">Sound of Text France</a> — French accent speech synthesis.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/german/">Sound of Text Germany</a> — German language speech synthesis.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/italian/">Sound of Text Italy</a> — Italian accent speech synthesis.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/chinese/">Sound of Text China</a> — Mandarin Chinese speech generator.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/hindi/">Sound of Text India (Hindi)</a> — Devanagari Hindi text to MP3 audio generator.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/portuguese/">Sound of Text Portuguese</a> — Portuguese speech audio generator.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/portugal/">Sound of Text Portugal</a> — European Portuguese accent generator.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/brazil/">Sound of Text Brazil</a> — Brazilian Portuguese accent generator.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/thai/">Sound of Text Thailand</a> — Thai language speech synthesis.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/vietnamese/">Sound of Text Vietnam</a> — Vietnamese language speech generator.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/philippines/">Sound of Text Philippines</a> — Filipino/Tagalog voice generator.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/malay/">Sound of Text Malaysia</a> — Bahasa Melayu voice generator.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/russian/">Sound of Text Russia</a> — Russian language speech synthesis.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/turkish/">Sound of Text Turkey</a> — Turkish language speech generator.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/dutch/">Sound of Text Netherlands</a> — Dutch language speech synthesis.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/swedish/">Sound of Text Sweden</a> — Swedish language speech generator.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/polish/">Sound of Text Poland</a> — Polish language speech synthesis.</li>
+<li><a href="https://soundtext.github.io/sound-of-text/robotic-voice/">Robotic Voice Generator</a> — Sci-fi robotic and mechanical audio generator.</li>
+</ul>
+<hr>
+<h3>How to Create &amp; Set Custom WhatsApp Ringtones</h3>
+<ol>
+<li>Type your desired custom text into the text area above or visit our <a href="https://soundtext.github.io/">homepage tool</a>.</li>
+<li>Select your target language from the dropdown selector.</li>
+<li>Click <strong>Convert to Speech</strong> and listen to the audio preview.</li>
+<li>Click <strong>Download MP3</strong> to save the audio file to your device.</li>
+<li>On your phone, open <strong>WhatsApp</strong> &gt; <strong>Settings</strong> &gt; <strong>Notifications</strong> &gt; select your downloaded MP3 audio file.</li>
+</ol>
+    </div>
+
+    <!-- FAQ accordion from front matter -->
+    
+    <section class="sot-faq">
+      <h2>FAQ</h2>
+      
+      <details>
+        <summary>What is Sound of Text?</summary>
+        <p>Sound of Text is a free online Text-to-Speech (TTS) tool that converts written text into high-quality MP3 speech using Google Translate's speech synthesis engine.</p>
+      </details>
+      
+      <details>
+        <summary>How to create a custom WhatsApp ringtone?</summary>
+        <p>Enter your text, choose your preferred language, click Convert, and download the MP3 file. Then open WhatsApp Settings > Notifications and select the MP3 sound.</p>
+      </details>
+      
+      <details>
+        <summary>Is Sound of Text free to use?</summary>
+        <p>Yes, 100% free with no registration, login, or installation required.</p>
+      </details>
+      
+      <details>
+        <summary>What is the difference between the homepage and this directory?</summary>
+        <p>The homepage is the full converter studio with bulk import and audio merging. This page is a directory that lists every Sound of Text voice by country so you can jump straight to one language generator.</p>
+      </details>
+      
+    </section>
+    
+
+  </main>
+
+  <!-- Dark Footer (from repo root template) -->
+  <footer class="footer-dark">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-icon">
+            <img src="https://soundtext.github.io/icon.jpg" alt="Sound of Text" class="brand-img" />
+          </div>
+          <span class="brand-title">Sound of Text</span>
+          <p class="footer-motto">Free text-to-speech converter and batch audio merger for creators worldwide.</p>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Navigation</h4>
+          <a href="https://soundtext.github.io/">Home</a>
+          <a href="https://soundtext.github.io/sound-of-text/">Sound of Text Hub</a>
+          <a href="https://soundtext.github.io/blog/">Blog &amp; Panduan</a>
+          <a href="https://soundtext.github.io/about/">About</a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Popular Voices</h4>
+          <a href="https://soundtext.github.io/sound-of-text/">All Languages</a>
+          <a href="https://soundtext.github.io/sound-of-text/indonesian/">Sound of Text Indonesia</a>
+          <a href="https://soundtext.github.io/sound-of-text/english-usa/">Sound of Text USA</a>
+          <a href="https://soundtext.github.io/sound-of-text/japanese/">Sound of Text Japan</a>
+          <a href="https://soundtext.github.io/sound-of-text/arabic/">Sound of Text Arabic</a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Community &amp; App</h4>
+          <a href="https://github.com/ncpierson" target="_blank" rel="noopener noreferrer">NC Pierson on GitHub</a>
+          <a href="https://soundtext.org" target="_blank" rel="noopener noreferrer">Soundtext.org Community</a>
+          <a href="https://play.google.com/store/apps/details?id=com.karinov.soundoftext" target="_blank" rel="noopener noreferrer" class="footer-badge" style="margin-top: 6px;">
+            <img src="https://soundtext.github.io/playstore.png" alt="Google Play" />
+          </a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Legal</h4>
+          <a href="https://soundtext.github.io/about/">About</a>
+          <a href="https://soundtext.github.io/privacy/">Privacy Policy</a>
+          <a href="https://soundtext.github.io/terms/">Terms of Service</a>
+          <a href="https://soundtext.github.io/disclaimer/">Disclaimer</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sound of Text. Open web utility. All rights reserved.</p>
+        <p style="margin-top: 6px; font-size: 12px;">
+          <a href="https://soundtext.github.io/blog/" style="color: #718481; text-decoration: none; margin: 0 8px;">Blog</a> ·
+          <a href="https://soundtext.github.io/about/" style="color: #718481; text-decoration: none; margin: 0 8px;">About</a> ·
+          <a href="https://soundtext.github.io/privacy/" style="color: #718481; text-decoration: none; margin: 0 8px;">Privacy</a> ·
+          <a href="https://soundtext.github.io/terms/" style="color: #718481; text-decoration: none; margin: 0 8px;">Terms</a> ·
+          <a href="https://soundtext.github.io/disclaimer/" style="color: #718481; text-decoration: none; margin: 0 8px;">Disclaimer</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lucide icons + mobile drawer (from repo root template) -->
+  <script>
+    try { if (window.lucide) lucide.createIcons(); } catch(e) { console.warn('Lucide:', e); }
+
+    (function() {
+      var tog = document.getElementById('mobileToggle');
+      var cls = document.getElementById('drawerClose');
+      var drw = document.getElementById('mobileDrawer');
+      if (tog) tog.onclick = function() { if (drw) drw.classList.add('open'); };
+      if (cls) cls.onclick = function() { if (drw) drw.classList.remove('open'); };
+      var links = document.querySelectorAll('.drawer-link');
+      for (var i = 0; i < links.length; i++) {
+        links[i].onclick = function() { if (drw) drw.classList.remove('open'); };
+      }
+    })();
+  </script>
+
+  <!-- Sound of Text engine (folder tool) -->
+  <script src="https://soundtext.github.io/tool/sot-engine.js" defer></script>
+</body>
+</html>
