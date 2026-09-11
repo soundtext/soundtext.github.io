@@ -5,7 +5,7 @@ export default function PrivacyPage() {
   return (
     <>
       <Seo
-        title="Privacy Policy — Sound of Text"
+        title="Privacy Policy | Sound of Text"
         description="How Sound of Text handles your data: on-device speech synthesis, no account, no upload of your text, and the third-party services the site relies on."
         path="/privacy"
       />
@@ -36,7 +36,7 @@ export default function PrivacyPage() {
           <ul>
             <li>We do not require a name, email address, or login to use the tool.</li>
             <li>We do not upload, transmit, or store the text you type or paste into the reader.</li>
-            <li>We do not record audio from your microphone — no microphone is used.</li>
+            <li>We do not record audio from your microphone. No microphone is used.</li>
           </ul>
 
           <h2>How speech is generated</h2>
@@ -54,7 +54,7 @@ export default function PrivacyPage() {
           </p>
           <ul>
             <li>
-              <span className="font-medium">Hosting — GitHub Pages.</span> Serves the site's files
+              <span className="font-medium">Hosting: GitHub Pages.</span> Serves the site's files
               and may keep server logs.
             </li>
             <li>

@@ -15,10 +15,25 @@ import {
 } from 'lucide-react';
 import { Seo } from '../components/Seo';
 
+const ABOUT_JSON_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'About Sound of Text',
+  url: 'https://soundtext.github.io/about',
+  description:
+    'Sound of Text is a free, browser-first text-to-speech tool with on-device speech, no account and no upload, plus a free Android app for 50+ languages, bulk import and audio merging.',
+  mainEntity: {
+    '@type': 'Organization',
+    name: 'Appz',
+    email: 'dev@appz.se',
+    url: 'https://help.appz.se',
+  },
+};
+
 const PRINCIPLES = [
   { icon: Gift, title: 'Free first', body: 'No paywall around basic conversion. Ever.' },
   { icon: ShieldCheck, title: 'Private by default', body: 'On-device speech; no account and no upload of your text.' },
-  { icon: Zap, title: 'Instant', body: 'Speed is the feature — type, convert, done.' },
+  { icon: Zap, title: 'Instant', body: 'Speed is the feature: type, convert, done.' },
   { icon: Accessibility, title: 'Accessible', body: 'Plain language, mobile-first, works on low-end devices.' },
   { icon: BadgeCheck, title: 'Honest', body: 'We describe only what the tool actually does.' },
 ];
@@ -49,9 +64,10 @@ export default function AboutPage() {
   return (
     <>
       <Seo
-        title="About Sound of Text — Free, Private Text to Speech"
+        title="About Sound of Text | Free, Private Text to Speech"
         description="Learn what Sound of Text is: a free, browser-first text-to-speech tool. On-device speech, no account, plus a free Android app for 50+ languages, bulk import and audio merging."
         path="/about"
+        jsonLd={ABOUT_JSON_LD}
       />
 
       <article className="max-w-3xl mx-auto">
@@ -60,7 +76,7 @@ export default function AboutPage() {
             About Sound of Text
           </h1>
           <p className="mt-2 text-lg text-neutral-600">
-            Free, private text-to-speech — for phones and browsers.
+            Free, private text-to-speech for phones and browsers.
           </p>
           <p className="mt-4 text-xs text-neutral-500 border-y border-neutral-200 py-3">
             Maintained by <span className="font-semibold text-neutral-700">Appz</span> · Last
@@ -84,7 +100,7 @@ export default function AboutPage() {
           <p>
             Sound of Text was inspired by the original open-source Sound of Text project and the
             community around <span className="font-medium">Soundtext.org</span>, created by NC
-            Pierson. We credit that work openly — it is where the idea of a simple, free
+            Pierson. We credit that work openly; it is where the idea of a simple, free
             text-to-speech page began. We are not that project and we do not claim to own it.
           </p>
           <p>
@@ -118,7 +134,7 @@ export default function AboutPage() {
             <div className="bg-white rounded-xs border border-neutral-200 p-5 shadow-2xs">
               <div className="flex items-center gap-2 mb-3">
                 <Smartphone className="w-4 h-4 text-neutral-700" />
-                <h3 className="text-sm font-bold text-neutral-900">Android app — Sound of Text Com</h3>
+                <h3 className="text-sm font-bold text-neutral-900">Android app: Sound of Text Com</h3>
               </div>
               <ul className="space-y-2 text-sm text-neutral-600">
                 {APP_FEATURES.map(({ icon: Icon, text }) => (
@@ -140,7 +156,7 @@ export default function AboutPage() {
             for an installed voice and synthesizes the audio locally. Your text is not sent to us
             and is not stored on a server. We do not require an account, an email address, or a
             login. The only data involved is what your browser and any third-party assets on the
-            page technically process — this is explained in detail in our{' '}
+            page technically process. This is explained in detail in our{' '}
             <Link to="/privacy">Privacy Policy</Link>.
           </p>
           <p>

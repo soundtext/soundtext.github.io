@@ -3,13 +3,27 @@ import { ArrowRight, BookOpen, Calendar } from 'lucide-react';
 import { Seo } from '../components/Seo';
 import { GUIDES } from '../data/guides';
 
+const GUIDES_JSON_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Text-to-Speech Guides',
+  url: 'https://soundtext.github.io/guides',
+  hasPart: GUIDES.map((guide) => ({
+    '@type': 'Article',
+    headline: guide.title,
+    description: guide.description,
+    url: `https://soundtext.github.io/guides/${guide.slug}`,
+  })),
+};
+
 export default function GuideIndexPage() {
   return (
     <>
       <Seo
-        title="Guides — Sound of Text"
+        title="Guides | Sound of Text"
         description="Step-by-step text-to-speech guides: create character voices, name-announcement clips, and custom WhatsApp ringtones."
         path="/guides"
+        jsonLd={GUIDES_JSON_LD}
       />
 
       <div className="max-w-5xl mx-auto">
@@ -22,7 +36,7 @@ export default function GuideIndexPage() {
             Text-to-Speech Guides
           </h1>
           <p className="mt-2 text-sm sm:text-base text-neutral-600 max-w-2xl leading-relaxed">
-            Practical walkthroughs for turning text into audio — character impressions, AI voice
+            Practical walkthroughs for turning text into audio: character impressions, AI voice
             effects, and custom WhatsApp notification sounds.
           </p>
         </div>

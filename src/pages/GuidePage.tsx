@@ -44,7 +44,7 @@ export default function GuidePage() {
   return (
     <>
       <Seo
-        title={`${guide.title} — Sound of Text`}
+        title={`${guide.title} | Sound of Text`}
         description={guide.description}
         path={`/guides/${guide.slug}`}
         type="article"

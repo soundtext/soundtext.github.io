@@ -12,7 +12,7 @@ You can type or paste any passage here, customize the reading rate and voice, an
 
 Explore the Knowledge Base below for step-by-step guides on voice clips, character impressions, and custom WhatsApp ringtones.`;
 
-const HOME_TITLE = 'Sound of Text — Free Text to Speech & Audio Merger';
+const HOME_TITLE = 'Sound of Text | Free Text to Speech & Audio Merger';
 const HOME_DESCRIPTION =
   'Convert text to natural speech online for free. No sign-up, no upload. Try it in your browser, or get 50+ languages, translation and audio merging in the Android app.';
 
@@ -109,7 +109,7 @@ export default function HomePage() {
           <span>Browser-first text to speech</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900">
-          Turn text into speech — free, in your browser
+          Turn text into speech for free, in your browser
         </h1>
         <p className="mt-3 text-sm sm:text-base text-neutral-600 leading-relaxed">
           Type or paste your text, pick a voice, and hear it read aloud instantly. No sign-up,

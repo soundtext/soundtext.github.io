@@ -5,7 +5,7 @@ export default function DisclaimerPage() {
   return (
     <>
       <Seo
-        title="Disclaimer — Sound of Text"
+        title="Disclaimer | Sound of Text"
         description="Terms and limitations for using Sound of Text, including speech accuracy, third-party tools and trademarks, and our non-affiliation with the original Soundtext.org project."
         path="/disclaimer"
       />
@@ -53,7 +53,7 @@ export default function DisclaimerPage() {
             Some guides mention third-party services such as FreeTTS, FakeYou, Myinstants, BlipCut,
             ElevenLabs, Murf AI, Play.ht, and Narakeet. Those names, tools, images, and trademarks
             belong to their respective owners. They are referenced for instructional purposes only,
-            and a mention is not an endorsement — nor should it be read as a partnership. Always
+            and a mention is not an endorsement, nor should it be read as a partnership. Always
             review a third-party tool's own terms and privacy policy before using it.
           </p>
 

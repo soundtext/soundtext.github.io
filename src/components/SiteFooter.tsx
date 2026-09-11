@@ -1,11 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Volume2 } from 'lucide-react';
 
-interface SiteFooterProps {
-  voiceCount: number;
-}
-
-export function SiteFooter({ voiceCount }: SiteFooterProps) {
+export function SiteFooter() {
   return (
     <footer className="bg-white border-t border-neutral-200 py-10 text-xs text-neutral-500">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col gap-6">
@@ -24,12 +20,10 @@ export function SiteFooter({ voiceCount }: SiteFooterProps) {
           </nav>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-t border-neutral-100 pt-4">
-          <p className="text-neutral-500">
-            Powered by the Web Speech API · {voiceCount} system voices detected · No sign-up, no upload.
-          </p>
-          <p className="text-neutral-400">
-            Maintained by Appz · inspired by the open-source Soundtext.org project (credited).
+        <div className="border-t border-neutral-100 pt-4 text-center text-neutral-400">
+          <p>
+            © {new Date().getFullYear()} Sound of Text · By Appz · Powered by the Web Speech API ·
+            Inspired by Soundtext.org
           </p>
         </div>
       </div>
