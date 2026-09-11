@@ -1,0 +1,6 @@
+{
+  "name": "Sound of Text",
+  "description": "A free, browser-first text-to-speech tool: on-device speech, no account, no upload, plus a free Android app for 50+ languages, translation, bulk import and audio merging.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
