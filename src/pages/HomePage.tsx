@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { TTSReader } from '../components/TTSReader';
 import { KnowledgeBase } from '../components/KnowledgeBase';
+import { AdBanner } from '../components/AdBanner';
 import { Seo } from '../components/Seo';
 import { useTts } from '../context/TtsContext';
 import { CheckCircle2, Sparkles, ShieldCheck, Zap, Gift, Smartphone } from 'lucide-react';
@@ -146,6 +147,9 @@ export default function HomePage() {
         onSetPitch={setPitch}
         onSetVolume={setVolume}
       />
+
+      {/* Ad slot below the TTS reader section */}
+      <AdBanner />
 
       {/* Section Divider */}
       <div className="my-12 border-t border-neutral-200/80" />

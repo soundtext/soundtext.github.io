@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { ArrowLeft, Calendar, User, Info } from 'lucide-react';
 import { Seo } from '../components/Seo';
+import { AdBanner } from '../components/AdBanner';
 import { getGuideBySlug, getGuideContent } from '../data/guides';
 
 export default function GuidePage() {
@@ -80,6 +81,9 @@ export default function GuidePage() {
             </span>
           </div>
         </div>
+
+        {/* Ad slot below the guide header */}
+        <AdBanner />
 
         <div className="mt-8 prose prose-neutral max-w-none prose-headings:tracking-tight prose-a:text-neutral-900 prose-a:font-medium prose-img:rounded-xs prose-img:border prose-img:border-neutral-200">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>

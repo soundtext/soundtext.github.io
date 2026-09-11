@@ -1,7 +1,3 @@
-<div align="center">
-<img width="1200" height="475" alt="Sound of Text" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
-
 # Sound of Text
 
 Free text-to-speech that runs in your browser and on Android. No sign-up, no upload, no paywall.
